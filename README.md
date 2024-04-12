@@ -3,14 +3,3 @@
 
  > [!TIP]
 > CSS reset tar bort mycket av den style som man får av webbläsaren. Lägg till eller ta bort det som ni vill ha med.
-Detta kommer från Zanne
-
-
-
-
-Jo, Julia här
-
-Hej
-hejhej
-nånting
-Hehe
