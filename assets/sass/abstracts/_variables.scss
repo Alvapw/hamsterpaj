@@ -9,11 +9,14 @@
     // colors
 
     // break-points
-    --break-point-sm: 640px;
-    --break-point-md: 768px;
-    --break-point-lg: 1024px;
-    --break-point-xl: 1280px;
-    --break-point-2xl: 1536px;
+    --screen-2xs: 320px; // small mobile
+    --screen-xs: 390px; // regular mobile
+    --screen-sm: 430px; // large mobile
+    --screen-md: 744px; // small ipad portrait
+    --screen-lg: 1133px; // small ipad landscape
+    --screen-xl: 1280px; // small desktop
+    --screen-2xl: 1440px; // normal desktop
+    --screen-3xl: 1920px; // tv
 
     // spacing?
     // blir kanske lite onödigt att sätta upp en tailwind spacing scale. med tanke på parse osv. då kan jag lika gärna sätta upp tailwind config.

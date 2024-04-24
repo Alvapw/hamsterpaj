@@ -1,0 +1,105 @@
+.c-post {
+
+    .c-post__cover {
+        // TO-DO: variabel?
+        margin-bottom: 1rem;
+    }
+
+    .c-post__container {
+        padding: var(--post-y-padding) var(--post-x-padding);
+
+        --post-y-padding: .25rem;
+        --post-x-padding: .5rem;
+
+        .c-post__content {
+            // TO-DO: variabel?
+            margin-bottom: 1rem;
+
+            .c-post__top-content {
+                // TO-DO: variabel?
+                margin-bottom: .5rem;
+
+                display: flex;
+                align-items: center;
+
+                .c-post__profile-img {
+                    // TO-DO: variabel?
+                    margin-right: .5rem;
+                    // TO-DO: variabel
+                    border-radius: 9999px;
+                    // TO-DO: byt ut värden
+                    width: 38px;
+                    height: 38px;
+
+                    // TO-DO: placeholder color
+                    background-color: black;
+                }
+
+                .c-post__name {
+                    // TO-DO: variabel?
+                    margin-bottom: .25rem;
+
+                    // TO-DO: typskala
+                    font-size: .875rem;
+                }
+
+                .c-post__user-title {
+                    // TO-DO: typskala
+                    font-size: .75rem;
+                }
+
+                .c-post__date {
+                    // TO-DO: typskala
+                    font-size: .75rem;
+                    margin-left: auto;
+                }
+            }
+
+            .c-post__heading {
+                // TO-DO: typskala
+                font-size: 1rem;
+                font-weight: 600;
+
+                // TO-DO: variabel?
+                margin-bottom: .25rem;
+            }
+
+            .c-post__text {
+                // TO-DO: typskala
+                font-size: .875rem;
+            }
+        }
+
+        .c-post__info {
+            
+            .c-post__info-row {
+                display: flex;
+                align-items: center;
+                // TO-DO: variabel gap
+                gap: .5rem;
+                // TO-DO: variabler?
+                padding-top: .5rem;
+                // TO-DO: variabler
+                border-top: 1px solid black;
+
+                // bara den första har margin-bottom
+                &:first-child {
+                    // TO-DO: variabel
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+
+    &.c-post--comment {
+        // TO-DO: variabler
+        background-color: grey;
+        // TO-DO: variabler
+        border-radius: .75rem;
+        // TO-DO: width?
+        // TO-DO: pratbubblehörn
+    }
+}
+
+// TO-DO: --teaser --full --comment
+// TO-DO: responsive

@@ -4,11 +4,14 @@
   --flex-gap: 1rem;
   /* Number of flex items*/
   --flex-items: 1;
-  --break-point-sm: 640px;
-  --break-point-md: 768px;
-  --break-point-lg: 1024px;
-  --break-point-xl: 1280px;
-  --break-point-2xl: 1536px;
+  --screen-2xs: 320px;
+  --screen-xs: 390px;
+  --screen-sm: 430px;
+  --screen-md: 744px;
+  --screen-lg: 1133px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1440px;
+  --screen-3xl: 1920px;
 }
 
 *,
@@ -205,27 +208,124 @@ body {
   white-space: nowrap;
 }
 
-@media (min-width: var(--break-point-md)) {
-  .c-mobile-menu {
+.c-menu-icon .c-menu-icon__line {
+  background-color: black;
+  width: 1.5rem;
+  height: 0.125rem;
+  display: block;
+  margin: 0.25rem 0;
+  transition: 0.2s;
+}
+.c-menu-icon.exit .c-menu-icon__line:first-child {
+  transform: rotate(45deg) translate(5px, 0px);
+}
+.c-menu-icon.exit .c-menu-icon__line:nth-child(2) {
+  display: none;
+}
+.c-menu-icon.exit .c-menu-icon__line:last-child {
+  transform: rotate(-45deg) translate(5px, 0px);
+}
+@media (min-width: 744px) {
+  .c-menu-icon {
     display: none;
   }
 }
-.c-mobile-menu .c-mobile-menu__line {
+
+.c-badge {
+  background-color: #EDEDED;
+  color: black;
+  padding: var(--badge-y-padding) var(--badge-x-padding);
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  --badge-y-padding: .25rem;
+  --badge-x-padding: .5rem;
+}
+@media (min-width: var(--screen-md)) {
+  .c-badge {
+    font-size: 1rem;
+    --badge-x-padding: .75rem;
+  }
+}
+
+.c-interactions {
+  display: flex;
+  gap: var(--interactions-gap);
+  align-items: center;
+  font-size: 0.75rem;
+  --interactions-gap: .25rem;
+}
+
+.c-cover {
+  position: relative;
+  width: 100%;
+  height: 105px;
+  background-color: grey;
+}
+.c-cover .c-cover__profile-img {
+  height: 64px;
+  width: 64px;
   background-color: black;
-  width: 25px;
-  height: 2px;
-  display: block;
-  margin: 5px 0;
-  transition: 0.2s;
+  border-radius: 9999px;
+  position: absolute;
+  left: 2rem;
+  bottom: -0.75rem;
 }
-.c-mobile-menu.exit .c-mobile-menu__line:first-child {
-  transform: rotate(45deg) translate(5px, 0px);
+
+.c-post .c-post__cover {
+  margin-bottom: 1rem;
 }
-.c-mobile-menu.exit .c-mobile-menu__line:nth-child(2) {
-  display: none;
+.c-post .c-post__container {
+  padding: var(--post-y-padding) var(--post-x-padding);
+  --post-y-padding: .25rem;
+  --post-x-padding: .5rem;
 }
-.c-mobile-menu.exit .c-mobile-menu__line:last-child {
-  transform: rotate(-45deg) translate(5px, 0px);
+.c-post .c-post__container .c-post__content {
+  margin-bottom: 1rem;
+}
+.c-post .c-post__container .c-post__content .c-post__top-content {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.c-post .c-post__container .c-post__content .c-post__top-content .c-post__profile-img {
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  width: 38px;
+  height: 38px;
+  background-color: black;
+}
+.c-post .c-post__container .c-post__content .c-post__top-content .c-post__name {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+.c-post .c-post__container .c-post__content .c-post__top-content .c-post__user-title {
+  font-size: 0.75rem;
+}
+.c-post .c-post__container .c-post__content .c-post__top-content .c-post__date {
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+.c-post .c-post__container .c-post__content .c-post__heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.c-post .c-post__container .c-post__content .c-post__text {
+  font-size: 0.875rem;
+}
+.c-post .c-post__container .c-post__info .c-post__info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid black;
+}
+.c-post .c-post__container .c-post__info .c-post__info-row:first-child {
+  margin-bottom: 0.5rem;
+}
+.c-post.c-post--comment {
+  background-color: grey;
+  border-radius: 0.75rem;
 }
 
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/

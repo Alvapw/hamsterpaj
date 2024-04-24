@@ -1,0 +1,22 @@
+.c-badge {
+    // TO-DO: färger variabel
+    background-color: #EDEDED;
+    color: black;
+    padding: var(--badge-y-padding) var(--badge-x-padding);
+    // TO-DO: border-radius variabel
+    border-radius: 1.5rem;
+
+    // TO-DO: font-size typskala variabel + lineheight
+    font-size: .75rem;
+
+    --badge-y-padding: .25rem;
+    --badge-x-padding: .5rem;
+
+    // TO-DO: media query rätt break-point
+    @media (min-width: var(--screen-md)) {
+        // TO-DO: font-size typskala variabel + lineheight
+        font-size: 1rem;
+
+        --badge-x-padding: .75rem;
+    }
+}

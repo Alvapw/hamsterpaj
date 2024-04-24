@@ -1,0 +1,13 @@
+.c-interactions {
+    // TO-DO: color variabel current-color
+    // TO-DO: font-size typskala variabel
+    // TO-DO: if interactions efter lägg till margin right
+
+    display: flex;
+    gap: var(--interactions-gap);
+    align-items: center;
+
+    font-size: .75rem;
+
+    --interactions-gap: .25rem;
+}
