@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="sv">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boilerplate</title>
-    <link rel="stylesheet" href="assets/sass/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hamsterpaj</title>
+        <link rel="stylesheet" href="assets/sass/style.css">
+    </head>
 
-<body>
-    <div class="flex-container">
-        <article class="flex-item">1</article>
-        <article class="flex-item">2</article>
-        <article class="flex-item">3</article>
-        <article class="flex-item">4</article>
-        <article class="flex-item">5</article>
-        <article class="flex-item">6</article>
-    </div>
-    <script src="js/script.js"></script>
-</body>
+    <body>
+        <header class="c-header">
+            <nav class="c-nav">
+                <div class="c-nav__hamburger c-mobile-menu" data-fn-mobile-menu-toggle>
+                    <span class="c-mobile-menu__line"></span>
+                    <span class="c-mobile-menu__line"></span>
+                    <span class="c-mobile-menu__line"></span>
+                </div>
+                <ul class="c-nav__list">
+                    <li class="c-nav__item">
+                        <a href="#" class="c-nav__link">Hamsterpaj</a>
+                    </li>
+                    <li class="c-nav__item">
+                        <a href="#" class="c-nav__link">Onlinespel</a>
+                    </li>
+                    <li class="c-nav__item">
+                        <a href="#" class="c-nav__link">Forum</a>
+                    </li>
+                    <li class="c-nav__item">
+                        <a href="#" class="c-nav__link">Snackis</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <footer class="c-footer"></footer>
+
+        <!-- LOADER -->
+        <!-- TO-DO: aria-label? -->
+        <!-- TO-DO: role? -->
+        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="c-loader">
+            <div class="c-loader__wheel"></div>
+            <div class="c-loader__hamster">
+                <div class="c-loader__hamster-body">
+                    <div class="c-loader__hamster-head">
+                        <div class="c-loader__hamster-ear"></div>
+                        <div class="c-loader__hamster-eye"></div>
+                        <div class="c-loader__hamster-nose"></div>
+                    </div>
+                    <div class="c-loader__hamster-limb c-loader__hamster-limb--fr"></div>
+                    <div class="c-loader__hamster-limb c-loader__hamster-limb--fl"></div>
+                    <div class="c-loader__hamster-limb c-loader__hamster-limb--br"></div>
+                    <div class="c-loader__hamster-limb c-loader__hamster-limb--bl"></div>
+                    <div class="c-loader__hamster-tail"></div>
+                </div>
+            </div>
+            <!-- TO-DO: what is this? -->
+            <div class="spoke"></div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
 
 </html>
