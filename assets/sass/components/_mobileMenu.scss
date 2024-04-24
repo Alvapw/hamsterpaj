@@ -1,0 +1,33 @@
+.c-mobile-menu {
+
+    @media (min-width: var(--break-point-md)){
+        display: none;
+    }
+
+    .c-mobile-menu__line {
+        // TO-DO: variabler!
+        background-color: black;
+        width: 25px;
+        height: 2px;
+        display: block;
+        margin: 5px 0;
+        transition: 0.2s;
+    }
+
+    // TO-DO: exit-class (.exit) eller bem modifier (.c-mobile-menu__line--exit)
+    &.exit {
+        .c-mobile-menu__line {
+            &:first-child {
+                transform: rotate(45deg) translate(5px, 0px);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg) translate(5px, 0px);
+            }
+        }
+    }
+}

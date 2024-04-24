@@ -174,3 +174,9 @@ ul,
 ol {
     list-style-type: "";
 }
+
+a {
+    text-decoration: none;
+    // TO-DO: fixa text-color på a links
+    color: black;
+}

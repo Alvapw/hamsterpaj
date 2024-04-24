@@ -4,6 +4,11 @@
   --flex-gap: 1rem;
   /* Number of flex items*/
   --flex-items: 1;
+  --break-point-sm: 640px;
+  --break-point-md: 768px;
+  --break-point-lg: 1024px;
+  --break-point-xl: 1280px;
+  --break-point-2xl: 1536px;
 }
 
 *,
@@ -178,6 +183,11 @@ ol {
   list-style-type: "";
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -193,6 +203,29 @@ body {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+@media (min-width: var(--break-point-md)) {
+  .c-mobile-menu {
+    display: none;
+  }
+}
+.c-mobile-menu .c-mobile-menu__line {
+  background-color: black;
+  width: 25px;
+  height: 2px;
+  display: block;
+  margin: 5px 0;
+  transition: 0.2s;
+}
+.c-mobile-menu.exit .c-mobile-menu__line:first-child {
+  transform: rotate(45deg) translate(5px, 0px);
+}
+.c-mobile-menu.exit .c-mobile-menu__line:nth-child(2) {
+  display: none;
+}
+.c-mobile-menu.exit .c-mobile-menu__line:last-child {
+  transform: rotate(-45deg) translate(5px, 0px);
 }
 
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/
