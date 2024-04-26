@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Blabla",
+    "userName": "snyggast1337",
+    "category": "spel",
+    "tags": ["spel", "humor"],
+    "likes": "11",
+    "comments": "9",
+    "dateStarted": "2024-04-25",
+    "Comment": "Jag älskar COS850W för den kan jag ha sladd och köra trådlöst. Dels kan jag sitta vid datorn men också skriva på en extern skärm om jag är på resande fot.",
+    "dateCommented": "Idag, 3sek"
+  },
+  {
+    "id": 2,
+    "userName": "elit1337",
+    "categories": ["spel"],
+    "date": "2024-04-25"
+  },
+  {
+    "id": 3,
+    "userName": "kungen",
+    "categories": ["kärlek"],
+    "date": "2024-04-25"
+  }
+]

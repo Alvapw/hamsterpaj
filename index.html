@@ -1,143 +1,180 @@
 <!DOCTYPE html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamsterpaj</title>
+    <link rel="stylesheet" href="assets/sass/style.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hamsterpaj</title>
-        <link rel="stylesheet" href="assets/sass/style.css">
-    </head>
+  <body>
+    <header class="c-header">
+      <nav class="c-nav">
+        <div class="c-menu-icon" data-fn-toggle-menu>
+          <span class="c-menu-icon__line"></span>
+          <span class="c-menu-icon__line"></span>
+          <span class="c-menu-icon__line"></span>
+        </div>
+        <ul class="c-nav__list" data-nav-list>
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">Hamsterpaj</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">Onlinespel</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">Forum</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">Snackis</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <body>
-        <header class="c-header">
-            <nav class="c-nav">
-                <div class="c-menu-icon" data-fn-toggle-mobile-menu>
-                    <span class="c-menu-icon__line"></span>
-                    <span class="c-menu-icon__line"></span>
-                    <span class="c-menu-icon__line"></span>
-                </div>
-                <ul class="c-nav__list" data-nav-list>
-                    <li class="c-nav__item">
-                        <a href="#" class="c-nav__link">Hamsterpaj</a>
-                    </li>
-                    <li class="c-nav__item">
-                        <a href="#" class="c-nav__link">Onlinespel</a>
-                    </li>
-                    <li class="c-nav__item">
-                        <a href="#" class="c-nav__link">Forum</a>
-                    </li>
-                    <li class="c-nav__item">
-                        <a href="#" class="c-nav__link">Snackis</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <article class="c-post c-post--teaser">
-            <section class="c-cover c-post__cover">
-                <img src="#" alt="" class="c-cover__profile-img">
-            </section>
-            <div class="c-post__container">
-                <section class="c-post__content">
-                    <div class="c-post__top-content">
-                        <h4 class="c-post__name">Användarnamn</h4>
-                        <p class="c-post__date">23/04/24</p>
-                    </div>
-                    <h3 class="c-post__heading">Rubrik</h3>
-                    <p class="c-post__text">Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper blandit aliquam. Habitant porttitor pellentesque venenatis sed maecenas egestas ac.</p>
-                </section>
-                <section class="c-post__info">
-                    <div class="c-post__info-row">
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                    </div>
-                    <div class="c-post__info-row">
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                    </div>
-                </section>
+    <article class="c-post c-post--teaser">
+      <section class="c-post__cover-img"></section>
+      <section class="c-post__content">
+        <div class="c-post__main-info">
+          <!-- TO-DO: flex class -->
+          <div class="flex-between">
+            <div>
+              <!-- TO-DO: span or p -->
+              <p>Startad</p>
+              <p>Tid</p>
             </div>
-        </article>
-        
-        <article class="c-post c-post--full">
-            <section class="c-cover"></section>
-            <div class="c-post__container">
-                <section class="c-post__content">
-                    <div class="c-post__top-content">
-                        <img src="#" alt="" class="c-post__profile-img">
-                        <div>
-                            <h4 class="c-post__name">Användarnamn</h4>
-                            <p class="c-post__user-title">Titel</p>
-                        </div>
-                        <p class="c-post__date">23/04/24</p>
-                    </div>
-                    <h3 class="c-post__heading">Rubrik</h3>
-                    <p class="c-post__text">Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper blandit aliquam. Habitant porttitor pellentesque venenatis sed maecenas egestas ac.</p>
-                </section>
-                <section class="c-post__info">
-                    <div class="c-post__info-row">
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                    </div>
-                    <div class="c-post__info-row">
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                    </div>
-                </section>
+            <div>
+              <!-- TO-DO: span or p -->
+              <p>Uppdaterad</p>
+              <p>Tid</p>
             </div>
-        </article>
-
-        <article class="c-post c-post--comment">
-            <div class="c-post__container">
-                <section class="c-post__content">
-                    <div class="c-post__top-content">
-                        <img src="#" alt="" class="c-post__profile-img">
-                        <div>
-                            <h4 class="c-post__name">Användarnamn</h4>
-                            <p class="c-post__user-title">Titel</p>
-                        </div>
-                        <p class="c-post__date">23/04/24</p>
-                    </div>
-                    <h3 class="c-post__heading">Rubrik</h3>
-                    <p class="c-post__text">Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper blandit aliquam. Habitant porttitor pellentesque venenatis sed maecenas egestas ac.</p>
-                </section>
-                <section class="c-post__info">
-                    <div class="c-post__info-row">
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                        <span class="c-badge">Badge</span>
-                    </div>
-                    <div class="c-post__info-row">
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                        <div class="c-interactions">
-                            <!-- TO-DO: icon -->
-                            <span>00</span>
-                        </div>
-                    </div>
-                </section>
+          </div>
+          <div>
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+              blandit aliquam. Habitant porttitor pellentesque venenatis sed
+              maecenas egestas ac.
+            </p>
+          </div>
+        </div>
+        <div></div>
+      </section>
+      <section class="c-cover c-post__cover">
+        <img src="#" alt="" class="c-cover__profile-img" />
+      </section>
+      <div class="c-post__container">
+        <section class="c-post__content">
+          <div class="c-post__top-content">
+            <h4 class="c-post__name">Användarnamn</h4>
+            <p class="c-post__date">23/04/24</p>
+          </div>
+          <h3 class="c-post__heading">Rubrik</h3>
+          <p class="c-post__text">
+            Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+            blandit aliquam. Habitant porttitor pellentesque venenatis sed
+            maecenas egestas ac.
+          </p>
+        </section>
+        <section class="c-post__info">
+          <div class="c-post__info-row">
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+          </div>
+          <div class="c-post__info-row">
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
             </div>
-        </article>
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
 
-        <footer class="c-footer"></footer>
+    <article class="c-post c-post--full">
+      <section class="c-cover"></section>
+      <div class="c-post__container">
+        <section class="c-post__content">
+          <div class="c-post__top-content">
+            <img src="#" alt="" class="c-post__profile-img" />
+            <div>
+              <h4 class="c-post__name">Användarnamn</h4>
+              <p class="c-post__user-title">Titel</p>
+            </div>
+            <p class="c-post__date">23/04/24</p>
+          </div>
+          <h3 class="c-post__heading">Rubrik</h3>
+          <p class="c-post__text">
+            Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+            blandit aliquam. Habitant porttitor pellentesque venenatis sed
+            maecenas egestas ac.
+          </p>
+        </section>
+        <section class="c-post__info">
+          <div class="c-post__info-row">
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+          </div>
+          <div class="c-post__info-row">
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
+            </div>
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
 
-        <script src="js/script.js" type="text/javascript"></script>
-    </body>
+    <article class="c-post c-post--comment">
+      <div class="c-post__container">
+        <section class="c-post__content">
+          <div class="c-post__top-content">
+            <img src="#" alt="" class="c-post__profile-img" />
+            <div>
+              <h4 class="c-post__name">Användarnamn</h4>
+              <p class="c-post__user-title">Titel</p>
+            </div>
+            <p class="c-post__date">23/04/24</p>
+          </div>
+          <h3 class="c-post__heading">Rubrik</h3>
+          <p class="c-post__text">
+            Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+            blandit aliquam. Habitant porttitor pellentesque venenatis sed
+            maecenas egestas ac.
+          </p>
+        </section>
+        <section class="c-post__info">
+          <div class="c-post__info-row">
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+            <span class="c-badge">Badge</span>
+          </div>
+          <div class="c-post__info-row">
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
+            </div>
+            <div class="c-interactions">
+              <!-- TO-DO: icon -->
+              <span>00</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
 
+    <footer class="c-footer"></footer>
+
+    <script src="assets/js/script.js" type="text/javascript"></script>
+  </body>
 </html>

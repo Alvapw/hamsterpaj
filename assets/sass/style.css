@@ -328,6 +328,26 @@ body {
   border-radius: 0.75rem;
 }
 
+.c-nav .c-nav__list {
+  display: none;
+}
+.c-nav .c-nav__list.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100svh;
+  background-color: white;
+}
+@media (min-width: 744px) {
+  .c-nav .c-nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/
 .flex-container {
   max-width: 1200px;
