@@ -1,0 +1,16 @@
+.c-interactions {
+  // TO-DO: color variabel current-color
+  // TO-DO: font-size typskala variabel
+  // TO-DO: variabler
+
+  display: flex;
+  gap: var(--interactions-gap);
+  align-items: center;
+
+  padding: var(--interactions-padding);
+
+  font-size: 0.75rem;
+
+  --interactions-gap: 0.25rem;
+  --interactions-padding: 0.25rem;
+}

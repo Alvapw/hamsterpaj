@@ -1,1 +1,74 @@
-//Style för footer
+.c-header {
+  width: 100%;
+  // TO-DO: bg-color + variabler
+  .c-header__nav {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .c-header__logo {
+    }
+
+    .c-header__menu-icon {
+      .c-header__menu-icon-line {
+        // TO-DO: variabler!
+        background-color: black;
+        width: 1.5rem;
+        height: 0.125rem;
+        display: block;
+        margin: 0.25rem 0;
+        transition: 0.2s;
+      }
+
+      &.exit {
+        .c-header__menu-icon-line {
+          &:first-child {
+            transform: rotate(45deg) translate(5px, 0px);
+          }
+
+          &:nth-child(2) {
+            display: none;
+          }
+
+          &:last-child {
+            transform: rotate(-45deg) translate(5px, 0px);
+          }
+        }
+      }
+
+      // TO-DO: ändra rätt break-point variabel
+      @media (min-width: 744px) {
+        display: none;
+      }
+    }
+
+    .c-header__menu-list {
+      display: none;
+
+      &.active {
+        // TO-DO: fixa
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100svh;
+        background-color: white;
+      }
+
+      // TO-DO: variabler fungerar ej här
+      @media (min-width: 744px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .c-header__menu-item {
+        .c-header__menu-link {
+        }
+      }
+    }
+  }
+}

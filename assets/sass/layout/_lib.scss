@@ -1,0 +1,43 @@
+.c-lib {
+  // TO-DO: fix this
+  flex: 0 0 60%;
+  .c-lib__trending {
+  }
+
+  .c-lib__search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    column-gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .c-lib__search {
+      flex: 0 0 100%;
+    }
+
+    .c-lib__dropdown {
+    }
+  }
+
+  .c-lib__feed {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+
+    .c-lib__article {
+      flex: 0 0 100%;
+
+      // TO-DO: rätt break-points
+      @media (min-width: 744px) {
+        flex: 0 0 calc(50% - 0.75rem);
+      }
+
+      @media (min-width: 1280px) {
+        // TO-DO: fixa calc
+        flex: 0 0 calc(33% - 0.75rem);
+      }
+    }
+  }
+}

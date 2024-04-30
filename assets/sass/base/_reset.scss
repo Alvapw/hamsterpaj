@@ -1,10 +1,10 @@
 //Nollställer CSS
 *,
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -13,12 +13,14 @@ html {
 */
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  // TO-DO: bg-color
+  background-color: #0d1833;
 }
 
 img,
@@ -26,15 +28,15 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 p,
@@ -44,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -133,10 +135,10 @@ time,
 mark,
 audio,
 video {
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -151,20 +153,20 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 
 //https://www.matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics
@@ -172,11 +174,11 @@ q:after {
 
 ul,
 ol {
-    list-style-type: "";
+  list-style-type: "";
 }
 
 a {
-    text-decoration: none;
-    // TO-DO: fixa text-color på a links
-    color: black;
+  text-decoration: none;
+  // TO-DO: fixa text-color på a links
+  color: black;
 }

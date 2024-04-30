@@ -1,24 +1,130 @@
-// Här kan ni använda CSS och SCSS variables 
+// Här kan ni använda CSS och SCSS variables
 :root {
-    /* Variable for gap */
-    --flex-gap: 1rem;
-    /* Number of flex items*/
-    --flex-items: 1;
+  // colors
+  // core colors
+  --blueberry-300: #8994a7;
+  --blueberry-400: #4c5467;
+  --blueberry-500: #29334e;
+  --blueberry-600: #0d1833;
+  --blueberry-700: #202a43;
+  --blueberry-900: #091124;
 
+  --grey-50: #efefef;
+  --grey-100: #e7e7e7;
+  --grey-200: #cfcfcf;
+  --grey-300: #b6b6b6;
+  --grey-400: #9e9e9e;
+  --grey-500: #868686;
+  --grey-600: #6e6e6e;
+  --grey-700: #565656;
+  --grey-800: #3d3d3d;
+  --grey-900: #1f1f1f;
+  --grey-950: #0d0d0d;
 
-    // colors
+  --lemon-100: #fff3c6;
+  --lemon-200: #ffe587;
+  --lemon-300: #ffd966;
+  --lemon-400: #ffbe1e;
+  --lemon-500: #f99c08;
 
-    // break-points
-    --break-point-sm: 640px;
-    --break-point-md: 768px;
-    --break-point-lg: 1024px;
-    --break-point-xl: 1280px;
-    --break-point-2xl: 1536px;
+  --grape-700: #8f476c;
+  --grape-800: #773d5b;
+  --grape-900: #65364e;
+  --grape-950: #51263c;
 
-    // spacing?
-    // blir kanske lite onödigt att sätta upp en tailwind spacing scale. med tanke på parse osv. då kan jag lika gärna sätta upp tailwind config.
+  --raspberry-300: #f1b0b8;
+  --raspberry-400: #e98391;
+  --raspberry-500: #dc576d;
+  --color-raspberry-600: #c83756;
+  --raspberry-700: #a72947;
 
-    // border-radius?
+  --pumpkin-200: #ffcda8;
+  --pumpkin-300: #ffa970;
+  --pumpkin-400: #ff7029;
+  --pumpkin-500: #fe5610;
+  --pumpkin-600: #ef3c08;
 
-    // border?
+  --vanilla-100: #f8efdd;
+  --vanilla-200: #eddbbb;
+  --vanilla-300: #e5c99d;
+  --vanilla-400: #d5a263;
+  --vanilla-500: #cb8944;
+
+  // alias colors
+  --color-bg: var(--blueberry-600);
+  --color-bg-card: var(--blueberry-500);
+  --color-bg-accent: var(--blueberry-400);
+
+  --color-border-stroke: var(--grey-400);
+
+  --color-btn: var(--pumpkin-400);
+  --color-btn-disabled: var(--pumpkin-200);
+  --color-btn-secondary: var(--blueberry-400);
+  --color-btn-secondary-disabled: var(--blueberry-200);
+
+  --color-interactions-stars: var(--lemon-300);
+
+  --color-neon: var(--grape-950);
+  --color-neon-accent-first: var(--raspberry-500);
+  --color-neon-accent-second: var(--lemon-300);
+
+  --color-text: var(--grey-50);
+  --color-text-subdued: var(--grey-200);
+  --color-text-pale: var(--grey-300);
+  --color-text-onwhite: var(--grey-900);
+  --color-text-onwhite-subdued: var(--grey-800);
+  --color-text-onwhite-pale: var(--grey-700);
+
+  --color-badge-accent-first: var(--vanilla-300);
+  --color-badge-accent-second: var(--raspberry-400);
+  --color-badge-accent-third: var(--grape-700);
+
+  // break-points
+  --screen-2xs: 320px; // small mobile
+  --screen-xs: 390px; // regular mobile
+  --screen-sm: 430px; // large mobile
+  --screen-md: 744px; // small ipad portrait
+  --screen-lg: 1133px; // small ipad landscape
+  --screen-xl: 1280px; // small desktop
+  --screen-2xl: 1440px; // normal desktop
+  --screen-3xl: 1920px; // tv
+
+  // spacing
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-9: 2.25rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-36: 9rem;
+  --space-40: 10rem;
+  --space-44: 11rem;
+  --space-48: 12rem;
+  --space-52: 13rem;
+  --space-56: 14rem;
+  --space-60: 15rem;
+  --space-64: 16rem;
+  --space-72: 18rem;
+  --space-80: 20rem;
+  --space-96: 24rem;
+
+  // border-radius
+  --border-radius-none: 0px;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.625rem;
+  --border-radius-lg: 1.25rem;
+  --border-radius-full: 9999rem;
+
+  // border
 }
