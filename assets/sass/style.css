@@ -387,24 +387,24 @@ body {
   flex: 0 0 100%;
 }
 .c-lib .c-lib__feed {
+  --flex-gap: 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 1rem;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+  gap: var(--flex-gap);
 }
 .c-lib .c-lib__feed .c-lib__article {
   flex: 0 0 100%;
 }
 @media (min-width: 744px) {
   .c-lib .c-lib__feed .c-lib__article {
-    flex: 0 0 calc(50% - 0.75rem);
+    --flex-items: 2;
+    flex: 0 0 calc(100% / var(--flex-items) - (var(--flex-items) - 1) / var(--flex-items) * var(--flex-gap));
   }
 }
 @media (min-width: 1280px) {
   .c-lib .c-lib__feed .c-lib__article {
-    flex: 0 0 calc(33% - 0.75rem);
+    --flex-items: 3;
   }
 }
 
