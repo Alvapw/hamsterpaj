@@ -48,6 +48,14 @@ function createArticleTeaser(thread) {
 
   const comments = article.querySelector("[data-replace-comments]");
   comments.textContent = thread.comments;
+  const tagsContainer = article.querySelector(".c-article__border-box");
+  thread.tags.forEach((tag) => {
+    console.log(tag);
+    const spanTag = document.createElement("span");
+    spanTag.classList.add("c-badge");
+    spanTag.textContent = tag;
+    tagsContainer.append(spanTag);
+  });
 
   //   link.setAttribute("href", recept.html);
   //   header.textContent = recept.name;
