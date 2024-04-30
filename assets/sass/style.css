@@ -1,9 +1,46 @@
 @charset "UTF-8";
 :root {
-  /* Variable for gap */
-  --flex-gap: 1rem;
-  /* Number of flex items*/
-  --flex-items: 1;
+  --color-blueberry-300: #8994a7;
+  --color-blueberry-400: #4c5467;
+  --color-blueberry-500: #29334e;
+  --color-blueberry-600: #0d1833;
+  --color-blueberry-700: #202a43;
+  --color-blueberry-900: #091124;
+  --color-grey-50: #efefef;
+  --color-grey-100: #e7e7e7;
+  --color-grey-200: #cfcfcf;
+  --color-grey-300: #b6b6b6;
+  --color-grey-400: #9e9e9e;
+  --color-grey-500: #868686;
+  --color-grey-600: #6e6e6e;
+  --color-grey-700: #565656;
+  --color-grey-800: #3d3d3d;
+  --color-grey-900: #1f1f1f;
+  --color-grey-950: #0d0d0d;
+  --color-lemon-100: #fff3c6;
+  --color-lemon-200: #ffe587;
+  --color-lemon-300: #ffd966;
+  --color-lemon-400: #ffbe1e;
+  --color-lemon-500: #f99c08;
+  --color-grape-700: #8f476c;
+  --color-grape-800: #773d5b;
+  --color-grape-900: #65364e;
+  --color-grape-950: #51263c;
+  --color-raspberry-300: #f1b0b8;
+  --color-raspberry-400: #e98391;
+  --color-raspberry-500: #dc576d;
+  --color-raspberry-600: #c83756;
+  --color-raspberry-700: #a72947;
+  --color-pumpkin-200: #ffcda8;
+  --color-pumpkin-300: #ffa970;
+  --color-pumpkin-400: #ff7029;
+  --color-pumpkin-500: #fe5610;
+  --color-pumpkin-600: #ef3c08;
+  --color-vanilla-100: #f8efdd;
+  --color-vanilla-200: #eddbbb;
+  --color-vanilla-300: #e5c99d;
+  --color-vanilla-400: #d5a263;
+  --color-vanilla-500: #cb8944;
   --screen-2xs: 320px;
   --screen-xs: 390px;
   --screen-sm: 430px;
@@ -12,6 +49,39 @@
   --screen-xl: 1280px;
   --screen-2xl: 1440px;
   --screen-3xl: 1920px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-9: 2.25rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-36: 9rem;
+  --space-40: 10rem;
+  --space-44: 11rem;
+  --space-48: 12rem;
+  --space-52: 13rem;
+  --space-56: 14rem;
+  --space-60: 15rem;
+  --space-64: 16rem;
+  --space-72: 18rem;
+  --space-80: 20rem;
+  --space-96: 24rem;
+  --border-radius-none: 0px;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.625rem;
+  --border-radius-lg: 1.25rem;
+  --border-radius-full: 9999rem;
 }
 
 *,
@@ -34,6 +104,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: #0d1833;
 }
 
 img,
@@ -195,7 +266,127 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.c-header {
+  width: 100%;
+}
+.c-header .c-header__nav {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.c-header .c-header__nav .c-header__menu-icon .c-header__menu-icon-line {
+  background-color: black;
+  width: 1.5rem;
+  height: 0.125rem;
+  display: block;
+  margin: 0.25rem 0;
+  transition: 0.2s;
+}
+.c-header .c-header__nav .c-header__menu-icon.exit .c-header__menu-icon-line:first-child {
+  transform: rotate(45deg) translate(5px, 0px);
+}
+.c-header .c-header__nav .c-header__menu-icon.exit .c-header__menu-icon-line:nth-child(2) {
+  display: none;
+}
+.c-header .c-header__nav .c-header__menu-icon.exit .c-header__menu-icon-line:last-child {
+  transform: rotate(-45deg) translate(5px, 0px);
+}
+@media (min-width: 744px) {
+  .c-header .c-header__nav .c-header__menu-icon {
+    display: none;
+  }
+}
+.c-header .c-header__nav .c-header__menu-list {
+  display: none;
+}
+.c-header .c-header__nav .c-header__menu-list.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100svh;
+  background-color: white;
+}
+@media (min-width: 744px) {
+  .c-header .c-header__nav .c-header__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 /* The layout/ folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms.*/
+.c-hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+.c-hero .c-hero__info-box .c-hero__heading {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.c-hero .c-hero__info-box .c-hero__text {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.c-hero .c-hero__info-box .c-hero__actions {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.c-page-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+
+.c-aside {
+  flex: 0 0 30%;
+}
+
+.c-lib {
+  flex: 0 0 60%;
+}
+.c-lib .c-lib__search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.c-lib .c-lib__search-filter .c-lib__search {
+  flex: 0 0 100%;
+}
+.c-lib .c-lib__feed {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.c-lib .c-lib__feed .c-lib__article {
+  flex: 0 0 100%;
+}
+@media (min-width: 744px) {
+  .c-lib .c-lib__feed .c-lib__article {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+@media (min-width: 1280px) {
+  .c-lib .c-lib__feed .c-lib__article {
+    flex: 0 0 calc(33% - 0.75rem);
+  }
+}
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -208,27 +399,21 @@ body {
   white-space: nowrap;
 }
 
-.c-menu-icon .c-menu-icon__line {
-  background-color: black;
+.c-icon.c-icon--xs {
+  width: 1rem;
+  height: 1rem;
+}
+.c-icon.c-icon--sm {
   width: 1.5rem;
-  height: 0.125rem;
-  display: block;
-  margin: 0.25rem 0;
-  transition: 0.2s;
+  height: 1.5rem;
 }
-.c-menu-icon.exit .c-menu-icon__line:first-child {
-  transform: rotate(45deg) translate(5px, 0px);
+.c-icon.c-icon--md {
+  width: 2rem;
+  height: 2rem;
 }
-.c-menu-icon.exit .c-menu-icon__line:nth-child(2) {
-  display: none;
-}
-.c-menu-icon.exit .c-menu-icon__line:last-child {
-  transform: rotate(-45deg) translate(5px, 0px);
-}
-@media (min-width: 744px) {
-  .c-menu-icon {
-    display: none;
-  }
+.c-icon.c-icon--lg {
+  width: 3rem;
+  height: 3rem;
 }
 
 .c-badge {
@@ -251,8 +436,10 @@ body {
   display: flex;
   gap: var(--interactions-gap);
   align-items: center;
+  padding: var(--interactions-padding);
   font-size: 0.75rem;
-  --interactions-gap: .25rem;
+  --interactions-gap: 0.25rem;
+  --interactions-padding: 0.25rem;
 }
 
 .c-cover {
@@ -271,81 +458,119 @@ body {
   bottom: -0.75rem;
 }
 
-.c-post .c-post__cover {
-  margin-bottom: 1rem;
+.c-article {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-color: var(--article-bg-color);
+  color: var(--article-text-color);
+  --article-bg-color: #29334e;
+  --article-text-color: #efefef;
 }
-.c-post .c-post__container {
-  padding: var(--post-y-padding) var(--post-x-padding);
-  --post-y-padding: .25rem;
-  --post-x-padding: .5rem;
+.c-article .c-article__cover-img {
+  background-color: grey;
 }
-.c-post .c-post__container .c-post__content {
-  margin-bottom: 1rem;
+.c-article .c-article__cover-img.c-article__cover-img--lying {
+  height: 105px;
 }
-.c-post .c-post__container .c-post__content .c-post__top-content {
-  margin-bottom: 0.5rem;
+.c-article .c-article__cover-img.c-article__cover-img--square {
+  height: 343px;
+}
+.c-article .c-article__content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--article-content-gap);
+  padding: var(--article-content-padding);
+  --article-content-gap: 1rem;
+  --article-content-padding: 0.5rem;
 }
-.c-post .c-post__container .c-post__content .c-post__top-content .c-post__profile-img {
-  margin-right: 0.5rem;
-  border-radius: 9999px;
-  width: 38px;
-  height: 38px;
-  background-color: black;
+.c-article .c-article__content .c-article__main-content .c-article__meta-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
-.c-post .c-post__container .c-post__content .c-post__top-content .c-post__name {
+.c-article .c-article__content .c-article__main-content .c-article__meta-info .c-article__meta-box .c-article__meta-text {
+  font-size: 0.75rem;
+}
+.c-article .c-article__content .c-article__main-content .c-article__meta-info .c-article__meta-box .c-article__meta-text:first-child {
   margin-bottom: 0.25rem;
-  font-size: 0.875rem;
 }
-.c-post .c-post__container .c-post__content .c-post__top-content .c-post__user-title {
-  font-size: 0.75rem;
+.c-article .c-article__content .c-article__main-content .c-article__meta-info .c-article__meta-box.c-article__meta-box--right-align {
+  text-align: right;
 }
-.c-post .c-post__container .c-post__content .c-post__top-content .c-post__date {
-  font-size: 0.75rem;
-  margin-left: auto;
-}
-.c-post .c-post__container .c-post__content .c-post__heading {
+.c-article .c-article__content .c-article__main-content .c-article__text-content .c-article__heading {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
-.c-post .c-post__container .c-post__content .c-post__text {
+.c-article .c-article__content .c-article__main-content .c-article__text-content .c-article__text {
   font-size: 0.875rem;
 }
-.c-post .c-post__container .c-post__info .c-post__info-row {
+.c-article .c-article__content .c-article__user-info {
+  display: flex;
+  align-items: center;
+}
+.c-article .c-article__content .c-article__user-info .c-article__profile-img {
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+  border-radius: var(--border-radius-full);
+  margin-right: 0.5rem;
+}
+.c-article .c-article__content .c-article__user-info .c-article__user-name {
+  font-size: 0.875rem;
+}
+.c-article .c-article__content .c-article__post-info .c-article__border-box {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-top: 0.5px solid #efefef;
   padding-top: 0.5rem;
-  border-top: 1px solid black;
 }
-.c-post .c-post__container .c-post__info .c-post__info-row:first-child {
+.c-article .c-article__content .c-article__post-info .c-article__border-box:first-child {
   margin-bottom: 0.5rem;
 }
-.c-post.c-post--comment {
-  background-color: grey;
-  border-radius: 0.75rem;
-}
 
-.c-nav .c-nav__list {
-  display: none;
-}
-.c-nav .c-nav__list.active {
+.c-search {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100svh;
-  background-color: white;
 }
-@media (min-width: 744px) {
-  .c-nav .c-nav__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.c-search .c-search__bar {
+  outline: none;
+  padding: var(--search-bar-padding);
+  background-color: var(--search-bar-bg-color);
+  border: 2px solid var(--search-bar-border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  color: var(--search-bar-text-color);
+  flex: 1;
+  margin-right: var(--space-2);
+  --search-bar-bg-color: #0d1833;
+  --search-bar-padding: var(--space-2);
+  --search-bar-text-color: #efefef;
+  --search-bar-border-color: #868686;
+}
+.c-search .c-search__bar::-moz-placeholder {
+  font-size: 1rem;
+  --search-bar-text-color: #545c6f;
+}
+.c-search .c-search__bar::placeholder {
+  font-size: 1rem;
+  --search-bar-text-color: #545c6f;
+}
+.c-search .c-search__bar:focus {
+  --search-bar-border-color: #cfcfcf;
+}
+.c-dropdown {
+  background-color: var(--dropdown-bg-color);
+  color: var(--dropdown-text-color);
+  border: 2px solid var(--dropdown-border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--dropdown-y-padding) var(--dropdown-x-padding);
+  --dropdown-bg-color: #0d1833;
+  --dropdown-text-color: #efefef;
+  --dropdown-border-color: #efefef;
+  --dropdown-y-padding: 0.25rem;
+  --dropdown-x-padding: 0.5rem;
 }
 
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/

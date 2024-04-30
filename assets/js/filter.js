@@ -15,7 +15,7 @@ searchInput.addEventListener("input", (e) => {
   filters.search = valueInput;
   render();
 });
-fetch("assets/json/data.json")
+fetch("assets/json/forumData.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((recept) => {

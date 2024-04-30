@@ -8,38 +8,228 @@
   </head>
 
   <body>
-    <!-- container -->
-    <div class="c-container">
-      <!-- header -->
-      <header class="c-header"></header>
-      <!-- självaste innehållet -->
-      <section>
-        <!-- aside med sök + länkar -->
-        <aside class="c-aside"></aside>
-        <main class="c-main">
-          <section class="c-hero-banner">
-            <div class="c-hero-banner__info">
-              <h2 class="c-hero-banner__heading">Hamsterpajs Forum</h2>
-              <p class="c-hero-banner__intro">
-                Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
-                blandit aliquam.
-              </p>
-              <div class="c-hero-banner__actions">
-                <!-- buttons -->
+    <header class="c-header">
+      <nav class="c-header__nav">
+        <div class="c-header__logo c-logo">
+          <!-- TO-DO: img -->
+        </div>
+        <div class="c-header__menu-icon">
+          <span class="c-header__menu-icon-line"></span>
+          <span class="c-header__menu-icon-line"></span>
+          <span class="c-header__menu-icon-line"></span>
+        </div>
+        <ul class="c-header__menu-list">
+          <li class="c-header__menu-item">
+            <a href="#" class="c-header__menu-link">Hamsterpaj</a>
+          </li>
+          <li class="c-header__menu-item">
+            <a href="#" class="c-header__menu-link">Onlinespel</a>
+          </li>
+          <li class="c-header__menu-item">
+            <a href="#" class="c-header__menu-link">Forum</a>
+          </li>
+          <li class="c-header__menu-item">
+            <a href="#" class="c-header__menu-link">Snackis</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="c-hero">
+      <div class="c-hero__info-box">
+        <h1 class="c-hero__heading">Hamsterpajs forum</h1>
+        <p class="c-hero__text">
+          Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+          blandit aliquam.
+        </p>
+        <div class="c-hero__actions">
+          <button class="c-button">
+            <span>Slumpa</span>
+          </button>
+          <button class="c-button">
+            <span>Regler</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-page-container">
+      <aside class="c-aside">
+        <section class="c-aside__nav c-caty-nav">
+          <ul class="c-caty-nav__list">
+            <li class="c-caty-nav__item">
+              <a href="#" class="c-caty-nav__link">Kategori</a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="c-lib">
+        <section class="c-lib__trending"></section>
+
+        <section class="c-lib__search-filter">
+          <form
+            id="search"
+            role="search"
+            autocomplete="off"
+            class="c-lib__search c-search"
+          >
+            <label for="forum-search">
+              <span class="visually-hidden">Sök forum</span>
+            </label>
+            <input
+              type="search"
+              id="forum-search"
+              placeholder="Sök"
+              class="c-search__bar"
+              data-search
+            />
+            <button class="c-button c-search__button">
+              <svg class="c-icon c-icon--sm">
+                <use href="#magnifyingGlass"></use>
+              </svg>
+              <span class="visually-hidden">Klicka för att söka</span>
+            </button>
+          </form>
+
+          <form id="sort" class="c-lib__dropdown">
+            <label for="forum-sort">
+              <span class="visually-hidden">Sortera forum</span>
+            </label>
+            <select name="sort" id="forum-sort" class="c-dropdown">
+              <option value="Option1" class="c-dropdown__option">
+                Option 1
+              </option>
+              <option value="Option2" class="c-dropdown__option">
+                Option 2
+              </option>
+              <option value="Option3" class="c-dropdown__option">
+                Option 3
+              </option>
+            </select>
+          </form>
+
+          <form id="filter" class="c-lib__dropdown">
+            <label for="forum-filter">
+              <span class="visually-hidden">Filtrera forum</span>
+            </label>
+            <select name="filter" id="forum-filter" class="c-dropdown">
+              <option value="Option1" class="c-dropdown__option">
+                Option 1
+              </option>
+              <option value="Option2" class="c-dropdown__option">
+                Option 2
+              </option>
+              <option value="Option3" class="c-dropdown__option">
+                Option 3
+              </option>
+            </select>
+          </form>
+
+          <form id="view" class="c-lib__dropdown">
+            <label for="forum-view">
+              <span class="visually-hidden">Ändra flödesvy</span>
+            </label>
+            <select name="view" id="forum-view" class="c-dropdown">
+              <option value="Option1" class="c-dropdown__option">
+                Option 1
+              </option>
+              <option value="Option2" class="c-dropdown__option">
+                Option 2
+              </option>
+            </select>
+          </form>
+        </section>
+
+        <section class="c-lib__feed" data-forum-feed></section>
+      </main>
+    </section>
+
+    <!-- TEMPLATES -->
+    <template data-article-teaser-template>
+      <article class="c-article c-article--teaser c-lib__article">
+        <section
+          class="c-article__cover-img c-article__cover-img--lying"
+        ></section>
+        <section class="c-article__content">
+          <div class="c-article__main-content">
+            <div class="c-article__meta-info">
+              <div class="c-article__meta-box">
+                <!-- TO-DO: span or p -->
+                <p class="c-article__meta-text">Startad</p>
+                <p class="c-article__meta-text" data-replace-created-date>
+                  Tid
+                </p>
+              </div>
+              <div class="c-article__meta-box c-article__meta-box--right-align">
+                <!-- TO-DO: span or p -->
+                <p class="c-article__meta-text">Uppdaterad</p>
+                <p class="c-article__meta-text" data-replace-updated-date>
+                  Tid
+                </p>
               </div>
             </div>
-          </section>
-          <section class="c-carousel">
-            <!-- karusell/swiper med trending forum -->
-          </section>
-          <section class="c-forums">
-            <section></section>
-          </section>
-        </main>
-      </section>
-      <!-- footer -->
-      <footer class="c-footer"></footer>
-    </div>
-    <script src="assets/js/script.js" type="text/javascript"></script>
+            <div class="c-article__text-content">
+              <h3 class="c-article__heading" data-replace-heading>Heading</h3>
+              <p class="c-article__text" data-replace-text>
+                Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+                blandit aliquam. Habitant porttitor pellentesque venenatis sed
+                maecenas egestas ac.
+              </p>
+            </div>
+          </div>
+          <div class="c-article__user-info">
+            <img src="#" alt="" class="c-article__profile-img" />
+            <div>
+              <p class="c-article__user-name" data-replace-username>
+                Användarnamn
+              </p>
+            </div>
+          </div>
+          <div class="c-article__post-info">
+            <div class="c-article__border-box">
+              <span class="c-badge">Badge</span>
+              <span class="c-badge">Badge</span>
+              <span class="c-badge">Badge</span>
+            </div>
+            <div class="c-article__border-box">
+              <div class="c-interactions">
+                <svg class="c-icon c-icon--xs">
+                  <use href="#thumbsUp"></use>
+                </svg>
+                <span data-replace-likes>00</span>
+              </div>
+              <div class="c-interactions">
+                <svg class="c-icon c-icon--xs">
+                  <use href="#chat"></use>
+                </svg>
+                <span data-replace-comments>00</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </template>
+
+    <!-- ICON SPRITE -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="chat" viewBox="0 0 256 256">
+        <path
+          d="M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78l.09-.07L83,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,224h0ZM216,192H80a8,8,0,0,0-5.23,1.95L40,224V64H216Z"
+        ></path>
+      </symbol>
+      <symbol id="thumbsUp" viewBox="0 0 256 256">
+        <path
+          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
+        ></path>
+      </symbol>
+      <symbol id="magnifyingGlass" viewBox="0 0 256 256">
+        <path
+          d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+        ></path>
+      </symbol>
+    </svg>
+
+    <script src="assets/js/forum.js" type="text/javascript"></script>
   </body>
 </html>

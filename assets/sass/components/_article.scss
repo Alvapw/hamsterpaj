@@ -1,0 +1,120 @@
+.c-article {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-color: var(--article-bg-color);
+  color: var(--article-text-color);
+
+  --article-bg-color: #29334e;
+  --article-text-color: #efefef;
+
+  .c-article__cover-img {
+    // TO-DO: background-img
+    background-color: grey;
+
+    &.c-article__cover-img--lying {
+      // TO-DO: fix this
+      height: 105px;
+    }
+
+    &.c-article__cover-img--square {
+      height: 343px;
+    }
+  }
+
+  .c-article__content {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--article-content-gap);
+    padding: var(--article-content-padding);
+
+    --article-content-gap: 1rem;
+    --article-content-padding: 0.5rem;
+
+    .c-article__main-content {
+      .c-article__meta-info {
+        display: flex;
+        justify-content: space-between;
+
+        // TO-DO: variabel
+        margin-bottom: 0.5rem;
+
+        .c-article__meta-box {
+          .c-article__meta-text {
+            // TO-DO: font style
+            font-size: 0.75rem;
+
+            &:first-child {
+              // TO-DO: variabel
+              margin-bottom: 0.25rem;
+            }
+          }
+
+          &.c-article__meta-box--right-align {
+            text-align: right;
+          }
+        }
+      }
+
+      .c-article__text-content {
+        .c-article__heading {
+          // TO-DO: font style
+          font-size: 1rem;
+          font-weight: 600;
+
+          // TO-DO: variabel
+          margin-bottom: 0.25rem;
+        }
+
+        .c-article__text {
+          // TO-DO: font style
+          font-size: 0.875rem;
+          // TO-DO: cut text
+        }
+      }
+    }
+
+    .c-article__user-info {
+      display: flex;
+      align-items: center;
+
+      .c-article__profile-img {
+        // TO-DO: height + width
+        width: 30px;
+        height: 30px;
+        // TO-DO: bg-color
+        background-color: grey;
+        // TO-DO: variabel
+        border-radius: var(--border-radius-full);
+
+        // TO-DO: variabel
+        margin-right: 0.5rem;
+      }
+
+      .c-article__user-name {
+        // TO-DO: font style
+        font-size: 0.875rem;
+      }
+    }
+
+    .c-article__post-info {
+      .c-article__border-box {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        // TO-DO: variabel + color + opacity 0.6
+        border-top: 0.5px solid #efefef;
+        // TO-DO: variabel
+        padding-top: 0.5rem;
+
+        &:first-child {
+          // TO-DO: variabel
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// // TO-DO: --teaser --full --comment --game
+// // TO-DO: responsive
