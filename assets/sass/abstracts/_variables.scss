@@ -1,53 +1,83 @@
 // Här kan ni använda CSS och SCSS variables
 :root {
   // colors
-  --color-blueberry-300: #8994a7;
-  --color-blueberry-400: #4c5467;
-  --color-blueberry-500: #29334e;
-  --color-blueberry-600: #0d1833;
-  --color-blueberry-700: #202a43;
-  --color-blueberry-900: #091124;
+  // core colors
+  --blueberry-300: #8994a7;
+  --blueberry-400: #4c5467;
+  --blueberry-500: #29334e;
+  --blueberry-600: #0d1833;
+  --blueberry-700: #202a43;
+  --blueberry-900: #091124;
 
-  --color-grey-50: #efefef;
-  --color-grey-100: #e7e7e7;
-  --color-grey-200: #cfcfcf;
-  --color-grey-300: #b6b6b6;
-  --color-grey-400: #9e9e9e;
-  --color-grey-500: #868686;
-  --color-grey-600: #6e6e6e;
-  --color-grey-700: #565656;
-  --color-grey-800: #3d3d3d;
-  --color-grey-900: #1f1f1f;
-  --color-grey-950: #0d0d0d;
+  --grey-50: #efefef;
+  --grey-100: #e7e7e7;
+  --grey-200: #cfcfcf;
+  --grey-300: #b6b6b6;
+  --grey-400: #9e9e9e;
+  --grey-500: #868686;
+  --grey-600: #6e6e6e;
+  --grey-700: #565656;
+  --grey-800: #3d3d3d;
+  --grey-900: #1f1f1f;
+  --grey-950: #0d0d0d;
 
-  --color-lemon-100: #fff3c6;
-  --color-lemon-200: #ffe587;
-  --color-lemon-300: #ffd966;
-  --color-lemon-400: #ffbe1e;
-  --color-lemon-500: #f99c08;
+  --lemon-100: #fff3c6;
+  --lemon-200: #ffe587;
+  --lemon-300: #ffd966;
+  --lemon-400: #ffbe1e;
+  --lemon-500: #f99c08;
 
-  --color-grape-700: #8f476c;
-  --color-grape-800: #773d5b;
-  --color-grape-900: #65364e;
-  --color-grape-950: #51263c;
+  --grape-700: #8f476c;
+  --grape-800: #773d5b;
+  --grape-900: #65364e;
+  --grape-950: #51263c;
 
-  --color-raspberry-300: #f1b0b8;
-  --color-raspberry-400: #e98391;
-  --color-raspberry-500: #dc576d;
+  --raspberry-300: #f1b0b8;
+  --raspberry-400: #e98391;
+  --raspberry-500: #dc576d;
   --color-raspberry-600: #c83756;
-  --color-raspberry-700: #a72947;
+  --raspberry-700: #a72947;
 
-  --color-pumpkin-200: #ffcda8;
-  --color-pumpkin-300: #ffa970;
-  --color-pumpkin-400: #ff7029;
-  --color-pumpkin-500: #fe5610;
-  --color-pumpkin-600: #ef3c08;
+  --pumpkin-200: #ffcda8;
+  --pumpkin-300: #ffa970;
+  --pumpkin-400: #ff7029;
+  --pumpkin-500: #fe5610;
+  --pumpkin-600: #ef3c08;
 
-  --color-vanilla-100: #f8efdd;
-  --color-vanilla-200: #eddbbb;
-  --color-vanilla-300: #e5c99d;
-  --color-vanilla-400: #d5a263;
-  --color-vanilla-500: #cb8944;
+  --vanilla-100: #f8efdd;
+  --vanilla-200: #eddbbb;
+  --vanilla-300: #e5c99d;
+  --vanilla-400: #d5a263;
+  --vanilla-500: #cb8944;
+
+  // alias colors
+  --color-bg: var(--blueberry-600);
+  --color-bg-card: var(--blueberry-500);
+  --color-bg-accent: var(--blueberry-400);
+
+  --color-border-stroke: var(--grey-400);
+
+  --color-btn: var(--pumpkin-400);
+  --color-btn-disabled: var(--pumpkin-200);
+  --color-btn-secondary: var(--blueberry-400);
+  --color-btn-secondary-disabled: var(--blueberry-200);
+
+  --color-interactions-stars: var(--lemon-300);
+
+  --color-neon: var(--grape-950);
+  --color-neon-accent-first: var(--raspberry-500);
+  --color-neon-accent-second: var(--lemon-300);
+
+  --color-text: var(--grey-50);
+  --color-text-subdued: var(--grey-200);
+  --color-text-pale: var(--grey-300);
+  --color-text-onwhite: var(--grey-900);
+  --color-text-onwhite-subdued: var(--grey-800);
+  --color-text-onwhite-pale: var(--grey-700);
+
+  --color-badge-accent-first: var(--vanilla-300);
+  --color-badge-accent-second: var(--raspberry-400);
+  --color-badge-accent-third: var(--grape-700);
 
   // break-points
   --screen-2xs: 320px; // small mobile
