@@ -5,14 +5,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.c-article {
-  .c-article__main-content {
-    .c-article__text {
-      // Gör så att p-tagg har tre rader och ... efter
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-  }
+.c-post__text {
+  // Gör så att p-tagg har tre rader och ... efter
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

@@ -1,0 +1,101 @@
+.c-post {
+  background-color: var(--post-bg-color);
+  color: var(--post-text-color);
+
+  --post-bg-color: var(--color-bg-card);
+  --post-text-color: var(--color-text);
+
+  &--teaser {
+    // som teaser har komponenten rundande hörn
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+  }
+
+  &--horizontal {
+    // horizontel version som används till liggande teaser-kort
+    display: flex;
+  }
+
+  &__cover-img {
+    // TO-DO: ta bort färg sen
+    background-color: grey;
+
+    aspect-ratio: 1 / 1;
+    // TO-DO: width + height
+
+    &--lying {
+      // som stående teaser kort är cover-img liggande
+      // TO-DO: width + height
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  &__content {
+    padding: var(--post-content-padding);
+
+    // TO-DO: kolla spacing
+    --post-content-padding: var(--space-2);
+  }
+
+  // översta boxen i __content med meta info
+  &__meta-container {
+    display: flex;
+    justify-content: space-between;
+
+    // TO-DO: kolla spacing
+    margin-bottom: var(--space-2);
+
+    // annan text-färg
+    --post-text-color: var(--color-text-subdued);
+  }
+
+  // nästöversta boxen i __content med forumtexten
+  &__text-container {
+    // TO-DO: kolla spacing
+    margin-bottom: var(--space-4);
+  }
+
+  &__title {
+    margin-bottom: var(--space-1);
+  }
+
+  // nästundersta boxen i __content med user info
+  &__user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // annan text-färg
+    --post-text-color: var(--color-text-subdued);
+  }
+
+  &__user-img {
+    // TO-DO: width + height
+    width: 30px;
+    height: 30px;
+    // TO-DO: ta bort bg-color sen
+    background-color: grey;
+    border-radius: var(--border-radius-full);
+
+    // TO-DO: kolla spacing
+    margin-right: var(--space-2);
+  }
+
+  &__user-name {
+    // TO-DO: kolla spacing
+    margin-bottom: var(--space-1);
+    margin-right: auto;
+  }
+
+  &__post-info-container {
+    display: flex;
+    align-items: center;
+    // TO-DO: kolla spacing
+    gap: var(--space-2);
+
+    // TO-DO: kolla spacing
+    padding-top: var(--space-2);
+    // TO-DO: kolla border
+    border-top: 0.5px solid var(--color-text-subdued);
+  }
+}

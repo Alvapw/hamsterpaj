@@ -3,8 +3,8 @@ const filters = {
   tags: [],
   search: "",
 };
-const articleTeaserTemplate = document.querySelector(
-  "[data-article-teaser-template]"
+const postTeaserTemplate = document.querySelector(
+  "[data-post-teaser-template]"
 );
 const forumFeed = document.querySelector("[data-forum-feed]");
 const searchInput = document.querySelector("[data-search]");
@@ -25,30 +25,31 @@ fetch("assets/json/forumData.json")
     render();
   })
   .catch((error) => console.log(error));
-function createArticleTeaser(thread) {
-  const article = articleTeaserTemplate.content.cloneNode(true).children[0];
+function createPostTeaser(thread) {
+  const post = postTeaserTemplate.content.cloneNode(true).children[0];
 
-  const createdDate = article.querySelector("[data-replace-created-date]");
+  const createdDate = post.querySelector("[data-replace-created-date]");
   createdDate.textContent = thread.dateStarted;
 
-  const updatedDate = article.querySelector("[data-replace-updated-date]");
+  const updatedDate = post.querySelector("[data-replace-updated-date]");
   updatedDate.textContent = thread.dateUpdated;
 
-  const heading = article.querySelector("[data-replace-heading]");
-  heading.textContent = thread.title;
+  const title = post.querySelector("[data-replace-title]");
+  title.textContent = thread.title;
 
-  const text = article.querySelector("[data-replace-text]");
+  const text = post.querySelector("[data-replace-text]");
   text.textContent = thread.text;
 
-  const userName = article.querySelector("[data-replace-username]");
+  const userName = post.querySelector("[data-replace-username]");
   userName.textContent = thread.userName;
 
-  const likes = article.querySelector("[data-replace-likes]");
+  const likes = post.querySelector("[data-replace-likes]");
   likes.textContent = thread.likes;
 
-  const comments = article.querySelector("[data-replace-comments]");
+  const comments = post.querySelector("[data-replace-comments]");
   comments.textContent = thread.comments;
-  const tagsContainer = article.querySelector(".c-article__border-box");
+
+  const tagsContainer = post.querySelector("[data-replace-tags]");
   thread.tags.forEach((tag) => {
     console.log(tag);
     const spanTag = document.createElement("span");
@@ -59,15 +60,14 @@ function createArticleTeaser(thread) {
 
   //   link.setAttribute("href", recept.html);
   //   header.textContent = recept.name;
-  forumFeed.append(article);
+  forumFeed.append(post);
 }
 function render() {
-  console.log(filters.search);
   let filteredThreads = [...forumThreads];
   if (filters.search.length > 0) {
     const search = filters.search.toLowerCase();
     filteredThreads = filteredThreads.filter((r) =>
-      r.name.toLowerCase().includes(search)
+      r.title.toLowerCase().includes(search)
     );
   }
   if (filters.tags.length > 0) {
@@ -76,16 +76,25 @@ function render() {
     );
   }
   forumFeed.innerHTML = "";
-  filteredThreads.forEach((thread) => createArticleTeaser(thread));
+  filteredThreads.forEach((thread) => createPostTeaser(thread));
 }
-tags.forEach((chip) => {
-  chip.addEventListener("change", (e) => {
+console.log(tags);
+tags.forEach((tag) => {
+  console.log(tag);
+  tag.addEventListener("click", (e) => {
+    console.log(tag);
     const currentTag = e.target.dataset.caty;
     toggleItemArray(currentTag, filters.tags);
     render();
   });
 });
-
+// const select = document.querySelector("#forum-sort");
+// select.addEventListener("change", (e) => {
+//   // const currentTag = e.options;
+//   // console.log(this.value);
+//   // toggleItemArray(currentTag, filters.tags);
+//   // render();
+// });
 function toggleItemArray(item, array) {
   //Om det finns i arrray ta bort
   //om det inte finns lägg till

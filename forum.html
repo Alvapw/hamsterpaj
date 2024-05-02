@@ -97,14 +97,15 @@
               <span class="visually-hidden">Sortera forum</span>
             </label>
             <select name="sort" id="forum-sort" class="c-dropdown">
-              <option value="Option1" class="c-dropdown__option">
-                Option 1
+              <option value="-">--välj tag--</option>
+              <option value="spel" class="c-dropdown__option" data-tag="spel">
+                spel
               </option>
-              <option value="Option2" class="c-dropdown__option">
-                Option 2
+              <option value="humor" class="c-dropdown__option" data-tag="humor">
+                humor
               </option>
-              <option value="Option3" class="c-dropdown__option">
-                Option 3
+              <option value="anime" class="c-dropdown__option" data-tag="anime">
+                anime
               </option>
             </select>
           </form>
@@ -131,12 +132,12 @@
               <span class="visually-hidden">Ändra flödesvy</span>
             </label>
             <select name="view" id="forum-view" class="c-dropdown">
-              <option value="Option1" class="c-dropdown__option">
+              <!-- <option value="Option1" class="c-dropdown__option">
                 Option 1
               </option>
               <option value="Option2" class="c-dropdown__option">
                 Option 2
-              </option>
+              </option> -->
             </select>
           </form>
         </section>
@@ -146,68 +147,66 @@
     </section>
 
     <!-- TEMPLATES -->
-    <template data-article-teaser-template>
-      <article class="c-article c-article--teaser c-lib__article">
-        <section
-          class="c-article__cover-img c-article__cover-img--lying"
-        ></section>
-        <section class="c-article__content">
-          <div class="c-article__main-content">
-            <div class="c-article__meta-info">
-              <div class="c-article__meta-box">
-                <!-- TO-DO: span or p -->
-                <p class="c-article__meta-text">Startad</p>
-                <p class="c-article__meta-text" data-replace-created-date>
-                  Tid
-                </p>
+    <template data-post-teaser-template>
+      <article class="c-post c-post--teaser c-lib__post">
+        <a href="thread.html">
+          <!-- TO-DO: lägg till data-replace -->
+          <section class="c-post__cover-img c-post__cover-img--lying"></section>
+          <section class="c-post__content">
+            <section class="c-post__meta-container">
+              <div class="c-meta c-meta--col">
+                <!-- TO-DO: lägg till text-class -->
+                <p>Startad</p>
+                <!-- TO-DO: lägg till text-class -->
+                <p data-replace-created-date></p>
               </div>
-              <div class="c-article__meta-box c-article__meta-box--right-align">
-                <!-- TO-DO: span or p -->
-                <p class="c-article__meta-text">Uppdaterad</p>
-                <p class="c-article__meta-text" data-replace-updated-date>
-                  Tid
-                </p>
+              <div class="c-meta c-meta--col c-meta--right">
+                <!-- TO-DO: lägg till text-class -->
+                <p>Senast besvarad</p>
+                <!-- TO-DO: lägg till text-class -->
+                <p data-replace-updated-date></p>
               </div>
-            </div>
-            <div class="c-article__text-content">
-              <h3 class="c-article__heading" data-replace-heading>Heading</h3>
-              <p class="c-article__text" data-replace-text>
-                Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
-                blandit aliquam. Habitant porttitor pellentesque venenatis sed
-                maecenas egestas ac.
-              </p>
-            </div>
-          </div>
-          <div class="c-article__user-info">
-            <img src="#" alt="" class="c-article__profile-img" />
-            <div>
-              <p class="c-article__user-name" data-replace-username>
-                Användarnamn
-              </p>
-            </div>
-          </div>
-          <div class="c-article__post-info">
-            <div class="c-article__border-box">
-              <!-- <span class="c-badge">Badge</span>
-              <span class="c-badge">Badge</span>
-              <span class="c-badge">Badge</span> -->
-            </div>
-            <div class="c-article__border-box">
-              <div class="c-interactions">
+            </section>
+            <section class="c-post__text-container">
+              <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
+              <h3 class="c-post__title" data-replace-title></h3>
+              <!-- TO-DO: lägg till text-class -->
+              <p class="c-post__text" data-replace-text></p>
+            </section>
+            <section class="c-post__user-container">
+              <div class="c-meta c-meta--row">
+                <!-- TO-DO: lägg till data-replace -->
+                <div class="c-post__user-img"></div>
+                <div>
+                  <!-- TO-DO: lägg till text-class -->
+                  <p class="c-post__user-name" data-replace-username></p>
+                </div>
+              </div>
+              <div class="c-meta c-meta--row c-meta--p">
+                <svg class="c-icon c-icon--xs">
+                  <use href="#dotsThree"></use>
+                </svg>
+              </div>
+            </section>
+            <section class="c-post-info-container" data-replace-tags></section>
+            <section class="c-post-info-container">
+              <div class="c-meta c-meta--row c-meta--p">
                 <svg class="c-icon c-icon--xs">
                   <use href="#thumbsUp"></use>
                 </svg>
-                <span data-replace-likes>00</span>
+                <!-- TO-DO: lägg till text-class -->
+                <span data-replace-likes></span>
               </div>
-              <div class="c-interactions">
+              <div class="c-meta c-meta--row c-meta--p">
                 <svg class="c-icon c-icon--xs">
                   <use href="#chat"></use>
                 </svg>
-                <span data-replace-comments>00</span>
+                <!-- TO-DO: lägg till text-class -->
+                <span data-replace-comments></span>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+          </section>
+        </a>
       </article>
     </template>
 
@@ -226,6 +225,11 @@
       <symbol id="magnifyingGlass" viewBox="0 0 256 256">
         <path
           d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+        ></path>
+      </symbol>
+      <symbol id="dotsThree" viewBox="0 0 256 256">
+        <path
+          d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56-12a12,12,0,1,0,12,12A12,12,0,0,0,196,116ZM60,116a12,12,0,1,0,12,12A12,12,0,0,0,60,116Z"
         ></path>
       </symbol>
     </svg>

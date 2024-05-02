@@ -7,9 +7,9 @@
   --article-bg-color: #29334e;
   --article-text-color: #efefef;
 
-  .c-article__cover-img {
+  &__cover-img {
     // TO-DO: background-img
-    background-color: grey;
+    background-color: black;
 
     &.c-article__cover-img--lying {
       // TO-DO: fix this
@@ -21,7 +21,7 @@
     }
   }
 
-  .c-article__content {
+  &__content {
     display: flex;
     flex-direction: column;
 
@@ -94,6 +94,13 @@
       .c-article__user-name {
         // TO-DO: font style
         font-size: 0.875rem;
+      }
+
+      .c-article__user-meta {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
     }
 
