@@ -32,6 +32,65 @@
       </nav>
     </header>
 
+    <article class="c-post c-post--teaser c-lib__post">
+      <a href="thread.html">
+        <!-- TO-DO: lägg till data-replace -->
+        <section class="c-post__cover-img c-post__cover-img--lying"></section>
+        <section class="c-post__content">
+          <section class="c-post__meta-container">
+            <div class="c-meta c-meta--col">
+              <!-- TO-DO: lägg till text-class -->
+              <p>Startad</p>
+              <!-- TO-DO: lägg till text-class -->
+              <p data-replace-created-date></p>
+            </div>
+            <div class="c-meta c-meta--col c-meta--right">
+              <!-- TO-DO: lägg till text-class -->
+              <p>Senast besvarad</p>
+              <!-- TO-DO: lägg till text-class -->
+              <p data-replace-updated-date></p>
+            </div>
+          </section>
+        </section>
+        <section class="c-post__text-container">
+          <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
+          <h3 class="c-post__title" data-replace-title></h3>
+          <!-- TO-DO: lägg till text-class -->
+          <p data-replace-text></p>
+        </section>
+        <section class="c-post__user-container">
+          <!-- TO-DO: lägg till data-replace -->
+          <div class="c-post__user-img"></div>
+          <div>
+            <!-- TO-DO: lägg till text-class -->
+            <p class="c-post__user-name" data-replace-username></p>
+          </div>
+          <div class="c-meta c-meta--row">
+            <svg class="c-icon c-icon-xs">
+              <use href="#dotsThree"></use>
+            </svg>
+          </div>
+        </section>
+        <section class="c-post-info-container" data-replace-tags></section>
+        <section class="c-post-info-container">
+          <div class="c-meta c-meta--row">
+            <svg class="c-icon c-icon--xs">
+              <use href="#thumbsUp"></use>
+            </svg>
+            <!-- TO-DO: lägg till text-class -->
+            <span data-replace-likes></span>
+          </div>
+          <div class="c-meta c-meta--row">
+            <svg class="c-icon c-icon--xs">
+              <use href="#chat"></use>
+            </svg>
+            <!-- TO-DO: lägg till text-class -->
+            <span data-replace-comments></span>
+          </div>
+        </section>
+      </a>
+    </article>
+
     <template>
       <article class="c-article c-article--post">
         <section class="c-article__cover-img c-article__cover-img--square">
