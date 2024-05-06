@@ -1,0 +1,61 @@
+.c-thread-start {
+  background-color: var(--thread-start-bg-color);
+  color: var(--thread-start-text-color);
+  border-radius: var(--border-radius-sm);
+  position: relative;
+
+  --thread-start-bg-color: var(--color-bg-card);
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+
+    // TO-DO: rätt break-point
+    @media (max-width: 744px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__cover-img {
+    // TO-DO: ta bort bg color sen
+    background-color: grey;
+
+    // TO-DO: aspect ratio
+    aspect-ratio: 1 / 1;
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__text-content {
+    background-color: var(--thread-start-content-bg-color);
+
+    --thread-start-content-bg-color: var(--color-bg-accent-first);
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      flex: 0 0 50%;
+    }
+  }
+
+  //   TO-DO: rätt break-point
+  @media (min-width: 744px) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--thread-start-flex-gap-row);
+
+    padding: var(--space-2) var(--space-6) var(--space-6);
+
+    --thread-start-flex-gap-row: var(--space-6);
+  }
+}

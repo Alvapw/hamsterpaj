@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj - forum</title>
     <link rel="stylesheet" href="assets/sass/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
@@ -65,7 +66,73 @@
       </aside>
 
       <main class="c-lib">
-        <section class="c-lib__trending"></section>
+        <section class="c-lib__trending">
+          <article class="c-post c-post--to-flex c-lib__post">
+            <a href="thread.html">
+              <!-- TO-DO: lägg till data-replace -->
+              <section
+                class="c-post__cover-img c-post__cover-img--lying"
+              ></section>
+              <section class="c-post__content">
+                <section class="c-post__meta-container">
+                  <div class="c-meta c-meta--col">
+                    <!-- TO-DO: lägg till text-class -->
+                    <p>Startad</p>
+                    <!-- TO-DO: lägg till text-class -->
+                    <p data-replace-created-date></p>
+                  </div>
+                  <div class="c-meta c-meta--col c-meta--right">
+                    <!-- TO-DO: lägg till text-class -->
+                    <p>Senast besvarad</p>
+                    <!-- TO-DO: lägg till text-class -->
+                    <p data-replace-updated-date></p>
+                  </div>
+                </section>
+                <section class="c-post__text-container">
+                  <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
+                  <h3 class="c-post__title" data-replace-title></h3>
+                  <!-- TO-DO: lägg till text-class -->
+                  <p class="c-post__text" data-replace-text></p>
+                </section>
+                <section class="c-post__user-container">
+                  <div class="c-meta c-meta--row">
+                    <!-- TO-DO: lägg till data-replace -->
+                    <div class="c-post__user-img"></div>
+                    <div>
+                      <!-- TO-DO: lägg till text-class -->
+                      <p class="c-post__user-name" data-replace-username></p>
+                    </div>
+                  </div>
+                  <div class="c-meta c-meta--row c-meta--p">
+                    <svg class="c-icon c-icon--xs">
+                      <use href="#dotsThree"></use>
+                    </svg>
+                  </div>
+                </section>
+                <section
+                  class="c-post-info-container"
+                  data-replace-tags
+                ></section>
+                <section class="c-post-info-container">
+                  <div class="c-meta c-meta--row c-meta--p">
+                    <svg class="c-icon c-icon--xs">
+                      <use href="#thumbsUp"></use>
+                    </svg>
+                    <!-- TO-DO: lägg till text-class -->
+                    <span data-replace-likes></span>
+                  </div>
+                  <div class="c-meta c-meta--row c-meta--p">
+                    <svg class="c-icon c-icon--xs">
+                      <use href="#chat"></use>
+                    </svg>
+                    <!-- TO-DO: lägg till text-class -->
+                    <span data-replace-comments></span>
+                  </div>
+                </section>
+              </section>
+            </a>
+          </article>
+        </section>
 
         <section class="c-lib__search-filter">
           <form
@@ -91,60 +158,130 @@
               <span class="visually-hidden">Klicka för att söka</span>
             </button>
           </form>
+          
+          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-sort>
+            <div class="c-dropdown__select" data-dropdown-select>
+              <span class="c-dropdown__selected" data-dropdown-selected
+                >Senaste</span
+              >
+              <i
+                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                data-dropdown-caret
+              ></i>
+            </div>
+            <ul class="c-dropdown__list" data-dropdown-list>
+              <li class="c-dropdown__option active" data-dropdown-option>
+                Senaste
+              </li>
+              <li class="c-dropdown__option" data-dropdown-option>Populära</li>
+              <li class="c-dropdown__option" data-dropdown-option>
+                Rekommenderas för dig
+              </li>
+            </ul>
+          </section>
 
-          <form id="sort" class="c-lib__dropdown">
-            <label for="forum-sort">
-              <span class="visually-hidden">Sortera forum</span>
-            </label>
-            <select name="sort" id="forum-sort" class="c-dropdown">
-              <option value="-">--välj tag--</option>
-              <option value="spel" class="c-dropdown__option" data-tag="spel">
-                spel
-              </option>
-              <option value="humor" class="c-dropdown__option" data-tag="humor">
-                humor
-              </option>
-              <option value="anime" class="c-dropdown__option" data-tag="anime">
-                anime
-              </option>
-            </select>
-          </form>
+          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-filter>
+            <div class="c-dropdown__select" data-dropdown-select>
+              <span class="c-dropdown__selected" data-dropdown-selected
+                >Alla taggar</span
+              >
+              <i
+                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                data-dropdown-caret
+              ></i>
+            </div>
+            <ul class="c-dropdown__list" data-dropdown-list>
+              <li class="c-dropdown__option active" data-dropdown-option>
+                Alla taggar
+              </li>
+              <li class="c-dropdown__option" data-dropdown-option>Populära</li>
+              <li class="c-dropdown__option" data-dropdown-option>
+                Rekommenderas för dig
+              </li>
+            </ul>
+          </section>
 
-          <form id="filter" class="c-lib__dropdown">
-            <label for="forum-filter">
-              <span class="visually-hidden">Filtrera forum</span>
-            </label>
-            <select name="filter" id="forum-filter" class="c-dropdown">
-              <option value="Option1" class="c-dropdown__option">
-                Option 1
-              </option>
-              <option value="Option2" class="c-dropdown__option">
-                Option 2
-              </option>
-              <option value="Option3" class="c-dropdown__option">
-                Option 3
-              </option>
-            </select>
-          </form>
-
-          <form id="view" class="c-lib__dropdown">
-            <label for="forum-view">
-              <span class="visually-hidden">Ändra flödesvy</span>
-            </label>
-            <select name="view" id="forum-view" class="c-dropdown">
-              <!-- <option value="Option1" class="c-dropdown__option">
-                Option 1
-              </option>
-              <option value="Option2" class="c-dropdown__option">
-                Option 2
-              </option> -->
-            </select>
-          </form>
-        </section>
+          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-view>
+            <div class="c-dropdown__select" data-dropdown-select>
+              <span class="c-dropdown__selected" data-dropdown-selected
+                >Galleri</span
+              >
+              <i
+                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                data-dropdown-caret
+              ></i>
+            </div>
+            <ul class="c-dropdown__list" data-dropdown-list>
+              <li class="c-dropdown__option active" data-dropdown-option>
+                Galleri
+              </li>
+              <li class="c-dropdown__option" data-dropdown-option>Annan vy</li>
+            </ul>
+          </section>
 
         <section class="c-lib__feed" data-forum-feed></section>
       </main>
     </section>
+
+    <footer class="c-footer">
+      <div class="c-footer__container">
+        <div class="c-footer__logo">
+          <h1>Hamsterpaj</h1>
+          <!-- TO-DO: logo -->
+        </div>
+        <div class="c-footer__content">
+          <ul class="c-footer__page-links">
+            <li>
+              <a href="#"  class="c-footer__page-link">
+                <!-- TO-DO: footer icon size + byta ut icon -->
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Om Hamsterpaj</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"  class="c-footer__page-link">
+                <!-- TO-DO: footer icon size + byta ut icon -->
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Cookies</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="c-footer__some-links">
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-facebook-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-instagram-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"  class="c-footer__some-link">
+                <i class="ph ph-tiktok-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"  class="c-footer__some-link">
+                <i class="ph ph-snapchat-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Snapchat</span>
+              </a>
+            </li>
+          </ul>
+          <div class="c-footer__cred-text">
+            <span>© 2024 Hamsterpaj</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- TEMPLATES -->
     <template data-post-teaser-template>
@@ -183,9 +320,7 @@
                 </div>
               </div>
               <div class="c-meta c-meta--row c-meta--p">
-                <svg class="c-icon c-icon--xs">
-                  <use href="#dotsThree"></use>
-                </svg>
+                <i class="ph ph-dots-three c-icon c-icon--xs"></i>
               </div>
             </section>
             <section class="c-post-info-container" data-replace-tags></section>
@@ -209,30 +344,6 @@
         </a>
       </article>
     </template>
-
-    <!-- ICON SPRITE -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="chat" viewBox="0 0 256 256">
-        <path
-          d="M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78l.09-.07L83,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,224h0ZM216,192H80a8,8,0,0,0-5.23,1.95L40,224V64H216Z"
-        ></path>
-      </symbol>
-      <symbol id="thumbsUp" viewBox="0 0 256 256">
-        <path
-          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
-        ></path>
-      </symbol>
-      <symbol id="magnifyingGlass" viewBox="0 0 256 256">
-        <path
-          d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-        ></path>
-      </symbol>
-      <symbol id="dotsThree" viewBox="0 0 256 256">
-        <path
-          d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56-12a12,12,0,1,0,12,12A12,12,0,0,0,196,116ZM60,116a12,12,0,1,0,12,12A12,12,0,0,0,60,116Z"
-        ></path>
-      </symbol>
-    </svg>
 
     <script src="assets/js/forum.js" type="text/javascript"></script>
   </body>
