@@ -1,101 +1,392 @@
-.c-post {
-  background-color: var(--post-bg-color);
-  color: var(--post-text-color);
+.c-teaser-post {
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
 
-  --post-bg-color: var(--color-bg-card);
-  --post-text-color: var(--color-text);
-
-  &--teaser {
-    // som teaser har komponenten rundande hörn
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
+  &__cover-img {
+    // TO-DO: kommer aspect ratio funka
+    aspect-ratio: 1 / 1;
+    // TO-DO: ta bort bg color
+    background-color: grey;
   }
 
-  &--horizontal {
-    // horizontel version som används till liggande teaser-kort
+  &__content {
+    padding: var(--space-2) var(--space-3);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  &__times {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+  }
+
+  &__time-box {
+    // TO-DO: font style
+    font-size: 12px;
+    color: var(--color-text-subdued);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    // TO-DO: font style
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: var(--space-2);
+  }
+
+  &__text {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__user-info {
+    color: var(--color-text-subdued);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__user-img {
+    // TO-DO: ta bort bg color
+    background-color: grey;
+    // TO-DO: width + height
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius-full);
+  }
+
+  &__username {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__time-dots-box {
+    padding: var(--space-1);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__info-container {
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--color-border-stroke);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
+
+.c-teaser-carousel-post {
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 744px) {
     display: flex;
   }
 
   &__cover-img {
-    // TO-DO: ta bort färg sen
+    // TO-DO: kommer aspect ratio funka
+    aspect-ratio: 16 / 9;
+    // TO-DO: ta bort bg color
     background-color: grey;
 
-    aspect-ratio: 1 / 1;
-    // TO-DO: width + height
-
-    &--lying {
-      // som stående teaser kort är cover-img liggande
-      // TO-DO: width + height
-      aspect-ratio: 16 / 9;
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      flex: 0 0 50%;
     }
   }
 
   &__content {
-    padding: var(--post-content-padding);
+    padding: var(--space-2) var(--space-3);
 
-    // TO-DO: kolla spacing
-    --post-content-padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
   }
 
-  // översta boxen i __content med meta info
-  &__meta-container {
+  &__times {
     display: flex;
     justify-content: space-between;
-
-    // TO-DO: kolla spacing
     margin-bottom: var(--space-2);
-
-    // annan text-färg
-    --post-text-color: var(--color-text-subdued);
   }
 
-  // nästöversta boxen i __content med forumtexten
-  &__text-container {
-    // TO-DO: kolla spacing
-    margin-bottom: var(--space-4);
+  &__time-box {
+    // TO-DO: font style
+    font-size: 12px;
+    color: var(--color-text-subdued);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+    &--right {
+      text-align: right;
+    }
   }
 
   &__title {
-    margin-bottom: var(--space-1);
+    // TO-DO: font style
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: var(--space-2);
   }
 
-  // nästundersta boxen i __content med user info
-  &__user-container {
+  &__text {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__user-info {
+    color: var(--color-text-subdued);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
 
-    // annan text-färg
-    --post-text-color: var(--color-text-subdued);
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
   }
 
   &__user-img {
+    // TO-DO: ta bort bg color
+    background-color: grey;
     // TO-DO: width + height
     width: 30px;
     height: 30px;
-    // TO-DO: ta bort bg-color sen
-    background-color: grey;
     border-radius: var(--border-radius-full);
-
-    // TO-DO: kolla spacing
-    margin-right: var(--space-2);
   }
 
-  &__user-name {
-    // TO-DO: kolla spacing
-    margin-bottom: var(--space-1);
-    margin-right: auto;
+  &__username {
+    // TO-DO: font style
+    font-size: 14px;
   }
 
-  &__post-info-container {
+  &__time-dots-box {
+    padding: var(--space-1);
+
     display: flex;
     align-items: center;
-    // TO-DO: kolla spacing
     gap: var(--space-2);
+  }
 
-    // TO-DO: kolla spacing
+  &__additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__info-container {
     padding-top: var(--space-2);
-    // TO-DO: kolla border
-    border-top: 0.5px solid var(--color-text-subdued);
+    border-top: 0.5px solid var(--color-border-stroke);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
+
+.c-full-post {
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+
+  position: relative;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 744px) {
+    padding: var(--space-2) var(--space-6) var(--space-6);
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: var(--space-2);
+
+    --full-post-flex-column-gap: var(--space-6);
+    --flex-items: 2;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+
+    // TO-DO: rätt breakpoint
+    @media (max-width: 744px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-2);
+    }
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__cover-img {
+    // TO-DO: kommer aspect ratio funka
+    aspect-ratio: 1 / 1;
+    // TO-DO: ta bort bg color
+    background-color: grey;
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      flex: 0 0
+        calc(
+          (100% / var(--flex-items)) -
+            (
+              ((var(--flex-items) - 1) / var(--flex-items)) *
+                var(--full-post-flex-column-gap)
+            )
+        );
+    }
+  }
+
+  &__content {
+    padding: var(--space-2) var(--space-3);
+    background-color: var(--color-bg-accent-first);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      flex: 0 0
+        calc(
+          (100% / var(--flex-items)) -
+            (
+              ((var(--flex-items) - 1) / var(--flex-items)) *
+                var(--full-post-flex-column-gap)
+            )
+        );
+    }
+  }
+
+  &__times {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+  }
+
+  &__time-box {
+    // TO-DO: font style
+    font-size: 12px;
+    color: var(--color-text-subdued);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    // TO-DO: font style
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: var(--space-2);
+  }
+
+  &__text {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__user-info {
+    color: var(--color-text-subdued);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__user-img {
+    // TO-DO: ta bort bg color
+    background-color: grey;
+    // TO-DO: width + height
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius-full);
+  }
+
+  &__username {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__usertitle {
+    // TO-DO: font style
+    font-size: 14px;
+    margin-top: var(--space-1);
+  }
+
+  &__time-dots-box {
+    padding: var(--space-1);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__info-container {
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--color-border-stroke);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
   }
 }

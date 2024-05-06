@@ -1,0 +1,20 @@
+.c-tag {
+  // TO-DO: färger variabel regler för tags
+  background-color: #ededed;
+  color: black;
+  padding: var(--badge-y-padding) var(--badge-x-padding);
+  // TO-DO: border-radius variabel
+  border-radius: var(--border-radius-full);
+
+  // TO-DO: font-size typskala variabel + lineheight
+  font-size: 0.75rem;
+
+  --badge-y-padding: var(--space-1);
+  --badge-x-padding: var(--space-2);
+
+  // TO-DO: media query rätt break-point
+  @media (min-width: 744px) {
+    // TO-DO: font-size typskala variabel + lineheight
+    font-size: 1rem;
+  }
+}

@@ -1,3 +1,87 @@
-/* The layout/ folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms.*/
+.c-footer {
+  background-color: var(--color-bg-accent-third);
+  width: 100%;
+  padding: var(--space-4) var(--space-4) var(--space-6);
+  border-top: 3px solid var(--color-border-black);
 
-//Style för header
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+
+    // TO-DO: rätt breakpoint footer
+    @media (min-width: 744px) {
+      padding: var(--space-10) var(--space-0) var(--space-16);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    margin-bottom: var(--space-6);
+
+    // TO-DO: rätt breakpoint footer
+    @media (min-width: 744px) {
+      // TO-DO: footer logo flex
+      flex: 0 0 30%;
+
+      margin-bottom: var(--space-0);
+    }
+  }
+
+  &__content {
+    max-width: 166px;
+
+    // TO-DO: rätt breakpoint footer
+    @media (min-width: 744px) {
+      // TO-DO: footer logo flex
+      flex: 0 0 166px;
+    }
+  }
+
+  &__page-links {
+    margin-bottom: var(--space-6);
+
+    &:last-child {
+      margin-bottom: var(--space-0);
+    }
+
+    // TO-DO: rätt breakpoint footer
+    @media (min-width: 744px) {
+      margin-bottom: var(--space-8);
+    }
+  }
+
+  &__page-link {
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    // TO-DO: footer font style
+    font-size: 20px;
+
+    // TO-DO: rätt breakpoint footer
+    @media (min-width: 744px) {
+      margin-bottom: var(--space-6);
+    }
+  }
+
+  &__some-links {
+    margin-bottom: var(--space-8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cred-text {
+    // TO-DO: font style footer
+    font-size: 14px;
+    color: var(--color-text-pale);
+  }
+}

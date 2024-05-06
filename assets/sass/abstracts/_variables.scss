@@ -2,7 +2,7 @@
 :root {
   // colors
   // core colors
-  --blueberry-300: #8994a7;
+  --blueberry-200: #8994a7;
   --blueberry-400: #4c5467;
   --blueberry-500: #29334e;
   --blueberry-600: #0d1833;
@@ -35,7 +35,7 @@
   --raspberry-300: #f1b0b8;
   --raspberry-400: #e98391;
   --raspberry-500: #dc576d;
-  --color-raspberry-600: #c83756;
+  --raspberry-600: #c83756;
   --raspberry-700: #a72947;
 
   --pumpkin-200: #ffcda8;
@@ -50,12 +50,24 @@
   --vanilla-400: #d5a263;
   --vanilla-500: #cb8944;
 
+  --opacity-black-30: rgb(13, 13, 13 / 30%);
+
   // alias colors
-  --color-bg: var(--blueberry-600);
+  --color-bg: var(--blueberry-900);
   --color-bg-card: var(--blueberry-500);
-  --color-bg-accent: var(--blueberry-400);
+  --color-bg-accent-first: var(--blueberry-400);
+  --color-bg-accent-second: var(--grape-950);
+  --color-bg-accent-third: var(--blueberry-700);
+  --color-bg-scrollbar: var(--grey-600);
+  --color-bg-black: var(--grey-950);
+  --color-bg-opacity-filter: var(--opacity-black-30);
+  --color-bg-white: var(--grey-50);
 
   --color-border-stroke: var(--grey-400);
+  --color-border-scrollbar: var(--grey-100);
+  --color-border-inputfield: var(--grey-100);
+  --color-border-black: var(--grey-950);
+  --color-border-selected: var(--pumpkin-300);
 
   --color-btn: var(--pumpkin-400);
   --color-btn-disabled: var(--pumpkin-200);
@@ -71,13 +83,15 @@
   --color-text: var(--grey-50);
   --color-text-subdued: var(--grey-200);
   --color-text-pale: var(--grey-300);
+  --color-text-hover: var(--pumkin-300);
   --color-text-onwhite: var(--grey-900);
   --color-text-onwhite-subdued: var(--grey-800);
   --color-text-onwhite-pale: var(--grey-700);
 
   --color-badge-accent-first: var(--vanilla-300);
   --color-badge-accent-second: var(--raspberry-400);
-  --color-badge-accent-third: var(--grape-700);
+  --color-badge-accent-third: var(--grape-800);
+  --color-badge-neon: var(--raspberry-700);
 
   // break-points
   --screen-2xs: 320px; // small mobile
@@ -90,34 +104,38 @@
   --screen-3xl: 1920px; // tv
 
   // spacing
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-7: 1.75rem;
-  --space-8: 2rem;
-  --space-9: 2.25rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-14: 3.5rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-  --space-28: 7rem;
-  --space-32: 8rem;
-  --space-36: 9rem;
-  --space-40: 10rem;
-  --space-44: 11rem;
-  --space-48: 12rem;
-  --space-52: 13rem;
-  --space-56: 14rem;
-  --space-60: 15rem;
-  --space-64: 16rem;
-  --space-72: 18rem;
-  --space-80: 20rem;
-  --space-96: 24rem;
+  --space-0: 0rem; // 0px
+  --space-0-5: 0.125rem; // 2px
+  --space-1: 0.25rem; // 4px
+  --space-2: 0.5rem; // 8px
+  --space-3: 0.75rem; // 12px
+  --space-4: 1rem; // 16px
+  --space-5: 1.25rem; // 20px
+  --space-6: 1.5rem; // 24px
+  --space-7: 1.75rem; // 28px
+  --space-8: 2rem; // 32px
+  --space-9: 2.25rem; // 36px
+  --space-10: 2.5rem; // 40px
+  --space-12: 3rem; // 48px
+  --space-14: 3.5rem; // 56px
+  --space-16: 4rem; // 64px
+  --space-20: 5rem; // 80px
+  --space-24: 6rem; // 96px
+  --space-26: 6.5rem; // 104px
+  --space-28: 7rem; // 112px
+  --space-30: 7.5rem; // 120px
+  --space-32: 8rem; // 128px
+  --space-36: 9rem; // 144px
+  --space-39: 9.75rem; // 156px
+  --space-40: 10rem; // 160px
+  --space-44: 11rem; // 176px
+  --space-48: 12rem; // 192px
+  --space-52: 13rem; // 208px
+  --space-56: 14rem; // 224px
+  --space-64: 16rem; // 256px
+  --space-72: 18rem; // 288px
+  --space-80: 20rem; // 320px
+  --space-96: 24rem; // 384px
 
   // border-radius
   --border-radius-none: 0px;

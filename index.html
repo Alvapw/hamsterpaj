@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj</title>
     <link rel="stylesheet" href="assets/sass/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
@@ -32,164 +33,228 @@
       </nav>
     </header>
 
-    <article class="c-post c-post--teaser c-lib__post">
-      <a href="thread.html">
-        <!-- TO-DO: lägg till data-replace -->
-        <section class="c-post__cover-img c-post__cover-img--lying"></section>
-        <section class="c-post__content">
-          <section class="c-post__meta-container">
-            <div class="c-meta c-meta--col">
-              <!-- TO-DO: lägg till text-class -->
+    <article class="c-teaser-post">
+      <section class="c-teaser-post__cover-img">
+        <!-- TO-DO: .c-teaser__cover-img -->
+      </section>
+      <section class="c-teaser-post__content">
+        <section class="c-teaser-post__post-info">
+          <section class="c-teaser-post__times">
+            <div class="c-teaser-post__time-box">
+              <!-- TO-DO: span eller p tagg i posts -->
               <p>Startad</p>
-              <!-- TO-DO: lägg till text-class -->
-              <p data-replace-created-date></p>
+              <p>1 april 2024</p>
             </div>
-            <div class="c-meta c-meta--col c-meta--right">
-              <!-- TO-DO: lägg till text-class -->
+            <div class="c-teaser-post__time-box c-teaser-post__time-box--right">
+              <!-- TO-DO: span eller p tagg i posts -->
               <p>Senast besvarad</p>
-              <!-- TO-DO: lägg till text-class -->
-              <p data-replace-updated-date></p>
+              <p>13 maj, 22:30</p>
+            </div>
+          </section>
+          <section class="c-teaser-post__text-description">
+            <h3 class="c-teaser-post__title">HJÄLP MIG!1!111!!!</h3>
+            <p class="c-teaser-post__text cut-text">
+              Har suttit hela helgen men kommer fan inte vidare! Kan någon
+              berätta hur man får trophien 'Bounty Hunter'?! Jag har googlat
+              överallt och jag tror jag fattar vad som krävs men asså det är
+              något någonstans som fattas! Fattar inte vad det är jag missar.
+              NÅGON HJÄLP ASAP!!!
+            </p>
+          </section>
+        </section>
+        <section class="c-teaser-post__user-info">
+          <div class="c-teaser-post__user">
+            <div class="c-teaser-post__user-img">
+              <!-- TO-DO: .c-post__user-img -->
+            </div>
+            <div>
+              <p class="c-teaser-post__username">VRVixen</p>
+            </div>
+          </div>
+          <div class="c-teaser-post__time-dots-box">
+            <!-- TO-DO: icon size-->
+            <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+          </div>
+        </section>
+        <section class="c-teaser-post__additional-info">
+          <section class="c-teaser-post__info-container">
+            <!-- TO-DO: styla tags -->
+            <span class="c-tag">RPG</span>
+            <span class="c-tag">Dark</span>
+            <span class="c-tag">Spel</span>
+          </section>
+          <section class="c-teaser-post__info-container">
+            <!-- TO-DO: styla interactions -->
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-thumbs-up c-icon c-icon--xs"></i>
+              <span>22</span>
+            </div>
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-chat c-icon c-icon--xs"></i>
+              <span>7</span>
             </div>
           </section>
         </section>
-        <section class="c-post__text-container">
-          <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
-          <h3 class="c-post__title" data-replace-title></h3>
-          <!-- TO-DO: lägg till text-class -->
-          <p data-replace-text></p>
-        </section>
-        <section class="c-post__user-container">
-          <!-- TO-DO: lägg till data-replace -->
-          <div class="c-post__user-img"></div>
-          <div>
-            <!-- TO-DO: lägg till text-class -->
-            <p class="c-post__user-name" data-replace-username></p>
-          </div>
-          <div class="c-meta c-meta--row">
-            <svg class="c-icon c-icon-xs">
-              <use href="#dotsThree"></use>
-            </svg>
-          </div>
-        </section>
-        <section class="c-post-info-container" data-replace-tags></section>
-        <section class="c-post-info-container">
-          <div class="c-meta c-meta--row">
-            <svg class="c-icon c-icon--xs">
-              <use href="#thumbsUp"></use>
-            </svg>
-            <!-- TO-DO: lägg till text-class -->
-            <span data-replace-likes></span>
-          </div>
-          <div class="c-meta c-meta--row">
-            <svg class="c-icon c-icon--xs">
-              <use href="#chat"></use>
-            </svg>
-            <!-- TO-DO: lägg till text-class -->
-            <span data-replace-comments></span>
-          </div>
-        </section>
-      </a>
+      </section>
     </article>
 
-    <template>
-      <article class="c-article c-article--post">
-        <section class="c-article__cover-img c-article__cover-img--square">
-          <button class="c-article__fab c-article__fab--left c-button--fab">
-            <svg class="c-icon c-icon--md">
-              <use href="#arrowLeft"></use>
-            </svg>
-          </button>
-          <button class="c-article__fab c-article__fab--right c-button--fab">
-            <svg class="c-icon c-icon--md">
-              <use href="#heartStraight"></use>
-            </svg>
-          </button>
+    <article class="c-teaser-carousel-post">
+      <section class="c-teaser-carousel-post__cover-img">
+        <!-- TO-DO: .c-teaser__cover-img -->
+      </section>
+      <section class="c-teaser-carousel-post__content">
+        <section class="c-teaser-carousel-post__post-info">
+          <section class="c-teaser-carousel-post__times">
+            <div class="c-teaser-carousel-post__time-box">
+              <!-- TO-DO: span eller p tagg i posts -->
+              <p>Startad</p>
+              <p>1 april 2024</p>
+            </div>
+            <div
+              class="c-teaser-carousel-post__time-box c-teaser-carousel-post__time-box--right"
+            >
+              <!-- TO-DO: span eller p tagg i posts -->
+              <p>Senast besvarad</p>
+              <p>13 maj, 22:30</p>
+            </div>
+          </section>
+          <section class="c-teaser-carousel-post__text-description">
+            <h3 class="c-teaser-carousel-post__title">HJÄLP MIG!1!111!!!</h3>
+            <p class="c-teaser-carousel-post__text cut-text">
+              Har suttit hela helgen men kommer fan inte vidare! Kan någon
+              berätta hur man får trophien 'Bounty Hunter'?! Jag har googlat
+              överallt och jag tror jag fattar vad som krävs men asså det är
+              något någonstans som fattas! Fattar inte vad det är jag missar.
+              NÅGON HJÄLP ASAP!!!
+            </p>
+          </section>
         </section>
-        <section class="c-article__content">
-          <div class="c-article__main-content">
-            <div class="c-article__meta-info">
-              <div class="c-article__meta-box">
-                <!-- TO-DO: span or p -->
-                <p class="c-article__meta-text">Startade</p>
-                <p class="c-article__meta-text">Tid</p>
-              </div>
-              <div class="c-article__meta-box c-article__meta-box--right-align">
-                <!-- TO-DO: span or p -->
-                <p class="c-article__meta-text">Uppdaterad</p>
-                <p class="c-article__meta-text">Tid</p>
-              </div>
+        <section class="c-teaser-carousel-post__user-info">
+          <div class="c-teaser-carousel-post__user">
+            <div class="c-teaser-carousel-post__user-img">
+              <!-- TO-DO: .c-post__user-img -->
             </div>
-            <div class="c-article__text-content">
-              <h3 class="c-article__heading">Heading</h3>
-              <p class="c-article__text">
-                Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
-                blandit aliquam. Habitant porttitor pellentesque venenatis sed
-                maecenas egestas ac.
-              </p>
-            </div>
-          </div>
-          <div class="c-article__user-info">
-            <img src="#" alt="" class="c-article__profile-img" />
             <div>
-              <p class="c-article__user-name">Användarnamn</p>
-              <p class="c-article__user-titel">Titel</p>
+              <p class="c-teaser-carousel-post__username">VRVixen</p>
             </div>
           </div>
-          <div class="c-article__post-info">
-            <div class="c-article__border-box">
-              <span class="c-badge">Badge</span>
-              <span class="c-badge">Badge</span>
-              <span class="c-badge">Badge</span>
-            </div>
-            <div class="c-article__border-box">
-              <div class="c-interactions">
-                <svg class="c-icon c-icon--xs">
-                  <use href="#thumbsUp"></use>
-                </svg>
-                <span>00</span>
-              </div>
-              <div class="c-interactions">
-                <svg class="c-icon c-icon--xs">
-                  <use href="#chat"></use>
-                </svg>
-                <span>00</span>
-              </div>
-            </div>
-            <!-- TO-DO: svara input ruta -->
-            <form action="">
-              <input type="text" />
-            </form>
+          <div class="c-teaser-carousel-post__time-dots-box">
+            <!-- TO-DO: icon size-->
+            <i class="ph ph-dots-three c-icon c-icon--xs"></i>
           </div>
         </section>
-      </article>
-    </template>
+        <section class="c-teaser-carousel-post__additional-info">
+          <section class="c-teaser-carousel-post__info-container">
+            <!-- TO-DO: styla tags -->
+            <span class="c-tag">RPG</span>
+            <span class="c-tag">Dark</span>
+            <span class="c-tag">Spel</span>
+          </section>
+          <section class="c-teaser-carousel-post__info-container">
+            <!-- TO-DO: styla interactions -->
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-thumbs-up c-icon c-icon--xs"></i>
+              <span>22</span>
+            </div>
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-chat c-icon c-icon--xs"></i>
+              <span>7</span>
+            </div>
+          </section>
+        </section>
+      </section>
+    </article>
+
+    <article class="c-full-post">
+      <section class="c-full-post__actions">
+        <button class="c-button c-button-fab c-full-post__left-btn">
+          <span class="visually-hidden">Gå tillbaka ett steg</span>
+          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+        </button>
+        <button class="c-button c-button-fab c-full-post__right-btn">
+          <span class="visually-hidden">Spara forumtråd</span>
+          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+        </button>
+      </section>
+      <section class="c-full-post__cover-img">
+        <!-- TO-DO: .c-teaser__cover-img -->
+      </section>
+      <section class="c-full-post__content">
+        <section class="c-full-post__post-info">
+          <section class="c-full-post__times">
+            <div class="c-full-post__time-box">
+              <!-- TO-DO: span eller p tagg i posts -->
+              <p>Startad</p>
+              <p>1 april 2024</p>
+            </div>
+            <div class="c-full-post__time-box c-full-post__time-box--right">
+              <!-- TO-DO: span eller p tagg i posts -->
+              <p>Senast besvarad</p>
+              <p>13 maj, 22:30</p>
+            </div>
+          </section>
+          <section class="c-full-post__text-description">
+            <h3 class="c-full-post__title">HJÄLP MIG!1!111!!!</h3>
+            <p class="c-full-post__text">
+              Har suttit hela helgen men kommer fan inte vidare! Kan någon
+              berätta hur man får trophien 'Bounty Hunter'?! Jag har googlat
+              överallt och jag tror jag fattar vad som krävs men asså det är
+              något någonstans som fattas! Fattar inte vad det är jag missar.
+              NÅGON HJÄLP ASAP!!!
+            </p>
+          </section>
+        </section>
+        <section class="c-full-post__user-info">
+          <div class="c-full-post__user">
+            <div class="c-full-post__user-img">
+              <!-- TO-DO: .c-post__user-img -->
+            </div>
+            <div>
+              <p class="c-full-post__username">VRVixen</p>
+              <p class="c-full-post__usertitle">Titel</p>
+            </div>
+          </div>
+          <div class="c-full-post__time-dots-box">
+            <!-- TO-DO: icon size-->
+            <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+          </div>
+        </section>
+        <section class="c-full-post__additional-info">
+          <section class="c-full-post__info-container">
+            <!-- TO-DO: styla tags -->
+            <span class="c-tag">RPG</span>
+            <span class="c-tag">Dark</span>
+            <span class="c-tag">Spel</span>
+          </section>
+          <section class="c-full-post__info-container">
+            <!-- TO-DO: styla interactions -->
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+              <span>22</span>
+            </div>
+            <div class="c-post-interactions">
+              <!-- TO-DO: icon size-->
+              <i class="ph ph-chat c-icon c-icon--xs"></i>
+              <span>7</span>
+            </div>
+          </section>
+          <label for="postInput" class="visually-hidden">Svara på post</label>
+          <input
+            type="text"
+            id="postInput"
+            placeholder="Svara"
+            class="c-input"
+          />
+        </section>
+      </section>
+    </article>
 
     <footer class="c-footer"></footer>
-
-    <!-- IKON SPRITE -->
-    <!-- TO-DO: kolla vilka ikoner som används + fungerar det + flytta till separat fil -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="chat" viewBox="0 0 256 256">
-        <path
-          d="M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78l.09-.07L83,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,224h0ZM216,192H80a8,8,0,0,0-5.23,1.95L40,224V64H216Z"
-        ></path>
-      </symbol>
-      <symbol id="thumbsUp" viewBox="0 0 256 256">
-        <path
-          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
-        ></path>
-      </symbol>
-      <symbol id="arrowLeft" viewBox="0 0 256 256">
-        <path
-          d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
-        ></path>
-      </symbol>
-      <symbol id="heartStraight" viewBox="0 0 256 256">
-        <path
-          d="M223,57a58.07,58.07,0,0,0-81.92-.1L128,69.05,114.91,56.86A58,58,0,0,0,33,139l89.35,90.66a8,8,0,0,0,11.4,0L223,139a58,58,0,0,0,0-82Zm-11.35,70.76L128,212.6,44.3,127.68a42,42,0,0,1,59.4-59.4l.2.2,18.65,17.35a8,8,0,0,0,10.9,0L152.1,68.48l.2-.2a42,42,0,1,1,59.36,59.44Z"
-        ></path>
-      </symbol>
-    </svg>
 
     <script src="assets/js/script.js" type="text/javascript"></script>
   </body>

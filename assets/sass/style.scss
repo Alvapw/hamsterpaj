@@ -14,12 +14,13 @@
 @import "components/accessibility";
 @import "components/icons";
 @import "components/buttons";
-@import "components/badge";
-@import "components/interactions";
-@import "components/article";
+@import "components/c-tag";
 @import "components/searchBar";
-@import "components/dropdown";
+@import "components/c-dropdown";
+@import "components/c-post-interactions";
 @import "components/c-post";
+@import "components/c-teaser";
+@import "components/c-thread-start";
 
 @import "pages/home";
 

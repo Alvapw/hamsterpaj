@@ -19,8 +19,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  // TO-DO: bg-color
-  background-color: #0d1833;
+  background-color: var(--color-bg);
 }
 
 img,
