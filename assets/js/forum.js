@@ -1,3 +1,16 @@
+// TILLFÄLLIGT ligger menu js här
+const menuIcon = document.querySelector("[data-fn-toggle-menu]");
+const headerSearch = document.querySelector("[data-header-search]");
+const mainMenuList = document.querySelector("[data-main-menu]");
+const headerBtn = document.querySelector("[data-header-btn]");
+
+menuIcon.addEventListener("click", function () {
+  headerSearch.classList.toggle("active");
+  mainMenuList.classList.toggle("active");
+  headerBtn.classList.toggle("active");
+  menuIcon.classList.toggle("exit");
+});
+
 let forumThreads = [];
 const filters = {
   tags: [],
@@ -34,6 +47,8 @@ function createPostTeaser(thread) {
   const post = postTeaserTemplate.content.cloneNode(true).children[0];
 
   // byter ut datan i kortet
+  const coverImg = post.querySelector("[data-replace-cover-img]");
+
   const createdDate = post.querySelector("[data-replace-created-date]");
   createdDate.textContent = thread.dateStarted;
 
@@ -106,9 +121,11 @@ dropdowns.forEach((dropdown) => {
   // hämtar alla inre element i dropdowns
   const select = dropdown.querySelector("[data-dropdown-select]");
   const selected = dropdown.querySelector("[data-dropdown-selected]");
+  const selectedIcon = dropdown.querySelector("[data-dropdown-selected-icon]");
   const caret = dropdown.querySelector("[data-dropdown-caret]");
   const list = dropdown.querySelector("[data-dropdown-list]");
   const options = dropdown.querySelectorAll("[data-dropdown-option]");
+  const optionIcons = dropdown.querySelectorAll("[data-dropdown-option-icon]");
 
   // lägger till en lyssnare på select
   select.addEventListener("click", () => {
@@ -127,6 +144,8 @@ dropdowns.forEach((dropdown) => {
       console.log("click");
       // när ett option klickas på så ska selected innerText ändras till det klickade optionets innerText
       selected.innerText = option.innerText;
+      // om det finns en icon ska selectedIcon bytas ut till optionIcon
+      // TO-DO: byta ut ikon
       // tar bort classer som förut lades till
       select.classList.remove("open");
       caret.classList.remove("rotate");

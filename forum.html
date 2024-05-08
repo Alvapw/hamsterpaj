@@ -11,236 +11,647 @@
   <body>
     <header class="c-header">
       <nav class="c-header__nav">
-        <div class="c-header__logo c-logo">
-          <!-- TO-DO: img -->
+        <div class="c-header__mobile-container">
+          <div class="c-header__logo-box">
+            <img src="../assets/img/logotyp/hamster+text-img.png" alt="" />
+          </div>
+          <div class="c-header__menu-icon" data-fn-toggle-menu>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+          </div>
         </div>
-        <div class="c-header__menu-icon">
-          <span class="c-header__menu-icon-line"></span>
-          <span class="c-header__menu-icon-line"></span>
-          <span class="c-header__menu-icon-line"></span>
+        <div class="c-header__menus">
+          <div class="c-header__top-menu">
+            <form
+              id="search"
+              role="search"
+              autocomplete="off"
+              class="c-search c-header__search"
+              data-header-search
+            >
+              <label for="search">
+                <span class="visually-hidden">Sök</span>
+              </label>
+              <input
+                type="search"
+                id="search"
+                placeholder="Sök"
+                class="c-search__input c-header__search-input"
+              />
+              <button class="c-search__button">
+                <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
+                <span class="visually-hidden">Klicka för att söka</span>
+              </button>
+            </form>
+          </div>
+          <ul class="c-header__icon-menu">
+            <li class="c-header__icon-item">
+              <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Vänner</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-book-open c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Gästboken</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-chat c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Meddelande</span>
+            </li>
+            <li class="c-header__icon-item c-header__icon-item--mobile-only">
+              <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Lägg till</span>
+            </li>
+          </ul>
+          <ul class="c-header__main-menu" data-main-menu>
+            <li class="c-header__main-item">
+              <a href="#">Om Hamsterpaj</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="forum.html">Forum</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Onlinespel</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Snackis</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Min profil</a>
+            </li>
+          </ul>
         </div>
-        <ul class="c-header__menu-list">
-          <li class="c-header__menu-item">
-            <a href="#" class="c-header__menu-link">Hamsterpaj</a>
-          </li>
-          <li class="c-header__menu-item">
-            <a href="#" class="c-header__menu-link">Onlinespel</a>
-          </li>
-          <li class="c-header__menu-item">
-            <a href="#" class="c-header__menu-link">Forum</a>
-          </li>
-          <li class="c-header__menu-item">
-            <a href="#" class="c-header__menu-link">Snackis</a>
-          </li>
-        </ul>
+        <button
+          class="c-button c-button--primary c-header__btn"
+          data-header-btn
+        >
+          <span>Logga in</span>
+        </button>
       </nav>
     </header>
 
     <section class="c-hero">
       <div class="c-hero__info-box">
         <h1 class="c-hero__heading">Hamsterpajs forum</h1>
-        <p class="c-hero__text">
-          Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
-          blandit aliquam.
-        </p>
-        <div class="c-hero__actions">
-          <button class="c-button">
-            <span>Slumpa</span>
-          </button>
-          <button class="c-button">
-            <span>Regler</span>
-          </button>
-        </div>
       </div>
     </section>
 
-    <section class="c-page-container">
-      <aside class="c-aside">
-        <section class="c-aside__nav c-caty-nav">
-          <ul class="c-caty-nav__list">
-            <li class="c-caty-nav__item">
-              <a href="#" class="c-caty-nav__link">Kategori</a>
+    <section class="c-lib-page">
+      <aside class="c-lib-page__aside c-aside">
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__box"
+          data-fn-dropdown
+        >
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <i
+              class="ph ph-eyes c-icon c-icon--sm"
+              data-dropdown-selected-icon
+            ></i>
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Alla kategorier</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-eyes c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Alla kategorier</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-rabbit c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Anime & manga</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-books c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Böcker & serier</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-mask-happy c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Cosplay & conventions</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-newspaper-clipping c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Fanart & fanfiction</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-game-controller c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Spel & brädspel</span>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__box"
+          data-fn-dropdown
+        >
+          <h3 class="c-dropdown__heading">Moderatorer online</h3>
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <i class="ph ph-robot c-icon c-icon--sm"></i>
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Moderatorer online</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li class="c-dropdown__option c-dropdown__option--lg">
+              <div class="c-dropdown__user-img"></div>
+              <span>StrategySorceress</span>
+            </li>
+            <li class="c-dropdown__option c-dropdown__option--lg">
+              <div class="c-dropdown__user-img"></div>
+              <span>Wizardess</span>
             </li>
           </ul>
         </section>
       </aside>
 
-      <main class="c-lib">
-        <section class="c-lib__trending">
-          <article class="c-post c-post--to-flex c-lib__post">
-            <a href="thread.html">
-              <!-- TO-DO: lägg till data-replace -->
-              <section
-                class="c-post__cover-img c-post__cover-img--lying"
-              ></section>
-              <section class="c-post__content">
-                <section class="c-post__meta-container">
-                  <div class="c-meta c-meta--col">
-                    <!-- TO-DO: lägg till text-class -->
-                    <p>Startad</p>
-                    <!-- TO-DO: lägg till text-class -->
-                    <p data-replace-created-date></p>
-                  </div>
-                  <div class="c-meta c-meta--col c-meta--right">
-                    <!-- TO-DO: lägg till text-class -->
-                    <p>Senast besvarad</p>
-                    <!-- TO-DO: lägg till text-class -->
-                    <p data-replace-updated-date></p>
-                  </div>
-                </section>
-                <section class="c-post__text-container">
-                  <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
-                  <h3 class="c-post__title" data-replace-title></h3>
-                  <!-- TO-DO: lägg till text-class -->
-                  <p class="c-post__text" data-replace-text></p>
-                </section>
-                <section class="c-post__user-container">
-                  <div class="c-meta c-meta--row">
-                    <!-- TO-DO: lägg till data-replace -->
-                    <div class="c-post__user-img"></div>
-                    <div>
-                      <!-- TO-DO: lägg till text-class -->
-                      <p class="c-post__user-name" data-replace-username></p>
-                    </div>
-                  </div>
-                  <div class="c-meta c-meta--row c-meta--p">
-                    <svg class="c-icon c-icon--xs">
-                      <use href="#dotsThree"></use>
-                    </svg>
-                  </div>
-                </section>
-                <section
-                  class="c-post-info-container"
-                  data-replace-tags
-                ></section>
-                <section class="c-post-info-container">
-                  <div class="c-meta c-meta--row c-meta--p">
-                    <svg class="c-icon c-icon--xs">
-                      <use href="#thumbsUp"></use>
-                    </svg>
-                    <!-- TO-DO: lägg till text-class -->
-                    <span data-replace-likes></span>
-                  </div>
-                  <div class="c-meta c-meta--row c-meta--p">
-                    <svg class="c-icon c-icon--xs">
-                      <use href="#chat"></use>
-                    </svg>
-                    <!-- TO-DO: lägg till text-class -->
-                    <span data-replace-comments></span>
-                  </div>
-                </section>
-              </section>
-            </a>
-          </article>
+      <main class="c-lib-page__main">
+        <section class="c-lib-page__swiper c-swiper">
+          <ul class="c-swiper__list">
+            <li class="c-swiper__item">
+              <a href="thread.html">
+                <article class="c-teaser-carousel-post">
+                  <section class="c-teaser-carousel-post__cover-img">
+                    <picture>
+                      <source data-replace-cover-img />
+                    </picture>
+                  </section>
+                  <section class="c-teaser-carousel-post__content">
+                    <section class="c-teaser-carousel-post__post-info">
+                      <section class="c-teaser-carousel-post__times">
+                        <div class="c-teaser-carousel-post__time-box">
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Startad</p>
+                          <p>1 april 2024</p>
+                        </div>
+                        <div
+                          class="c-teaser-carousel-post__time-box c-teaser-carousel-post__time-box--right"
+                        >
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Senast besvarad</p>
+                          <p>13 maj, 22:30</p>
+                        </div>
+                      </section>
+                      <section class="c-teaser-carousel-post__text-description">
+                        <h3 class="c-teaser-carousel-post__title">
+                          HJÄLP MIG!1!111!!!
+                        </h3>
+                        <p class="c-teaser-carousel-post__text cut-text">
+                          Har suttit hela helgen men kommer fan inte vidare! Kan
+                          någon berätta hur man får trophien 'Bounty Hunter'?!
+                          Jag har googlat överallt och jag tror jag fattar vad
+                          som krävs men asså det är något någonstans som fattas!
+                          Fattar inte vad det är jag missar. NÅGON HJÄLP ASAP!!!
+                        </p>
+                      </section>
+                    </section>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <!-- TO-DO: icon size-->
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <section class="c-teaser-carousel-post__additional-info">
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla tags -->
+                        <span class="c-tag">RPG</span>
+                        <span class="c-tag">Dark</span>
+                        <span class="c-tag">Spel</span>
+                      </section>
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla interactions -->
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                          <span>22</span>
+                        </div>
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-chat c-icon c-icon--xs"></i>
+                          <span>7</span>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </article>
+              </a>
+            </li>
+            <li class="c-swiper__item">
+              <a href="thread.html">
+                <article class="c-teaser-carousel-post">
+                  <section class="c-teaser-carousel-post__cover-img">
+                    <picture>
+                      <source data-replace-cover-img />
+                    </picture>
+                  </section>
+                  <section class="c-teaser-carousel-post__content">
+                    <section class="c-teaser-carousel-post__post-info">
+                      <section class="c-teaser-carousel-post__times">
+                        <div class="c-teaser-carousel-post__time-box">
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Startad</p>
+                          <p>1 april 2024</p>
+                        </div>
+                        <div
+                          class="c-teaser-carousel-post__time-box c-teaser-carousel-post__time-box--right"
+                        >
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Senast besvarad</p>
+                          <p>13 maj, 22:30</p>
+                        </div>
+                      </section>
+                      <section class="c-teaser-carousel-post__text-description">
+                        <h3 class="c-teaser-carousel-post__title">
+                          HJÄLP MIG!1!111!!!
+                        </h3>
+                        <p class="c-teaser-carousel-post__text cut-text">
+                          Har suttit hela helgen men kommer fan inte vidare! Kan
+                          någon berätta hur man får trophien 'Bounty Hunter'?!
+                          Jag har googlat överallt och jag tror jag fattar vad
+                          som krävs men asså det är något någonstans som fattas!
+                          Fattar inte vad det är jag missar. NÅGON HJÄLP ASAP!!!
+                        </p>
+                      </section>
+                    </section>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <!-- TO-DO: icon size-->
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <section class="c-teaser-carousel-post__additional-info">
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla tags -->
+                        <span class="c-tag">RPG</span>
+                        <span class="c-tag">Dark</span>
+                        <span class="c-tag">Spel</span>
+                      </section>
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla interactions -->
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                          <span>22</span>
+                        </div>
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-chat c-icon c-icon--xs"></i>
+                          <span>7</span>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </article>
+              </a>
+            </li>
+            <li class="c-swiper__item">
+              <a href="thread.html">
+                <article class="c-teaser-carousel-post">
+                  <section class="c-teaser-carousel-post__cover-img">
+                    <picture>
+                      <source data-replace-cover-img />
+                    </picture>
+                  </section>
+                  <section class="c-teaser-carousel-post__content">
+                    <section class="c-teaser-carousel-post__post-info">
+                      <section class="c-teaser-carousel-post__times">
+                        <div class="c-teaser-carousel-post__time-box">
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Startad</p>
+                          <p>1 april 2024</p>
+                        </div>
+                        <div
+                          class="c-teaser-carousel-post__time-box c-teaser-carousel-post__time-box--right"
+                        >
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Senast besvarad</p>
+                          <p>13 maj, 22:30</p>
+                        </div>
+                      </section>
+                      <section class="c-teaser-carousel-post__text-description">
+                        <h3 class="c-teaser-carousel-post__title">
+                          HJÄLP MIG!1!111!!!
+                        </h3>
+                        <p class="c-teaser-carousel-post__text cut-text">
+                          Har suttit hela helgen men kommer fan inte vidare! Kan
+                          någon berätta hur man får trophien 'Bounty Hunter'?!
+                          Jag har googlat överallt och jag tror jag fattar vad
+                          som krävs men asså det är något någonstans som fattas!
+                          Fattar inte vad det är jag missar. NÅGON HJÄLP ASAP!!!
+                        </p>
+                      </section>
+                    </section>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <!-- TO-DO: icon size-->
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <section class="c-teaser-carousel-post__additional-info">
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla tags -->
+                        <span class="c-tag">RPG</span>
+                        <span class="c-tag">Dark</span>
+                        <span class="c-tag">Spel</span>
+                      </section>
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla interactions -->
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                          <span>22</span>
+                        </div>
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-chat c-icon c-icon--xs"></i>
+                          <span>7</span>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </article>
+              </a>
+            </li>
+            <li class="c-swiper__item">
+              <a href="thread.html">
+                <article class="c-teaser-carousel-post">
+                  <section class="c-teaser-carousel-post__cover-img">
+                    <picture>
+                      <source data-replace-cover-img />
+                    </picture>
+                  </section>
+                  <section class="c-teaser-carousel-post__content">
+                    <section class="c-teaser-carousel-post__post-info">
+                      <section class="c-teaser-carousel-post__times">
+                        <div class="c-teaser-carousel-post__time-box">
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Startad</p>
+                          <p>1 april 2024</p>
+                        </div>
+                        <div
+                          class="c-teaser-carousel-post__time-box c-teaser-carousel-post__time-box--right"
+                        >
+                          <!-- TO-DO: span eller p tagg i posts -->
+                          <p>Senast besvarad</p>
+                          <p>13 maj, 22:30</p>
+                        </div>
+                      </section>
+                      <section class="c-teaser-carousel-post__text-description">
+                        <h3 class="c-teaser-carousel-post__title">
+                          HJÄLP MIG!1!111!!!
+                        </h3>
+                        <p class="c-teaser-carousel-post__text cut-text">
+                          Har suttit hela helgen men kommer fan inte vidare! Kan
+                          någon berätta hur man får trophien 'Bounty Hunter'?!
+                          Jag har googlat överallt och jag tror jag fattar vad
+                          som krävs men asså det är något någonstans som fattas!
+                          Fattar inte vad det är jag missar. NÅGON HJÄLP ASAP!!!
+                        </p>
+                      </section>
+                    </section>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <!-- TO-DO: icon size-->
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <section class="c-teaser-carousel-post__additional-info">
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla tags -->
+                        <span class="c-tag">RPG</span>
+                        <span class="c-tag">Dark</span>
+                        <span class="c-tag">Spel</span>
+                      </section>
+                      <section class="c-teaser-carousel-post__info-container">
+                        <!-- TO-DO: styla interactions -->
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                          <span>22</span>
+                        </div>
+                        <div class="c-post-interactions">
+                          <!-- TO-DO: icon size-->
+                          <i class="ph ph-chat c-icon c-icon--xs"></i>
+                          <span>7</span>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </article>
+              </a>
+            </li>
+          </ul>
         </section>
 
-        <section class="c-lib__search-filter">
+        <section class="c-lib-page__search-filter">
           <form
             id="search"
             role="search"
             autocomplete="off"
-            class="c-lib__search c-search"
+            class="c-search c-lib-page__search"
           >
-            <label for="forum-search">
+            <label for="search">
               <span class="visually-hidden">Sök forum</span>
             </label>
             <input
               type="search"
-              id="forum-search"
+              id="search"
               placeholder="Sök"
-              class="c-search__bar"
+              class="c-search__input"
               data-search
             />
-            <button class="c-button c-search__button">
-              <svg class="c-icon c-icon--sm">
-                <use href="#magnifyingGlass"></use>
-              </svg>
+            <button class="c-search__button">
+              <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
               <span class="visually-hidden">Klicka för att söka</span>
             </button>
           </form>
-          
-          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-sort>
-            <div class="c-dropdown__select" data-dropdown-select>
-              <span class="c-dropdown__selected" data-dropdown-selected
-                >Senaste</span
-              >
-              <i
-                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
-                data-dropdown-caret
-              ></i>
-            </div>
-            <ul class="c-dropdown__list" data-dropdown-list>
-              <li class="c-dropdown__option active" data-dropdown-option>
-                Senaste
-              </li>
-              <li class="c-dropdown__option" data-dropdown-option>Populära</li>
-              <li class="c-dropdown__option" data-dropdown-option>
-                Rekommenderas för dig
-              </li>
-            </ul>
+          <section class="c-lib-page__dropdowns">
+            <section class="c-dropdown" data-fn-dropdown data-fn-dropdown-sort>
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Senaste</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul class="c-dropdown__list" data-dropdown-list>
+                <li class="c-dropdown__option active" data-dropdown-option>
+                  Senaste
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Populära
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Rekommenderas för dig
+                </li>
+              </ul>
+            </section>
+            <section
+              class="c-dropdown"
+              data-fn-dropdown
+              data-fn-dropdown-filter
+            >
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Alla taggar</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul class="c-dropdown__list" data-dropdown-list>
+                <li class="c-dropdown__option active" data-dropdown-option>
+                  Alla taggar
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Populära
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Rekommenderas för dig
+                </li>
+              </ul>
+            </section>
+            <section
+              class="c-dropdown c-lib__dropdown"
+              data-fn-dropdown
+              data-fn-dropdown-view
+            >
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Galleri</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul class="c-dropdown__list" data-dropdown-list>
+                <li class="c-dropdown__option active" data-dropdown-option>
+                  Galleri
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Annan vy
+                </li>
+              </ul>
+            </section>
           </section>
-
-          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-filter>
-            <div class="c-dropdown__select" data-dropdown-select>
-              <span class="c-dropdown__selected" data-dropdown-selected
-                >Alla taggar</span
-              >
-              <i
-                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
-                data-dropdown-caret
-              ></i>
-            </div>
-            <ul class="c-dropdown__list" data-dropdown-list>
-              <li class="c-dropdown__option active" data-dropdown-option>
-                Alla taggar
-              </li>
-              <li class="c-dropdown__option" data-dropdown-option>Populära</li>
-              <li class="c-dropdown__option" data-dropdown-option>
-                Rekommenderas för dig
-              </li>
-            </ul>
-          </section>
-
-          <section class="c-dropdown c-lib__dropdown" data-fn-dropdown data-fn-dropdown-view>
-            <div class="c-dropdown__select" data-dropdown-select>
-              <span class="c-dropdown__selected" data-dropdown-selected
-                >Galleri</span
-              >
-              <i
-                class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
-                data-dropdown-caret
-              ></i>
-            </div>
-            <ul class="c-dropdown__list" data-dropdown-list>
-              <li class="c-dropdown__option active" data-dropdown-option>
-                Galleri
-              </li>
-              <li class="c-dropdown__option" data-dropdown-option>Annan vy</li>
-            </ul>
-          </section>
-
-        <section class="c-lib__feed" data-forum-feed></section>
+        </section>
+        <section class="c-lib-page__feed" data-forum-feed></section>
       </main>
     </section>
 
     <footer class="c-footer">
       <div class="c-footer__container">
         <div class="c-footer__logo">
-          <h1>Hamsterpaj</h1>
-          <!-- TO-DO: logo -->
+          <img
+            src="../assets/img/logotyp/hamster+text-img.png"
+            alt="Hamsterpajs logotyp"
+          />
         </div>
         <div class="c-footer__content">
           <ul class="c-footer__page-links">
             <li>
-              <a href="#"  class="c-footer__page-link">
-                <!-- TO-DO: footer icon size + byta ut icon -->
+              <a href="#" class="c-footer__page-link">
                 <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
                 <span>Om Hamsterpaj</span>
               </a>
             </li>
             <li>
-              <a href="#"  class="c-footer__page-link">
-                <!-- TO-DO: footer icon size + byta ut icon -->
+              <a href="#" class="c-footer__page-link">
                 <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
                 <span>Cookies</span>
               </a>
@@ -250,28 +661,24 @@
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-facebook-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-instagram-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li>
-              <a href="#"  class="c-footer__some-link">
+              <a href="#" class="c-footer__some-link">
                 <i class="ph ph-tiktok-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">TikTok</span>
               </a>
             </li>
             <li>
-              <a href="#"  class="c-footer__some-link">
+              <a href="#" class="c-footer__some-link">
                 <i class="ph ph-snapchat-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Snapchat</span>
               </a>
             </li>
@@ -283,66 +690,76 @@
       </div>
     </footer>
 
-    <!-- TEMPLATES -->
+    <!-- TEMPLATE FÖR TEASER POST -->
     <template data-post-teaser-template>
-      <article class="c-post c-post--teaser c-lib__post">
-        <a href="thread.html">
-          <!-- TO-DO: lägg till data-replace -->
-          <section class="c-post__cover-img c-post__cover-img--lying"></section>
-          <section class="c-post__content">
-            <section class="c-post__meta-container">
-              <div class="c-meta c-meta--col">
-                <!-- TO-DO: lägg till text-class -->
-                <p>Startad</p>
-                <!-- TO-DO: lägg till text-class -->
-                <p data-replace-created-date></p>
-              </div>
-              <div class="c-meta c-meta--col c-meta--right">
-                <!-- TO-DO: lägg till text-class -->
-                <p>Senast besvarad</p>
-                <!-- TO-DO: lägg till text-class -->
-                <p data-replace-updated-date></p>
-              </div>
+      <a href="thread.html" class="c-lib-page__post">
+        <article class="c-teaser-post">
+          <section class="c-teaser-post__cover-img">
+            <picture>
+              <source data-replace-cover-img />
+              <!-- <source data-image-desktop>
+              <img data-image> -->
+            </picture>
+          </section>
+          <section class="c-teaser-post__content">
+            <section class="c-teaser-post__post-info">
+              <section class="c-teaser-post__times">
+                <div class="c-teaser-post__time-box">
+                  <!-- TO-DO: span eller p tagg i posts -->
+                  <p>Startad</p>
+                  <p data-replace-created-date></p>
+                </div>
+                <div
+                  class="c-teaser-post__time-box c-teaser-post__time-box--right"
+                >
+                  <!-- TO-DO: span eller p tagg i posts -->
+                  <p>Senast besvarad</p>
+                  <p data-replace-updated-date></p>
+                </div>
+              </section>
+              <section class="c-teaser-post__text-description">
+                <h3 class="c-teaser-post__title" data-replace-title></h3>
+                <p class="c-teaser-post__text cut-text" data-replace-text></p>
+              </section>
             </section>
-            <section class="c-post__text-container">
-              <!-- TO-DO: ändra semantisk heading + lägg till text-class -->
-              <h3 class="c-post__title" data-replace-title></h3>
-              <!-- TO-DO: lägg till text-class -->
-              <p class="c-post__text" data-replace-text></p>
-            </section>
-            <section class="c-post__user-container">
-              <div class="c-meta c-meta--row">
-                <!-- TO-DO: lägg till data-replace -->
-                <div class="c-post__user-img"></div>
+            <section class="c-user-box">
+              <div class="c-user-box__user-info">
+                <div class="c-user-box__user-img">
+                  <picture>
+                    <source data-replace-profile-img />
+                  </picture>
+                </div>
                 <div>
-                  <!-- TO-DO: lägg till text-class -->
-                  <p class="c-post__user-name" data-replace-username></p>
+                  <p class="c-user-box__username" data-replace-username></p>
                 </div>
               </div>
-              <div class="c-meta c-meta--row c-meta--p">
+              <div class="c-user-box__more-info">
+                <!-- TO-DO: icon size-->
                 <i class="ph ph-dots-three c-icon c-icon--xs"></i>
               </div>
             </section>
-            <section class="c-post-info-container" data-replace-tags></section>
-            <section class="c-post-info-container">
-              <div class="c-meta c-meta--row c-meta--p">
-                <svg class="c-icon c-icon--xs">
-                  <use href="#thumbsUp"></use>
-                </svg>
-                <!-- TO-DO: lägg till text-class -->
-                <span data-replace-likes></span>
-              </div>
-              <div class="c-meta c-meta--row c-meta--p">
-                <svg class="c-icon c-icon--xs">
-                  <use href="#chat"></use>
-                </svg>
-                <!-- TO-DO: lägg till text-class -->
-                <span data-replace-comments></span>
-              </div>
+            <section class="c-teaser-post__additional-info">
+              <section
+                class="c-teaser-post__info-container"
+                data-replace-tags
+              ></section>
+              <section class="c-teaser-post__info-container">
+                <!-- TO-DO: styla interactions -->
+                <div class="c-post-interactions">
+                  <!-- TO-DO: icon size-->
+                  <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                  <span data-replace-likes></span>
+                </div>
+                <div class="c-post-interactions">
+                  <!-- TO-DO: icon size-->
+                  <i class="ph ph-chat c-icon c-icon--xs"></i>
+                  <span data-replace-comments></span>
+                </div>
+              </section>
             </section>
           </section>
-        </a>
-      </article>
+        </article>
+      </a>
     </template>
 
     <script src="assets/js/forum.js" type="text/javascript"></script>

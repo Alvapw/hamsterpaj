@@ -4,23 +4,24 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "components/accessibility";
+@import "components/input";
+@import "components/icons";
+@import "components/buttons";
+@import "components/tag";
+@import "components/search";
+@import "components/dropdown";
+@import "components/post-interactions";
+@import "components/user-box";
+@import "components/c-post";
+@import "components/comment";
+@import "components/swiper";
+
 @import "layout/header";
 @import "layout/footer";
 @import "layout/hero";
-@import "layout/pageContainer";
 @import "layout/aside";
-@import "layout/lib";
-
-@import "components/accessibility";
-@import "components/icons";
-@import "components/buttons";
-@import "components/c-tag";
-@import "components/searchBar";
-@import "components/c-dropdown";
-@import "components/c-post-interactions";
-@import "components/c-post";
-@import "components/c-teaser";
-@import "components/c-thread-start";
+@import "layout/lib-page";
 
 @import "pages/home";
 

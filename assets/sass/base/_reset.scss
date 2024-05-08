@@ -178,6 +178,6 @@ ol {
 
 a {
   text-decoration: none;
-  // TO-DO: fixa text-color på a links
-  color: black;
+  // reset links to white color
+  color: var(--color-text);
 }

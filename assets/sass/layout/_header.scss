@@ -1,98 +1,194 @@
 .c-header {
-  background-color: var(--header-bg-color);
   width: 100%;
+  background-color: var(--color-bg-accent-third);
+  border-bottom: 2px solid var(--color-border-black);
+  padding: var(--space-2) var(--space-4);
 
-  --header-bg-color: var(--color-bg-accent-third);
+  // TO-DO: rätt break-point
+  @media (min-width: 744px) {
+    padding: var(--space-4) var(--space-0) var(--space-5);
+  }
 
   &__nav {
     max-width: 1200px;
     margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      flex-direction: row;
+      align-items: end;
+      justify-content: space-between;
+    }
   }
 
-  &__logo {
+  &__mobile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    max-width: 250px;
+  }
+
+  &__menu-icon {
+    &.exit {
+      &__menu-line {
+        &:first-child {
+          transform: rotate(45deg) translate(5px, 0px);
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(5px, 0px);
+        }
+      }
+    }
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      display: none;
+    }
+  }
+
+  &__menu-line {
+    background-color: var(--color-text);
+    width: 1.5rem;
+    height: 0.125rem;
+    display: block;
+    margin: 0.25rem 0;
+    transition: 0.2s;
+  }
+
+  &__menus {
+    margin-left: auto;
+  }
+
+  &__top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__search {
+    width: 100%;
+
+    display: none;
+
+    &.active {
+      margin-top: var(--space-3);
+      display: flex;
+    }
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      display: none;
+      // TO-DO: mindre
+    }
+  }
+
+  &__icon-menu {
+    background-color: var(--color-bg-accent-third);
+    color: var(--color-text-subdued);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    // TO-DO: rätt break-point
+    @media (max-width: 744px) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      margin-bottom: var(--space-1);
+      justify-content: end;
+      // TO-DO: kolla spacing
+      gap: var(--space-8);
+    }
+  }
+
+  &__icon-item {
+    padding: var(--space-1) var(--space-0);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+
+    // TO-DO: font style
+    font-size: 12px;
+  }
+
+  &__icon-text {
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      display: none;
+    }
   }
 
   &__main-menu {
+    margin: var(--space-6) var(--space-0);
+    color: var(--color-text);
+
+    // TO-DO: font style
+    font-size: 20px;
+    font-weight: 600;
+
+    display: none;
+    transition: 0.2s;
+
+    &.active {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: var(--space-4);
+    }
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      margin: var(--space-2) var(--space-0);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // TO-DO: kolla spacing
+      gap: var(--space-6);
+    }
   }
 
-  &__mini-menu {
+  &__main-item {
   }
 
-  &__login-btn {
+  &__btn {
+    display: none;
+    transition: 0.2s;
+
+    &.active {
+      margin-left: auto;
+      margin-bottom: var(--space-6);
+
+      display: block;
+    }
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      display: block;
+      margin-left: var(--space-6);
+    }
   }
 }
-
-// .c-header {
-//   width: 100%;
-//   // TO-DO: bg-color + variabler
-//   .c-header__nav {
-//     max-width: 1200px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-
-//     .c-header__logo {
-//     }
-
-//     .c-header__menu-icon {
-//       .c-header__menu-icon-line {
-//         // TO-DO: variabler!
-//         background-color: black;
-//         width: 1.5rem;
-//         height: 0.125rem;
-//         display: block;
-//         margin: 0.25rem 0;
-//         transition: 0.2s;
-//       }
-
-//       &.exit {
-//         .c-header__menu-icon-line {
-//           &:first-child {
-//             transform: rotate(45deg) translate(5px, 0px);
-//           }
-
-//           &:nth-child(2) {
-//             display: none;
-//           }
-
-//           &:last-child {
-//             transform: rotate(-45deg) translate(5px, 0px);
-//           }
-//         }
-//       }
-
-//       // TO-DO: ändra rätt break-point variabel
-//       @media (min-width: 744px) {
-//         display: none;
-//       }
-//     }
-
-//     .c-header__menu-list {
-//       display: none;
-
-//       &.active {
-//         // TO-DO: fixa
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-
-//         width: 100vw;
-//         height: 100svh;
-//         background-color: white;
-//       }
-
-//       // TO-DO: variabler fungerar ej här
-//       @media (min-width: 744px) {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//       }
-
-//       .c-header__menu-item {
-//         .c-header__menu-link {
-//         }
-//       }
-//     }
-//   }
-// }

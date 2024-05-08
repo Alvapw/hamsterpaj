@@ -1,0 +1,156 @@
+.c-dropdown {
+  padding: var(--space-2);
+  border: 1px solid var(--dropdown-border-color);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--dropdown-bg-color);
+  color: var(--dropdown-text-color);
+
+  // TO-DO: dropdown font style
+  font-size: 14px;
+
+  // TO-DO: width dropdown
+  width: 220px;
+
+  --dropdown-border-color: var(--color-border-inputfield);
+  --dropdown-bg-color: transparent;
+  --dropdown-text-color: var(--color-text);
+
+  // --lg förekommer i mobilvy i aside
+  &--lg {
+    // som --lg blir den lite längre, större typsnitt, annan border color, bakgrund och text color
+    width: 100%;
+
+    // TO-DO: dropdown font style
+    font-size: 16px;
+
+    --dropdown-border-color: var(--color-border-stroke);
+    --dropdown-bg-color: var(--color-bg);
+    --dropdown-text-color: var(--color-text-pale);
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      // som --lg försvinner dopdown funktionen i större skärmstorlekar och padding förändras
+      padding: var(--space-6) var(--space-2);
+    }
+  }
+
+  &__heading {
+    display: none;
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      // som --lg försvinner dopdown funktionen i större skärmstorlekar och heading blir synlig
+      display: block;
+      padding: var(--space-2) var(--space-3);
+
+      // TO-DO: font style
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-1);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &.open {
+      background-color: var(--color-bg-accent-third);
+      border-radius: var(--border-radius-sm);
+    }
+
+    &--lg {
+      // som --lg blir padding lite större också
+      padding: var(--space-3) var(--space-4);
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        // som --lg försvinner dopdown funktionen i större skärmstorlekar
+        display: none;
+      }
+    }
+  }
+
+  &__caret {
+    margin-left: auto;
+    transition: 0.3s;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+
+    &.open {
+      opacity: 1;
+      display: block;
+    }
+
+    &--lg {
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        // som --lg försvinner dopdown funktionen i större skärmstorlekar och listan visas bara som vanligt
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+
+  &__option {
+    padding: var(--space-2) var(--space-1);
+    margin-top: var(--space-2);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+
+    &.active {
+      display: none;
+    }
+
+    // &:hover {
+    //   background-color: var(--color-bg-accent-third);
+    //   border-radius: var(--border-radius-sm);
+    // }
+
+    &--lg {
+      // som --lg blir padding mycket större och den skjuts längre in men gap blir mindre
+      padding: var(--space-2) var(--space-14);
+      gap: var(--space-2);
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        // som --lg försvinner dopdown funktionen i större skärmstorlekar och listan ska inte längre skjutas in på samma sätt
+        padding: var(--space-2) var(--space-3);
+        gap: var(--space-4);
+
+        &.active {
+          // den som är active visas nu också på ett annat sätt
+          display: block;
+          background-color: var(--color-bg-accent-third);
+          border: 0.5px solid var(--color-text);
+          border-radius: var(--border-radius-sm);
+          color: var(--color-text);
+        }
+      }
+    }
+  }
+
+  &__user-img {
+    // TO-DO: ta bort bg sen
+    background-color: grey;
+    // TO-DO: width + height
+    width: 24px;
+    height: 24px;
+    border-radius: var(--border-radius-full);
+  }
+}

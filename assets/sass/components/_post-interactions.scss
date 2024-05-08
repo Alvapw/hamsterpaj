@@ -6,28 +6,30 @@
 
   padding: var(--post-interactions-padding);
   background-color: var(--post-interactions-bg-color);
-  color: var(--post-interaction-text-icon-color);
-  fill: var(--post-interaction-text-icon-color);
+  color: var(--post-interactions-text-color);
 
   --post-interactions-gap: var(--space-1);
   --post-interactions-padding: var(--space-1);
-  --post-interaction-text-icon-color: var(--color-text-on-white);
+  --post-interactions-text-color: var(--color-text);
 
   // TO-DO: fontstyle typskala .c-post-interactions__text
   font-size: 0.75rem;
+  font-weight: 600;
 
   &--bg {
     border-radius: var(--border-radius-full);
 
     // TO-DO: font weight heavier .c-post-interactions--bg
 
+    --post-interactions-padding: var(--space-1) var(--space-2);
     --post-interactions-bg-color: var(--vanilla-100);
+    --post-interactions-text-color: var(--color-text-onwhite);
 
     // TO-DO: rätt state på .c-post-interactions
 
     &.pressed {
       --post-interactions-bg-color: var(--raspberry-700);
-      --post-interactions-text-icon-color: var(--color-text);
+      --post-interactions-text-color: var(--color-text);
       // TO-DO: neon effekt .c-post-interactions pressed state
     }
   }

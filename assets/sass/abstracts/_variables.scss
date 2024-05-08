@@ -61,6 +61,7 @@
   --color-bg-scrollbar: var(--grey-600);
   --color-bg-black: var(--grey-950);
   --color-bg-opacity-filter: var(--opacity-black-30);
+  --color-bg-muted: var(--grey-600);
   --color-bg-white: var(--grey-50);
 
   --color-border-stroke: var(--grey-400);
@@ -68,6 +69,8 @@
   --color-border-inputfield: var(--grey-100);
   --color-border-black: var(--grey-950);
   --color-border-selected: var(--pumpkin-300);
+  --color-border-neon: var(--raspberry-700);
+  --color-border-neon-muted: var(--grape-700);
 
   --color-btn: var(--pumpkin-400);
   --color-btn-disabled: var(--pumpkin-200);
@@ -92,6 +95,20 @@
   --color-badge-accent-second: var(--raspberry-400);
   --color-badge-accent-third: var(--grape-800);
   --color-badge-neon: var(--raspberry-700);
+
+  // fonts / typescale
+  --body-nr: 0px;
+  --body-xs: 0px;
+  --body-sm: 0px;
+  --body-md: 0px;
+  --body-lg: 0px;
+  --heading-sm: 0px;
+  --heading-md: 0px;
+  --heading-lg: 0px;
+  --heading-xl: 0px;
+  --heading-xl: 0px;
+  --heading-xxl: 0px;
+  --button: 0px;
 
   // break-points
   --screen-2xs: 320px; // small mobile
@@ -140,11 +157,11 @@
   // border-radius
   --border-radius-none: 0px;
   --border-radius-sm: 0.25rem;
-  --border-radius-md: 0.625rem;
-  --border-radius-lg: 1.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.25rem;
+  --border-radius-xxll: 2.5rem;
   --border-radius-full: 9999rem;
 
   // border
 }
-
-//test
