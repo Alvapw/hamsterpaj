@@ -1,7 +1,7 @@
 .c-icon {
-  // TO-DO: style
-  // TO-DO: should i or should i not?
   font-size: 1em;
+  // för att få bort det lilla tomma utrymmet under ikonen
+  display: block;
 
   &--xs {
     font-size: 1rem;

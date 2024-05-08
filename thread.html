@@ -5,27 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj - forum</title>
     <link rel="stylesheet" href="assets/sass/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
-    <!-- container -->
-    <div>
-      <!-- header -->
-      <header></header>
-      <!-- självaste innehållet -->
-      <section>
-        <!-- aside med sök + länkar -->
-        <aside></aside>
-        <!-- någon slags top/welcome section -->
-        <section></section>
-        <!-- självaste tråden -->
-        <section></section>
-        <!-- liknande inlägg -->
-        <section></section>
-      </section>
-      <!-- footer -->
-      <footer></footer>
-    </div>
+    <header class="c-header"></header>
+
+    <section class="c-lib-page">
+      <aside class="c-lib-page__aside c-aside">
+        <section class="c-aside__box">
+          <h3 class="c-aside__list-heading">Moderatorer Online</h3>
+          <ul>
+            <li class="c-aside__list-item">
+              <div class="c-aside__user-img"></div>
+              <span>StrategySorceress</span>
+            </li>
+            <li class="c-aside__list-item">
+              <div class="c-aside__user-img"></div>
+              <span>Wizardess</span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="c-lib-page__main">
+        <article class="c-full-post">
+          <section class="c-full-post__actions">
+            <button class="c-full-post__btn c-full-post__left-btn">
+              <span class="visually-hidden">Gå tillbaka ett steg</span>
+              <i class="ph ph-arrow-left c-icon c-icon--sm"></i>
+            </button>
+            <button class="c-full-post__btn c-full-post__right-btn">
+              <span class="visually-hidden">Spara forumtråd</span>
+              <i class="ph ph-heart-straight c-icon c-icon--sm"></i>
+            </button>
+          </section>
+          <section class="c-full-post__cover-img">
+            <!-- TO-DO: .c-teaser__cover-img -->
+          </section>
+          <section class="c-full-post__content">
+            <section class="c-full-post__post-info">
+              <section class="c-full-post__times">
+                <div class="c-full-post__time-box">
+                  <!-- TO-DO: span eller p tagg i posts -->
+                  <p>Startad</p>
+                  <p>1 april 2024</p>
+                </div>
+                <div class="c-full-post__time-box c-full-post__time-box--right">
+                  <!-- TO-DO: span eller p tagg i posts -->
+                  <p>Senast besvarad</p>
+                  <p>13 maj, 22:30</p>
+                </div>
+              </section>
+              <section class="c-full-post__text-description">
+                <h3 class="c-full-post__title">HJÄLP MIG!1!111!!!</h3>
+                <p class="c-full-post__text">
+                  Har suttit hela helgen men kommer fan inte vidare! Kan någon
+                  berätta hur man får trophien 'Bounty Hunter'?! Jag har googlat
+                  överallt och jag tror jag fattar vad som krävs men asså det är
+                  något någonstans som fattas! Fattar inte vad det är jag
+                  missar. NÅGON HJÄLP ASAP!!!
+                </p>
+              </section>
+            </section>
+            <section class="c-user-box">
+              <div class="c-user-box__user-info">
+                <div class="c-user-box__user-img">
+                  <!-- TO-DO: .c-post__user-img -->
+                </div>
+                <div>
+                  <p class="c-user-box__username">VRVixen</p>
+                  <p class="c-user-box__usertitle">Titel</p>
+                </div>
+              </div>
+              <div class="c-user-box__more-info">
+                <!-- TO-DO: icon size-->
+                <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+              </div>
+            </section>
+            <section class="c-full-post__additional-info">
+              <section class="c-full-post__info-container">
+                <!-- TO-DO: styla tags -->
+                <span class="c-tag">RPG</span>
+                <span class="c-tag">Dark</span>
+                <span class="c-tag">Spel</span>
+              </section>
+              <section class="c-full-post__info-container">
+                <!-- TO-DO: styla interactions -->
+                <div class="c-post-interactions">
+                  <!-- TO-DO: icon size-->
+                  <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                  <span>22</span>
+                </div>
+                <div class="c-post-interactions">
+                  <!-- TO-DO: icon size-->
+                  <i class="ph ph-chat c-icon c-icon--xs"></i>
+                  <span>7</span>
+                </div>
+              </section>
+              <label for="postInput" class="visually-hidden"
+                >Svara på post</label
+              >
+              <input
+                type="text"
+                id="postInput"
+                placeholder="Svara"
+                class="c-input c-full-post__input"
+              />
+            </section>
+          </section>
+        </article>
+      </main>
+    </section>
+
+    <footer class="c-footer">
+      <div class="c-footer__container">
+        <div class="c-footer__logo">
+          <h1>Hamsterpaj</h1>
+          <!-- TO-DO: logo -->
+        </div>
+        <div class="c-footer__content">
+          <ul class="c-footer__page-links">
+            <li>
+              <a href="#" class="c-footer__page-link">
+                <!-- TO-DO: footer icon size + byta ut icon -->
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Om Hamsterpaj</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__page-link">
+                <!-- TO-DO: footer icon size + byta ut icon -->
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Cookies</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="c-footer__some-links">
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-facebook-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-instagram-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-tiktok-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-snapchat-logo c-icon c-icon--md"></i>
+                <!-- TO-DO: sr only footer-icon text -->
+                <span class="visually-hidden">Snapchat</span>
+              </a>
+            </li>
+          </ul>
+          <div class="c-footer__cred-text">
+            <span>© 2024 Hamsterpaj</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="assets/js/script.js" type="text/javascript"></script>
   </body>
 </html>

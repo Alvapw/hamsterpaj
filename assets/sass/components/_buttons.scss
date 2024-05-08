@@ -1,2 +1,53 @@
 .c-button {
+  // TO-DO: fixa hela denna den är bara freestyle
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--btn-border-radius);
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  box-shadow: var(--btn-box-shadow-default);
+
+  font-size: 20px;
+
+  --btn-border-radius: var(--border-radius-xl);
+  --btn-box-shadow-default: -3px 4px 0px 0px rgba(0, 0, 0, 1);
+  --btn-box-shadow-hover: -6px 8px 0px 0px rgba(0, 0, 0, 1);
+  --btn-box-shadow-pressed: -1.5px 2px 0px 0px rgba(0, 0, 0, 1);
+
+  &:focus {
+    border: 3px solid yellow;
+  }
+
+  &--primary {
+    --btn-bg-color: #ff7029;
+    --btn-text-color: var(--color-text-onwhite);
+
+    &:hover {
+      box-shadow: var(--btn-box-shadow-hover);
+      transform: translate(3px, -4px);
+    }
+  }
+
+  &--secondary {
+    --btn-color: var(--color-btn-secondary);
+    --btn-text-color: var(--color-text);
+
+    &:hover {
+      box-shadow: var(--btn-box-shadow-hover);
+      transform: translate(3px, -4px);
+    }
+  }
+
+  &--tertiary {
+    --btn-border-radius: var(--border-radius-sm);
+    --btn-bg-color: transparent;
+    --btn-text-color: var(--color-text);
+    --btn-box-shadow-default: none;
+    --btn-box-shadown-hover: none;
+    --btn-box-shadow-pressed: none;
+
+    &:hover {
+      background-color: grey;
+    }
+  }
 }

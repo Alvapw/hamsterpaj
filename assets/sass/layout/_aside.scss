@@ -1,4 +1,22 @@
 .c-aside {
-  // TO-DO: fix this
-  flex: 0 0 30%;
+  // TO-DO: fixa i mobil
+  // TO-DO: padding spacing
+  padding: var(--space-14) var(--space-6);
+  background-image: url("../assets/img/rutor-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 744px) {
+    border-radius: var(--border-radius-md);
+    border: 0.2px solid var(--color-border-neon-muted);
+  }
+
+  &__box {
+    margin-bottom: var(--space-6);
+
+    &:last-child {
+      margin-bottom: var(--space-0);
+    }
+  }
 }

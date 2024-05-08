@@ -1,0 +1,42 @@
+.c-search {
+  display: flex;
+  align-items: center;
+
+  .c-search__input {
+    //   TO-DO: variabler
+    outline: none;
+    background-color: transparent;
+    padding: var(--space-4) var(--space-3);
+    border: 1px solid var(--color-border-scrollbar);
+    border-radius: var(--border-radius-sm);
+    margin-right: var(--space-2);
+
+    // TO-DO: font style
+    font-size: 14px;
+    color: var(--color-text);
+
+    // sökfältet ska ta upp så mycket plats som möjligt
+    flex: 1;
+
+    &::placeholder {
+      // TO-DO: font style
+      font-size: 14px;
+      color: var(--color-text);
+    }
+
+    &:focus {
+      // TO-DO: styla focus
+    }
+  }
+
+  .c-search__button {
+    // TO-DO: egentligen borde denna ligga som en c-button
+    color: var(--color-text);
+    background-color: var(--color-bg-scrollbar);
+    padding: var(--space-2);
+    border: none;
+    border-radius: var(--border-radius-sm);
+
+    // TO-DO: states
+  }
+}

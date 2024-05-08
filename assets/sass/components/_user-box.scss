@@ -1,0 +1,41 @@
+.c-user-box {
+  color: var(--color-text-subdued);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__user-img {
+    // TO-DO: ta bort bg-color
+    background-color: grey;
+    // TO-DO: width + height
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius-full);
+  }
+
+  &__username {
+    // TO-DO: font style
+    font-size: 14px;
+  }
+
+  &__usertitle {
+    // TO-DO: font style
+    font-size: 14px;
+    margin-top: var(--space-1);
+  }
+
+  &__more-info {
+    padding: var(--space-1);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
