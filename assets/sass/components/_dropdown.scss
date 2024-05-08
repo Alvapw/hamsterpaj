@@ -88,9 +88,6 @@
     opacity: 0;
     display: none;
     transition: 0.2s;
-    // för att listan inte ska bli för långradig så har jag satt en max-width och scroll
-    max-height: 200px;
-    overflow: scroll;
 
     &.open {
       opacity: 1;
@@ -104,6 +101,12 @@
         opacity: 1;
         display: block;
       }
+    }
+
+    &--scroll {
+      // för att listan inte ska bli för långradig så har jag satt en max-width och scroll
+      max-height: 200px;
+      overflow: scroll;
     }
   }
 
