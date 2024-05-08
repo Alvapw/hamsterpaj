@@ -14,7 +14,7 @@ menuIcon.addEventListener("click", function () {
 let forumThreads = [];
 const filters = {
   tags: [],
-  search: "",
+  search: ""
 };
 const postTeaserTemplate = document.querySelector(
   "[data-post-teaser-template]"
@@ -22,6 +22,7 @@ const postTeaserTemplate = document.querySelector(
 const forumFeed = document.querySelector("[data-forum-feed]");
 const searchInput = document.querySelector("[data-search]");
 const tags = document.querySelectorAll("[data-tag]");
+// console.log(tags);
 
 // lyssnar efter input i sökfältet och hämtar värdet
 searchInput.addEventListener("input", (e) => {
@@ -43,6 +44,7 @@ fetch("assets/json/forumData.json")
 
 // funktion för att skapa korten
 function createPostTeaser(thread) {
+  console.log(thread);
   // klonar template
   const post = postTeaserTemplate.content.cloneNode(true).children[0];
 
@@ -73,7 +75,7 @@ function createPostTeaser(thread) {
   // filtrerar ut hur många och vilka tags som ska skrivas ut i kortet och skapar elementet med rätt class
   const tagsContainer = post.querySelector("[data-replace-tags]");
   thread.tags.forEach((tag) => {
-    console.log(tag);
+    // console.log(tag);
     const spanTag = document.createElement("span");
     spanTag.classList.add("c-tag");
     spanTag.textContent = tag;
@@ -85,31 +87,37 @@ function createPostTeaser(thread) {
 }
 
 // funktion för att rendera ut korten
-function render() {
+function render(data) {
   let filteredThreads = [...forumThreads];
+  
   if (filters.search.length > 0) {
     const search = filters.search.toLowerCase();
     filteredThreads = filteredThreads.filter((r) =>
       r.title.toLowerCase().includes(search)
     );
   }
-  if (filters.tags.length > 0) {
+  // if (filters.tags.length > 0) {
+  //   filteredThreads = filteredThreads.filter((r) =>
+  //     filters.tags.every((f) => r.tags.includes(f))
+  //   );
+  // }
+  if(data){
     filteredThreads = filteredThreads.filter((r) =>
-      filters.tags.every((f) => r.tags.includes(f))
-    );
+    r.tags.includes(data));
   }
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
+ 
 }
 
-console.log(tags);
+// console.log(tags);
 tags.forEach((tag) => {
-  console.log(tag);
+  // console.log(tag);
   tag.addEventListener("click", (e) => {
-    console.log(tag);
-    const currentTag = e.target.dataset.caty;
-    toggleItemArray(currentTag, filters.tags);
-    render();
+    console.log(e.target.dataset.tag);
+    const currentTag = e.target.dataset.tag;
+    // toggleItemArray(currentTag, filters.tags);
+    render(currentTag);
   });
 });
 
@@ -141,7 +149,7 @@ dropdowns.forEach((dropdown) => {
   options.forEach((option) => {
     // lägger till lyssnare på option
     option.addEventListener("click", () => {
-      console.log("click");
+      // console.log("click");
       // när ett option klickas på så ska selected innerText ändras till det klickade optionets innerText
       selected.innerText = option.innerText;
       // om det finns en icon ska selectedIcon bytas ut till optionIcon
@@ -180,5 +188,6 @@ function toggleItemArray(item, array) {
   } else {
     array.push(item);
   }
-  console.log(array);
+  // console.log(array);
 }
+
