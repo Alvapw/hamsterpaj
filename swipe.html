@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+    <link rel="stylesheet" href="assets/sass/style.css">
+</head>
+<body>
+    <div class="tinder">
+        <div class="tinder--status">
+          <i class="fa fa-remove"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+      
+        <div class="tinder--cards">
+          <!--TO DO-->
+          <!--Implement JS myDoubleClickFunction to do what ecplained in next few lines -->
+          <div class="tinder--card" ondblclick="myDoubleClickFunction()">
+            <img src="https://placeimg.com/600/300/people">
+            <!--TO DO-->
+            <h3 id="question1">Question 1</h3>
+           <!-- <h3 id="answer1">Answer 1</h3>-->
+           <!--  when user double clicks on card, "id=question" is displayed smaller (i.e. <h3>) and "id=answer" is displayed-->
+          </div>
+          <div class="tinder--card"  ondblclick="myDoubleClickFunction()">
+            <img src="https://placeimg.com/600/300/animals">
+            <!--TO DO-->
+            <h3 id="question2">Question 2</h3>
+           <!-- <h3 id="answer2">Answer 2</h3>-->
+           <!--  when user double clicks on card, "id=question" is displayed smaller (i.e. <h3>) and "id=answer" is displayed-->
+          </div>
+          <div class="tinder--card">
+            <img src="https://placeimg.com/600/300/nature">
+            <h3>Demo card 3</h3>
+            <p>This is a demo for Tinder like swipe cards</p>
+          </div>
+          <div class="tinder--card">
+            <img src="https://placeimg.com/600/300/tech">
+            <h3>Demo card 4</h3>
+            <p>This is a demo for Tinder like swipe cards</p>
+          </div>
+          <div class="tinder--card">
+            <img src="https://placeimg.com/600/300/arch">
+            <h3>Demo card 5</h3>
+            <p>This is a demo for Tinder like swipe cards</p>
+          </div>
+        </div>
+      
+        <div class="tinder--buttons">
+          <button id="nope">x</button>
+          <button id="love">y</button>
+        </div>
+      </div>
+      <script src="assets/js/swipe.js"></script>
+</body>
+</html>
