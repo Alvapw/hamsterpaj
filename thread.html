@@ -9,19 +9,122 @@
   </head>
 
   <body>
-    <header class="c-header"></header>
+    <header class="c-header">
+      <nav class="c-header__nav">
+        <div class="c-header__mobile-container">
+          <div class="c-header__logo-box">
+            <img src="../assets/img/logotyp/hamster+text-img.png" alt="" />
+          </div>
+          <div class="c-header__menu-icon" data-fn-toggle-menu>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+          </div>
+        </div>
+        <div class="c-header__menus">
+          <div class="c-header__top-menu">
+            <form
+              id="search"
+              role="search"
+              autocomplete="off"
+              class="c-search c-header__search"
+              data-header-search
+            >
+              <label for="search">
+                <span class="visually-hidden">Sök</span>
+              </label>
+              <input
+                type="search"
+                id="search"
+                placeholder="Sök"
+                class="c-search__input c-header__search-input"
+              />
+              <button class="c-search__button">
+                <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
+                <span class="visually-hidden">Klicka för att söka</span>
+              </button>
+            </form>
+          </div>
+          <ul class="c-header__icon-menu">
+            <li class="c-header__icon-item">
+              <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Vänner</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-book-open c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Gästboken</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-chat c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Meddelande</span>
+            </li>
+            <li class="c-header__icon-item c-header__icon-item--mobile-only">
+              <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Lägg till</span>
+            </li>
+          </ul>
+          <ul class="c-header__main-menu" data-main-menu>
+            <li class="c-header__main-item">
+              <a href="#">Om Hamsterpaj</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="forum.html">Forum</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Onlinespel</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Snackis</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Min profil</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="c-button c-button--primary c-header__btn"
+          data-header-btn
+        >
+          <span>Logga in</span>
+        </button>
+      </nav>
+    </header>
 
     <section class="c-lib-page">
       <aside class="c-lib-page__aside c-aside">
-        <section class="c-aside__box">
-          <h3 class="c-aside__list-heading">Moderatorer Online</h3>
-          <ul>
-            <li class="c-aside__list-item">
-              <div class="c-aside__user-img"></div>
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__box"
+          data-fn-dropdown
+        >
+          <h3 class="c-dropdown__heading">Moderatorer online</h3>
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <i class="ph ph-robot c-icon c-icon--sm"></i>
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Moderatorer online</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <div class="c-dropdown__user-img"></div>
               <span>StrategySorceress</span>
             </li>
-            <li class="c-aside__list-item">
-              <div class="c-aside__user-img"></div>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <div class="c-dropdown__user-img"></div>
               <span>Wizardess</span>
             </li>
           </ul>
@@ -121,21 +224,21 @@
     <footer class="c-footer">
       <div class="c-footer__container">
         <div class="c-footer__logo">
-          <h1>Hamsterpaj</h1>
-          <!-- TO-DO: logo -->
+          <img
+            src="../assets/img/logotyp/hamster+text-img.png"
+            alt="Hamsterpajs logotyp"
+          />
         </div>
         <div class="c-footer__content">
           <ul class="c-footer__page-links">
             <li>
               <a href="#" class="c-footer__page-link">
-                <!-- TO-DO: footer icon size + byta ut icon -->
                 <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
                 <span>Om Hamsterpaj</span>
               </a>
             </li>
             <li>
               <a href="#" class="c-footer__page-link">
-                <!-- TO-DO: footer icon size + byta ut icon -->
                 <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
                 <span>Cookies</span>
               </a>
@@ -145,28 +248,24 @@
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-facebook-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-instagram-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-tiktok-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">TikTok</span>
               </a>
             </li>
             <li>
               <a href="#" class="c-footer__some-link">
                 <i class="ph ph-snapchat-logo c-icon c-icon--md"></i>
-                <!-- TO-DO: sr only footer-icon text -->
                 <span class="visually-hidden">Snapchat</span>
               </a>
             </li>

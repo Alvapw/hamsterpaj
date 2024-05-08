@@ -37,7 +37,7 @@
     "profileImg": "../assets/img/profile-img.png",
     "userName": "GlitterJuni",
     "category": ["Fanart & fanfiction"],
-    "tags": ["Konst", "Fanart", "Crafting"],
+    "tags": ["Fanart", "Crafting"],
     "likes": "3344",
     "comments": "5446"
   },
@@ -93,7 +93,7 @@
     "profileImg": "../assets/img/profile-img.png",
     "userName": "TechTinkerer",
     "category": ["Spel & brädspel"],
-    "tags": ["Musik", "Gamer", "RPG"],
+    "tags": ["Musik", "RPG"],
     "likes": "12",
     "comments": "99"
   },
@@ -107,7 +107,7 @@
     "profileImg": "../assets/img/profile-img.png",
     "userName": "EmmaKin99",
     "category": ["Spel & brädspel"],
-    "tags": ["Spel", "Tips", "Story"],
+    "tags": ["Spel", "Tips"],
     "likes": "77",
     "comments": "78"
   },

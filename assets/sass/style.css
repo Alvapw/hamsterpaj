@@ -538,6 +538,8 @@ body {
   opacity: 0;
   display: none;
   transition: 0.2s;
+  max-height: 200px;
+  overflow: scroll;
 }
 .c-dropdown__list.open {
   opacity: 1;
@@ -904,26 +906,20 @@ body {
   padding: var(--space-0) var(--space-4);
   position: absolute;
   right: 0;
-  bottom: -1.25rem;
+  bottom: -0.75rem;
   display: flex;
   align-items: end;
   gap: var(--space-4);
-}
-.c-comment__img-container {
-  display: flex;
-  gap: var(--space-4);
-  margin-bottom: var(--space-5);
 }
 .c-comment__img-box {
   position: relative;
   background-color: var(--color-bg-accent-first);
   border-radius: var(--border-radius-sm);
-  padding: var(--space-4);
+  margin-bottom: var(--space-5);
 }
 .c-comment__img {
   background-color: grey;
-  width: 174px;
-  height: 174px;
+  aspect-ratio: 1/1;
 }
 
 .c-swiper {
@@ -1295,6 +1291,31 @@ body {
 }
 
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/
+.c-asymmetric-feed__post {
+  --flex-gap: var(--space-4);
+}
+.c-asymmetric-feed__post--60 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flex-gap);
+  flex: 0 0 100%;
+}
+@media (min-width: 1000px) {
+  .c-asymmetric-feed__post--60 {
+    --flex-items: 3;
+    flex: 0 0 calc(100% / var(--flex-items) - (var(--flex-items) - 1) / var(--flex-items) * var(--flex-gap) + 100% / var(--flex-items) - (var(--flex-items) - 1) / var(--flex-items) * var(--flex-gap) + var(--flex-gap));
+  }
+}
+.c-asymmetric-feed__post--30 {
+  flex: 0 0 100%;
+}
+@media (min-width: 1000px) {
+  .c-asymmetric-feed__post--30 {
+    --flex-items: 3;
+    flex: 0 0 calc(100% / var(--flex-items) - (var(--flex-items) - 1) / var(--flex-items) * var(--flex-gap));
+  }
+}
+
 .flex-container {
   max-width: 1200px;
   margin: auto;
