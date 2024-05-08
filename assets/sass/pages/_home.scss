@@ -1,1 +1,51 @@
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/
+
+.c-asymmetric-feed {
+  &__post {
+    --flex-gap: var(--space-4);
+    &--60 {
+      display: flex;
+      flex-direction: column;
+      gap: var(--flex-gap);
+
+      flex: 0 0 100%;
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 1000px) {
+        --flex-items: 3;
+
+        flex: 0 0
+          calc(
+            calc(
+                (100% / var(--flex-items)) -
+                  (
+                    ((var(--flex-items) - 1) / var(--flex-items)) *
+                      var(--flex-gap)
+                  )
+              ) +
+              calc(
+                (100% / var(--flex-items)) -
+                  (
+                    ((var(--flex-items) - 1) / var(--flex-items)) *
+                      var(--flex-gap)
+                  )
+              ) + var(--flex-gap)
+          );
+      }
+    }
+    &--30 {
+      flex: 0 0 100%;
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 1000px) {
+        --flex-items: 3;
+
+        flex: 0 0
+          calc(
+            (100% / var(--flex-items)) -
+              (((var(--flex-items) - 1) / var(--flex-items)) * var(--flex-gap))
+          );
+      }
+    }
+  }
+}
