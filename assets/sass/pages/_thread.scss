@@ -1,0 +1,163 @@
+.c-thread-page {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 744px) {
+    // TO-DO: kolla spacing
+    padding: var(--space-7) var(--space-4) var(--space-16);
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__aside {
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      // TO-DO: procent eller pixlar
+      flex: 0 0 20%;
+    }
+  }
+
+  &__main {
+    padding: var(--space-4);
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      // TO-DO: procent eller pixlar
+      flex: 0 0 70%;
+      padding: var(--space-0);
+    }
+  }
+}
+
+.c-thread {
+  &__ts {
+  }
+
+  // sätter max-width på comments-containern
+  &__comments {
+    max-width: 594px;
+  }
+
+  // position relative behövs för att kunna positionera ut before + after
+  &__list {
+    position: relative;
+
+    // yttersta nivån för kommentarslista
+    &--lvl1 {
+      // padding på top + left för att skjuta in kommentarerna
+      padding-top: 52px;
+      padding-left: 24px;
+      // margin på left för att skjuta in hela listan
+      margin-left: 24px;
+
+      // detta skapar då den lodräta linjen för listan, satt som :before och inte :after för den ska ligga nederst (gå att täcka)
+      &:before {
+        content: "";
+        // positioneras längst upp, längst till vänster
+        position: absolute;
+        top: 0;
+        left: 0;
+        // 1px bred, följa hela vägan, va färgad i rätt border color
+        background-color: var(--color-border-stroke);
+        height: 100%;
+        width: 1px;
+      }
+    }
+
+    // alla innerlistor alltså svar på kommentarer skapar egna listor som  namnges med lvl2
+    &--lvl2 {
+      // dessa listor skjuts in lite kortare än lvl1
+      padding-left: 16px;
+
+      // skapar en likadan listlinje
+      &:before {
+        content: "";
+        // positioneras med -84px i top för att listlinjen ska börja från den övre kommentarens botten ( -84px = 44px pmargin + 20px border radius)
+        position: absolute;
+        top: -64px;
+        left: 0;
+        background-color: var(--color-border-stroke);
+        height: 100%;
+        width: 1px;
+      }
+    }
+  }
+
+  // style för kommentarerna
+  &__comment {
+    margin-bottom: 44px;
+    position: relative;
+
+    // de yttersta kommentarerna som svarar på ts
+    &--lvl1 {
+      // vägräta linjen skapas som :after och inte :before för att ligga överst och inte kunna övertäckas
+      &:after {
+        content: "";
+        position: absolute;
+        // eftersom denna linjen har en böj så är den skapat som en box med border-radius och border på left och bottom
+        // den går upp 16px från top och den går ut 25px från vänster (24px till listlinje + 1px för att border sitter alltid på utsidan)
+        top: -16px;
+        left: -25px;
+        border-left: 1px solid var(--color-border-stroke);
+        border-bottom: 1px solid var(--color-border-stroke);
+        border-bottom-left-radius: var(--border-radius-sm);
+        width: 25px;
+        height: 16px;
+      }
+
+      // den sista kommentaren i en lista har en :after som täcker över listlinjens sista del för att listlinjen ska sluta vid sista kommentarens top
+      &:last-child {
+        // därför gjord som before för att den inte ska täcka över kommentarens :after vågräta linje
+        &:before {
+          content: "";
+          position: absolute;
+          // pga border radius + padding + outer border
+          top: -4px;
+          left: -25px;
+          // samma färg som bg
+          background-color: var(--color-bg);
+          // eftersom den startas på -4px från top så förlänger vi den lite så att den fortfarande i höjd går ända ner i kanten
+          height: calc(100% + 5px);
+          width: 1px;
+        }
+      }
+    }
+
+    // alla inre kommentarer som svarar på andra kommentarer
+    &--lvl2 {
+      // vägräta linjen skapas som :after och inte :before för att ligga överst och inte kunna övertäckas
+      &:after {
+        content: "";
+        position: absolute;
+        // eftersom denna linjen har en böj så är den skapat som en box med border-radius och border på left och bottom
+        // den går upp 16px från top och den går ut 25px från vänster (24px till listlinje + 1px för att border sitter alltid på utsidan)
+        top: -16px;
+        left: -17px;
+        border-left: 1px solid var(--color-border-stroke);
+        border-bottom: 1px solid var(--color-border-stroke);
+        border-bottom-left-radius: var(--border-radius-sm);
+        width: 17px;
+        height: 16px;
+      }
+
+      // den sista kommentaren i en lista har en :after som täcker över listlinjens sista del för att listlinjen ska sluta vid sista kommentarens top
+      &:last-child {
+        // därför gjord som before för att den inte ska täcka över kommentarens :after vågräta linje
+        &:before {
+          content: "";
+          position: absolute;
+          // pga border radius + padding + outer border
+          top: -4px;
+          left: -17px;
+          // samma färg som bg
+          background-color: var(--color-bg);
+          // eftersom den startas på -4px från top så förlänger vi den lite så att den fortfarande i höjd går ända ner i kanten
+          height: calc(100% + 4px);
+          width: 1px;
+        }
+      }
+    }
+  }
+}

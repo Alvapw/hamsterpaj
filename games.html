@@ -5,9 +5,471 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj - spel</title>
     <link rel="stylesheet" href="assets/sass/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
+    <header class="c-header">
+      <nav class="c-header__nav">
+        <div class="c-header__mobile-container">
+          <div class="c-header__logo-box">
+            <a href="index.html">
+              <img src="../assets/img/logotyp/hamster+text-img.png" alt="" />
+            </a>
+          </div>
+          <div class="c-header__menu-icon" data-fn-toggle-menu>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+          </div>
+        </div>
+        <div class="c-header__menus">
+          <div class="c-header__top-menu">
+            <form
+              id="search"
+              role="search"
+              autocomplete="off"
+              class="c-search c-header__search"
+              data-header-search
+            >
+              <label for="search">
+                <span class="visually-hidden">Sök</span>
+              </label>
+              <input
+                type="search"
+                id="search"
+                placeholder="Sök"
+                class="c-search__input c-header__search-input"
+              />
+              <button class="c-search__button">
+                <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
+                <span class="visually-hidden">Klicka för att söka</span>
+              </button>
+            </form>
+          </div>
+          <ul class="c-header__icon-menu">
+            <li class="c-header__icon-item">
+              <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Vänner</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-book-open c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Gästboken</span>
+            </li>
+            <li class="c-header__icon-item">
+              <i class="ph ph-chat c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Meddelande</span>
+            </li>
+            <li class="c-header__icon-item c-header__icon-item--mobile-only">
+              <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+              <span class="c-header__icon-text">Lägg till</span>
+            </li>
+          </ul>
+          <ul class="c-header__main-menu" data-main-menu>
+            <li class="c-header__main-item">
+              <a href="#">Om Hamsterpaj</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="forum.html">Forum</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Onlinespel</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Snackis</a>
+            </li>
+            <li class="c-header__main-item">
+              <a href="#">Min profil</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="c-button c-button--primary c-header__btn"
+          data-header-btn
+        >
+          <span>Logga in</span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="c-hero c-hero--spel-img">
+      <div class="c-hero__info-box">
+        <h1 class="c-hero__heading">Hamsterpajs spel</h1>
+      </div>
+    </section>
+
+    <section class="c-lib-page">
+      <aside class="c-lib-page__aside c-aside">
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__box"
+          data-fn-dropdown
+        >
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <i
+              class="ph ph-eyes c-icon c-icon--sm"
+              data-dropdown-selected-icon
+            ></i>
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Alla kategorier</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg active"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-eyes c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Alla kategorier</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-rabbit c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Anime & manga</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-books c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Böcker & serier</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-mask-happy c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Cosplay & conventions</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-newspaper-clipping c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Fanart & fanfiction</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <i
+                class="ph ph-game-controller c-icon c-icon--sm"
+                data-dropdown-option-icon
+              ></i>
+              <span>Spel & brädspel</span>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__box"
+          data-fn-dropdown
+        >
+          <h3 class="c-dropdown__heading">Moderatorer online</h3>
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <i class="ph ph-robot c-icon c-icon--sm"></i>
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Moderatorer online</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li class="c-dropdown__option c-dropdown__option--lg">
+              <div class="c-dropdown__user-img"></div>
+              <span>StrategySorceress</span>
+            </li>
+            <li class="c-dropdown__option c-dropdown__option--lg">
+              <div class="c-dropdown__user-img"></div>
+              <span>Wizardess</span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="c-lib-page__main">
+        <section class="c-lib-page__search-filter">
+          <form
+            id="search"
+            role="search"
+            autocomplete="off"
+            class="c-search c-lib-page__search"
+          >
+            <label for="search">
+              <span class="visually-hidden">Sök forum</span>
+            </label>
+            <input
+              type="search"
+              id="search"
+              placeholder="Sök"
+              class="c-search__input"
+              data-search
+            />
+            <button class="c-search__button">
+              <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
+              <span class="visually-hidden">Klicka för att söka</span>
+            </button>
+          </form>
+          <section class="c-lib-page__dropdowns">
+            <section class="c-dropdown" data-fn-dropdown data-fn-dropdown-sort>
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Senaste</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul class="c-dropdown__list" data-dropdown-list>
+                <li class="c-dropdown__option active" data-dropdown-option>
+                  Senaste
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Populära
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Rekommenderas för dig
+                </li>
+              </ul>
+            </section>
+            <section class="c-dropdown" data-fn-dropdown>
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Alla taggar</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul
+                class="c-dropdown__list c-dropdown__list--scroll"
+                data-dropdown-list
+              >
+                <li
+                  class="c-dropdown__option active"
+                  data-dropdown-option
+                  data-tag="allataggar"
+                >
+                  Alla taggar
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="spel"
+                >
+                  Spel
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="dark"
+                >
+                  Dark
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="rpg"
+                >
+                  RPG
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="manga"
+                >
+                  Manga
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="anime"
+                >
+                  Anime
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="fanart"
+                >
+                  Fanart
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="crafting"
+                >
+                  Crafting
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="konsol"
+                >
+                  Konsol
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="cosplay"
+                >
+                  Cosplay
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="tips"
+                >
+                  Tips
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="fantasy"
+                >
+                  Fantasy
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="böcker"
+                >
+                  Böcker
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="musik"
+                >
+                  Musik
+                </li>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-tag="humor"
+                >
+                  Humor
+                </li>
+              </ul>
+            </section>
+            <section
+              class="c-dropdown c-lib__dropdown"
+              data-fn-dropdown
+              data-fn-dropdown-view
+            >
+              <div class="c-dropdown__select" data-dropdown-select>
+                <span class="c-dropdown__selected" data-dropdown-selected
+                  >Galleri</span
+                >
+                <i
+                  class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+                  data-dropdown-caret
+                ></i>
+              </div>
+              <ul class="c-dropdown__list" data-dropdown-list>
+                <li class="c-dropdown__option active" data-dropdown-option>
+                  Galleri
+                </li>
+                <li class="c-dropdown__option" data-dropdown-option>
+                  Annan vy
+                </li>
+              </ul>
+            </section>
+          </section>
+        </section>
+        <section class="c-lib-page__feed" data-forum-feed></section>
+      </main>
+    </section>
+
+    <footer class="c-footer">
+      <div class="c-footer__container">
+        <div class="c-footer__logo">
+          <img
+            src="../assets/img/logotyp/hamster+text-img.png"
+            alt="Hamsterpajs logotyp"
+          />
+        </div>
+        <div class="c-footer__content">
+          <ul class="c-footer__page-links">
+            <li>
+              <a href="#" class="c-footer__page-link">
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Om Hamsterpaj</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__page-link">
+                <i class="ph ph-chef-hat c-icon c-icon--xs"></i>
+                <span>Cookies</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="c-footer__some-links">
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-facebook-logo c-icon c-icon--md"></i>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-instagram-logo c-icon c-icon--md"></i>
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-tiktok-logo c-icon c-icon--md"></i>
+                <span class="visually-hidden">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-footer__some-link">
+                <i class="ph ph-snapchat-logo c-icon c-icon--md"></i>
+                <span class="visually-hidden">Snapchat</span>
+              </a>
+            </li>
+          </ul>
+          <div class="c-footer__cred-text">
+            <span>© 2024 Hamsterpaj</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="assets/js/script.js" type="text/javascript"></script>
   </body>
 </html>

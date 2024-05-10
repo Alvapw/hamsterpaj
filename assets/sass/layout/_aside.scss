@@ -2,7 +2,7 @@
   // TO-DO: fixa i mobil
   // TO-DO: padding spacing
   padding: var(--space-14) var(--space-6);
-  background-image: url("../assets/img/rutor-bg.png");
+  background-image: url("../../assets/img/hero-bg-images/bg-rutor.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -10,6 +10,13 @@
   @media (min-width: 744px) {
     border-radius: var(--border-radius-md);
     border: 0.2px solid var(--color-border-neon-muted);
+
+    // den är position sticky fast bara till lib-page så att den följer bara med det content som är relevant
+    position: sticky;
+    top: 1rem;
+    bottom: 1rem;
+    // den ska vara lika hög som svh fast minus 2rem för margin top och bottom
+    height: calc(100svh - 2rem);
   }
 
   &__box {

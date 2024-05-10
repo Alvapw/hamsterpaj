@@ -5,14 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.c-teaser-post__text {
-  // Gör så att p-tagg har tre rader och ... efter
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.c-teaser-carousel-post__text {
+.cut-text {
   // Gör så att p-tagg har tre rader och ... efter
   display: -webkit-box;
   -webkit-line-clamp: 3;

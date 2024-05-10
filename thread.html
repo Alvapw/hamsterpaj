@@ -90,8 +90,8 @@
       </nav>
     </header>
 
-    <section class="c-lib-page">
-      <aside class="c-lib-page__aside c-aside">
+    <section class="c-thread-page">
+      <aside class="c-thread-page__aside c-aside">
         <section
           class="c-dropdown c-dropdown--lg c-aside__box"
           data-fn-dropdown
@@ -131,38 +131,42 @@
         </section>
       </aside>
 
-      <main class="c-lib-page__main">
-        <article class="c-full-post">
-          <section class="c-full-post__actions">
-            <button class="c-full-post__btn c-full-post__left-btn">
+      <main class="c-thread-page__main">
+        <article
+          class="c-post c-post--full-post c-thread-page__ts c-thread__ts"
+        >
+          <section class="c-post__actions">
+            <button class="c-post__btn">
               <span class="visually-hidden">Gå tillbaka ett steg</span>
-              <i class="ph ph-arrow-left c-icon c-icon--sm"></i>
+              <i class="ph ph-arrow-left c-icon c-icon--xs"></i>
             </button>
-            <button class="c-full-post__btn c-full-post__right-btn">
+            <button class="c-post__btn">
               <span class="visually-hidden">Spara forumtråd</span>
-              <i class="ph ph-heart-straight c-icon c-icon--sm"></i>
+              <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
             </button>
           </section>
-          <section class="c-full-post__cover-img">
-            <!-- TO-DO: .c-teaser__cover-img -->
+          <section
+            class="c-post__cover-img-box c-post__cover-img-box--full-post"
+          >
+            <picture>
+              <source data-replace-cover-img />
+            </picture>
           </section>
-          <section class="c-full-post__content">
-            <section class="c-full-post__post-info">
-              <section class="c-full-post__times">
-                <div class="c-full-post__time-box">
-                  <!-- TO-DO: span eller p tagg i posts -->
+          <section class="c-post__content c-post__content--full-post">
+            <section class="c-post__post-info">
+              <section class="c-post__times-container">
+                <div class="c-post__time-box">
                   <p>Startad</p>
                   <p>1 april 2024</p>
                 </div>
-                <div class="c-full-post__time-box c-full-post__time-box--right">
-                  <!-- TO-DO: span eller p tagg i posts -->
+                <div class="c-post__time-box c-post__time-box--right">
                   <p>Senast besvarad</p>
                   <p>13 maj, 22:30</p>
                 </div>
               </section>
-              <section class="c-full-post__text-description">
-                <h3 class="c-full-post__title">HJÄLP MIG!1!111!!!</h3>
-                <p class="c-full-post__text">
+              <section class="c-post__text-container">
+                <h3 class="c-post__title">HJÄLP MIG!1!111!!!</h3>
+                <p class="c-post__text">
                   Har suttit hela helgen men kommer fan inte vidare! Kan någon
                   berätta hur man får trophien 'Bounty Hunter'?! Jag har googlat
                   överallt och jag tror jag fattar vad som krävs men asså det är
@@ -174,7 +178,9 @@
             <section class="c-user-box">
               <div class="c-user-box__user-info">
                 <div class="c-user-box__user-img">
-                  <!-- TO-DO: .c-post__user-img -->
+                  <picture>
+                    <source data-replace-profile-img />
+                  </picture>
                 </div>
                 <div>
                   <p class="c-user-box__username">VRVixen</p>
@@ -186,22 +192,18 @@
                 <i class="ph ph-dots-three c-icon c-icon--xs"></i>
               </div>
             </section>
-            <section class="c-full-post__additional-info">
-              <section class="c-full-post__info-container">
-                <!-- TO-DO: styla tags -->
+            <section class="c-post__additional-info">
+              <section class="c-post__info-container">
                 <span class="c-tag">RPG</span>
                 <span class="c-tag">Dark</span>
                 <span class="c-tag">Spel</span>
               </section>
-              <section class="c-full-post__info-container">
-                <!-- TO-DO: styla interactions -->
+              <section class="c-post__info-container">
                 <div class="c-post-interactions">
-                  <!-- TO-DO: icon size-->
                   <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
                   <span>22</span>
                 </div>
                 <div class="c-post-interactions">
-                  <!-- TO-DO: icon size-->
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
                   <span>7</span>
                 </div>
@@ -213,12 +215,441 @@
                 type="text"
                 id="postInput"
                 placeholder="Svara"
-                class="c-input c-full-post__input"
+                class="c-input"
               />
             </section>
           </section>
         </article>
-        <section></section>
+        <section class="c-thread__comments">
+          <ul class="c-thread__list c-thread__list--lvl1">
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+              >
+                <section class="c-comment__img-container">
+                  <div class="c-comment__img-box">
+                    <img src="#" alt="" class="c-comment__img" />
+                    <section class="c-comment__interactions">
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                        <span>22</span>
+                      </div>
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-chat c-icon c-icon--xs"></i>
+                        <span>7</span>
+                      </div>
+                    </section>
+                  </div>
+                </section>
+                <p class="c-comment__text">
+                  Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
+                  semper blandit aliquam. Habitant porttitor pellentesque
+                  venenatis sed maecenas egestas ac.Lorem ipsum dolor sit amet
+                  consectetur. Morbi adipiscing semper blandit aliquam. Habitant
+                  porttitor pellentesque venenatis sed maecenas egestas ac.
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <picture>
+                        <source data-replace-profile-img />
+                      </picture>
+                    </div>
+                    <div>
+                      <p class="c-user-box__username">VRVixen</p>
+                      <p class="c-user-box__usertitle">Titel</p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span>22</span>
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span>7</span>
+                  </div>
+                </section>
+              </article>
+              <ul class="c-thread__list c-thread__list--lvl2">
+                <li>
+                  <article
+                    class="c-comment c-thread__comment c-thread__comment--lvl2"
+                  >
+                    <section class="c-comment__img-container">
+                      <div class="c-comment__img-box">
+                        <img src="#" alt="" class="c-comment__img" />
+                        <section class="c-comment__interactions">
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i
+                              class="ph ph-heart-straight c-icon c-icon--xs"
+                            ></i>
+                            <span>22</span>
+                          </div>
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i class="ph ph-chat c-icon c-icon--xs"></i>
+                            <span>7</span>
+                          </div>
+                        </section>
+                      </div>
+                    </section>
+                    <p class="c-comment__text">
+                      Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
+                      semper blandit aliquam. Habitant porttitor pellentesque
+                      venenatis sed maecenas egestas ac.Lorem ipsum dolor sit
+                      amet consectetur. Morbi adipiscing semper blandit aliquam.
+                      Habitant porttitor pellentesque venenatis sed maecenas
+                      egestas ac.
+                    </p>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                          <p class="c-user-box__usertitle">Titel</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <label for="postInput" class="visually-hidden"
+                      >Svara på post</label
+                    >
+                    <input
+                      type="text"
+                      id="postInput"
+                      placeholder="Svara"
+                      class="c-input c-comment__input"
+                    />
+                    <section class="c-comment__interactions">
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                        <span>22</span>
+                      </div>
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-chat c-icon c-icon--xs"></i>
+                        <span>7</span>
+                      </div>
+                    </section>
+                  </article>
+                  <ul class="c-thread__list c-thread__list--lvl2">
+                    <li>
+                      <article
+                        class="c-comment c-thread__comment c-thread__comment--lvl2"
+                      >
+                        <section class="c-comment__img-container">
+                          <div class="c-comment__img-box">
+                            <img src="#" alt="" class="c-comment__img" />
+                            <section class="c-comment__interactions">
+                              <div
+                                class="c-post-interactions c-post-interactions--bg"
+                              >
+                                <i
+                                  class="ph ph-heart-straight c-icon c-icon--xs"
+                                ></i>
+                                <span>22</span>
+                              </div>
+                              <div
+                                class="c-post-interactions c-post-interactions--bg"
+                              >
+                                <i class="ph ph-chat c-icon c-icon--xs"></i>
+                                <span>7</span>
+                              </div>
+                            </section>
+                          </div>
+                        </section>
+                        <p class="c-comment__text">
+                          Lorem ipsum dolor sit amet consectetur. Morbi
+                          adipiscing semper blandit aliquam. Habitant porttitor
+                          pellentesque venenatis sed maecenas egestas ac.Lorem
+                          ipsum dolor sit amet consectetur. Morbi adipiscing
+                          semper blandit aliquam. Habitant porttitor
+                          pellentesque venenatis sed maecenas egestas ac.
+                        </p>
+                        <section class="c-user-box">
+                          <div class="c-user-box__user-info">
+                            <div class="c-user-box__user-img">
+                              <picture>
+                                <source data-replace-profile-img />
+                              </picture>
+                            </div>
+                            <div>
+                              <p class="c-user-box__username">VRVixen</p>
+                              <p class="c-user-box__usertitle">Titel</p>
+                            </div>
+                          </div>
+                          <div class="c-user-box__more-info">
+                            <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                          </div>
+                        </section>
+                        <label for="postInput" class="visually-hidden"
+                          >Svara på post</label
+                        >
+                        <input
+                          type="text"
+                          id="postInput"
+                          placeholder="Svara"
+                          class="c-input c-comment__input"
+                        />
+                        <section class="c-comment__interactions">
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i
+                              class="ph ph-heart-straight c-icon c-icon--xs"
+                            ></i>
+                            <span>22</span>
+                          </div>
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i class="ph ph-chat c-icon c-icon--xs"></i>
+                            <span>7</span>
+                          </div>
+                        </section>
+                      </article>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <article
+                    class="c-comment c-thread__comment c-thread__comment--lvl2"
+                  >
+                    <section class="c-comment__img-container">
+                      <div class="c-comment__img-box">
+                        <img src="#" alt="" class="c-comment__img" />
+                        <section class="c-comment__interactions">
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i
+                              class="ph ph-heart-straight c-icon c-icon--xs"
+                            ></i>
+                            <span>22</span>
+                          </div>
+                          <div
+                            class="c-post-interactions c-post-interactions--bg"
+                          >
+                            <i class="ph ph-chat c-icon c-icon--xs"></i>
+                            <span>7</span>
+                          </div>
+                        </section>
+                      </div>
+                    </section>
+                    <p class="c-comment__text">
+                      Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
+                      semper blandit aliquam. Habitant porttitor pellentesque
+                      venenatis sed maecenas egestas ac.Lorem ipsum dolor sit
+                      amet consectetur. Morbi adipiscing semper blandit aliquam.
+                      Habitant porttitor pellentesque venenatis sed maecenas
+                      egestas ac.
+                    </p>
+                    <section class="c-user-box">
+                      <div class="c-user-box__user-info">
+                        <div class="c-user-box__user-img">
+                          <picture>
+                            <source data-replace-profile-img />
+                          </picture>
+                        </div>
+                        <div>
+                          <p class="c-user-box__username">VRVixen</p>
+                          <p class="c-user-box__usertitle">Titel</p>
+                        </div>
+                      </div>
+                      <div class="c-user-box__more-info">
+                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                      </div>
+                    </section>
+                    <label for="postInput" class="visually-hidden"
+                      >Svara på post</label
+                    >
+                    <input
+                      type="text"
+                      id="postInput"
+                      placeholder="Svara"
+                      class="c-input c-comment__input"
+                    />
+                    <section class="c-comment__interactions">
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                        <span>22</span>
+                      </div>
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-chat c-icon c-icon--xs"></i>
+                        <span>7</span>
+                      </div>
+                    </section>
+                  </article>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+              >
+                <section class="c-comment__img-container">
+                  <div class="c-comment__img-box">
+                    <img src="#" alt="" class="c-comment__img" />
+                    <section class="c-comment__interactions">
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                        <span>22</span>
+                      </div>
+                      <div class="c-post-interactions c-post-interactions--bg">
+                        <i class="ph ph-chat c-icon c-icon--xs"></i>
+                        <span>7</span>
+                      </div>
+                    </section>
+                  </div>
+                </section>
+                <p class="c-comment__text">
+                  Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
+                  semper blandit aliquam. Habitant porttitor pellentesque
+                  venenatis sed maecenas egestas ac.Lorem ipsum dolor sit amet
+                  consectetur. Morbi adipiscing semper blandit aliquam. Habitant
+                  porttitor pellentesque venenatis sed maecenas egestas ac.
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <picture>
+                        <source data-replace-profile-img />
+                      </picture>
+                    </div>
+                    <div>
+                      <p class="c-user-box__username">VRVixen</p>
+                      <p class="c-user-box__usertitle">Titel</p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span>22</span>
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span>7</span>
+                  </div>
+                </section>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="c-dropdown c-dropdown--lg c-thread-page__rules"
+          data-fn-dropdown
+        >
+          <h3 class="c-dropdown__heading">Regler</h3>
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Regler</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">1</span>
+              <span>Bete er fint mot varandra</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">2</span>
+              <span>Attackera åsikter och inte varandra</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">3</span>
+              <span>Inget våld eller hot</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">4</span>
+              <span>Ingen rasism</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">5</span>
+              <span>Diskussioner är målet</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">6</span>
+              <span>Inga diskussioner om droger</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">7</span>
+              <span>Inget material av sexuell karaktär</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">8</span>
+              <span
+                >Håll texterna korta, ingen vill läsa en roman i tråden!</span
+              >
+            </li>
+          </ul>
+        </section>
       </main>
     </section>
 

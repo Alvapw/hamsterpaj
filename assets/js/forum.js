@@ -14,7 +14,7 @@ menuIcon.addEventListener("click", function () {
 let forumThreads = [];
 const filters = {
   tags: [],
-  search: ""
+  search: "",
 };
 const postTeaserTemplate = document.querySelector(
   "[data-post-teaser-template]"
@@ -50,6 +50,7 @@ function createPostTeaser(thread) {
 
   // byter ut datan i kortet
   const coverImg = post.querySelector("[data-replace-cover-img]");
+  coverImg.setAttribute("src", thread.coverImg);
 
   const createdDate = post.querySelector("[data-replace-created-date]");
   createdDate.textContent = thread.dateStarted;
@@ -62,6 +63,9 @@ function createPostTeaser(thread) {
 
   const text = post.querySelector("[data-replace-text]");
   text.textContent = thread.text;
+
+  const profileImg = post.querySelector("[data-replace-profile-img]");
+  profileImg.setAttribute("src", thread.profileImg);
 
   const userName = post.querySelector("[data-replace-username]");
   userName.textContent = thread.userName;
@@ -89,7 +93,7 @@ function createPostTeaser(thread) {
 // funktion för att rendera ut korten
 function render(data) {
   let filteredThreads = [...forumThreads];
-  
+
   if (filters.search.length > 0) {
     const search = filters.search.toLowerCase();
     filteredThreads = filteredThreads.filter((r) =>
@@ -101,13 +105,11 @@ function render(data) {
   //     filters.tags.every((f) => r.tags.includes(f))
   //   );
   // }
-  if(data){
-    filteredThreads = filteredThreads.filter((r) =>
-    r.tags.includes(data));
+  if (data) {
+    filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
   }
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
- 
 }
 
 // console.log(tags);
@@ -190,4 +192,3 @@ function toggleItemArray(item, array) {
   }
   // console.log(array);
 }
-

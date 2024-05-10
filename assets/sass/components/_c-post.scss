@@ -1,181 +1,49 @@
 // TO-DO: slå ihop komponenter + fixa bilder + styla text + height o width regler + rätt breakpoints
-.c-teaser-post {
+.c-post {
   background-color: var(--color-bg-card);
   color: var(--color-text);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-sm);
   overflow: hidden;
-  // för att alla korten ska ta upp lika stor plats i höjden, linjeras
-  height: 100%;
+  position: relative;
+  height: 413px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  &__cover-img {
-    // TO-DO: kommer aspect ratio funka
-    aspect-ratio: 1 / 1;
-    // TO-DO: ta bort bg color
-    background-color: grey;
-  }
-
-  &__content {
-    flex: 1;
-    padding: var(--space-2) var(--space-3);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: var(--space-4);
-  }
-
-  &__times {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--space-2);
-  }
-
-  &__time-box {
-    // TO-DO: font style
-    font-size: 12px;
-    color: var(--color-text-subdued);
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-
-    &--right {
-      text-align: right;
-    }
-  }
-
-  &__title {
-    // TO-DO: font style
-    font-size: 18px;
-    font-weight: 600;
-
-    margin-bottom: var(--space-2);
-  }
-
-  &__text {
-    // TO-DO: font style
-    font-size: 14px;
-  }
-
-  &__additional-info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  &__info-container {
-    padding-top: var(--space-2);
-    border-top: 0.5px solid var(--color-border-stroke);
-
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
-}
-
-.c-teaser-carousel-post {
-  background-color: var(--color-bg-card);
-  color: var(--color-text);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-
   // TO-DO: rätt breakpoint
   @media (min-width: 744px) {
-    display: flex;
+    height: 504px;
   }
 
-  &__cover-img {
-    // TO-DO: kommer aspect ratio funka
-    aspect-ratio: 16 / 9;
-    // TO-DO: ta bort bg color
-    background-color: grey;
+  &--to-horizontal {
+    height: auto;
 
     // TO-DO: rätt breakpoint
     @media (min-width: 744px) {
-      flex: 0 0 50%;
+      height: 294;
+      width: 588px;
+
+      justify-content: space-between;
+      flex-direction: row;
     }
   }
 
-  &__content {
-    padding: var(--space-2) var(--space-3);
+  &--full-post {
+    height: auto;
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-  }
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      padding: var(--space-2) var(--space-6) var(--space-6);
 
-  &__times {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--space-2);
-  }
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: var(--space-2);
 
-  &__time-box {
-    // TO-DO: font style
-    font-size: 12px;
-    color: var(--color-text-subdued);
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-
-    &--right {
-      text-align: right;
+      --full-post-flex-column-gap: var(--space-6);
+      --flex-items: 2;
     }
-  }
-
-  &__title {
-    // TO-DO: font style
-    font-size: 18px;
-    font-weight: 600;
-
-    margin-bottom: var(--space-2);
-  }
-
-  &__text {
-    // TO-DO: font style
-    font-size: 14px;
-  }
-
-  &__additional-info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  &__info-container {
-    padding-top: var(--space-2);
-    border-top: 0.5px solid var(--color-border-stroke);
-
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
-}
-
-.c-full-post {
-  background-color: var(--color-bg-card);
-  color: var(--color-text);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-
-  position: relative;
-
-  // TO-DO: rätt breakpoint
-  @media (min-width: 744px) {
-    padding: var(--space-2) var(--space-6) var(--space-6);
-
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: var(--space-2);
-
-    --full-post-flex-column-gap: var(--space-6);
-    --flex-items: 2;
   }
 
   &__actions {
@@ -205,47 +73,66 @@
     border: none;
   }
 
-  &__cover-img {
-    // TO-DO: kommer aspect ratio funka
-    aspect-ratio: 1 / 1;
-    // TO-DO: ta bort bg color
-    background-color: grey;
+  &__cover-img-box {
+    min-height: 100px;
 
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      flex: 0 0
-        calc(
-          (100% / var(--flex-items)) -
-            (
-              ((var(--flex-items) - 1) / var(--flex-items)) *
-                var(--full-post-flex-column-gap)
-            )
-        );
+    &--to-horizontal {
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--full-post {
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        flex: 0 0
+          calc(
+            (100% / var(--flex-items)) -
+              (
+                ((var(--flex-items) - 1) / var(--flex-items)) *
+                  var(--full-post-flex-column-gap)
+              )
+          );
+      }
     }
   }
 
   &__content {
+    // flex: 0 0 308px;
+    background-color: var(--color-bg-card);
     padding: var(--space-2) var(--space-3);
-    background-color: var(--color-bg-accent-first);
 
     display: flex;
     flex-direction: column;
+    // justify-content: space-between;
     gap: var(--space-4);
 
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      flex: 0 0
-        calc(
-          (100% / var(--flex-items)) -
-            (
-              ((var(--flex-items) - 1) / var(--flex-items)) *
-                var(--full-post-flex-column-gap)
-            )
-        );
+    &--to-horizontal {
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--full-post {
+      background-color: var(--color-bg-accent-first);
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        flex: 0 0
+          calc(
+            (100% / var(--flex-items)) -
+              (
+                ((var(--flex-items) - 1) / var(--flex-items)) *
+                  var(--full-post-flex-column-gap)
+              )
+          );
+      }
     }
   }
 
-  &__times {
+  &__times-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--space-2);
@@ -287,6 +174,7 @@
   &__info-container {
     padding-top: var(--space-2);
     border-top: 0.5px solid var(--color-border-stroke);
+    overflow-x: scroll;
 
     display: flex;
     align-items: center;
