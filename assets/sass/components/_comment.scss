@@ -16,42 +16,6 @@
     color: var(--color-text);
   }
 
-  &__user-info {
-    color: var(--color-text-subdued);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__user {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
-
-  &__user-img {
-    // TO-DO: ta bort bg color
-    background-color: grey;
-    // TO-DO: width + height
-    width: 30px;
-    height: 30px;
-    border-radius: var(--border-radius-full);
-  }
-
-  &__username {
-    // TO-DO: font style
-    font-size: 14px;
-  }
-
-  &__time-dots-box {
-    padding: var(--space-1);
-
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
-
   &__interactions {
     padding: var(--space-0) var(--space-4);
     position: absolute;
@@ -71,15 +35,9 @@
 
   &__img-box {
     position: relative;
-    background-color: var(--color-bg-accent-first);
-    border-radius: var(--border-radius-sm);
     margin-bottom: var(--space-5);
   }
 
   &__img {
-    // TO-DO: ta bort bg color sen
-    background-color: grey;
-    // TO-DO: tilfälligt
-    aspect-ratio: 1 / 1;
   }
 }

@@ -181,3 +181,8 @@ a {
   // reset links to white color
   color: var(--color-text);
 }
+
+img {
+  display: block;
+  object-fit: cover;
+}

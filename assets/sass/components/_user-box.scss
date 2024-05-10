@@ -12,12 +12,11 @@
   }
 
   &__user-img {
-    // TO-DO: ta bort bg-color
-    background-color: grey;
     // TO-DO: width + height
     width: 30px;
     height: 30px;
     border-radius: var(--border-radius-full);
+    overflow: hidden;
   }
 
   &__username {
@@ -27,7 +26,7 @@
 
   &__usertitle {
     // TO-DO: font style
-    font-size: 14px;
+    font-size: 12px;
     margin-top: var(--space-1);
   }
 

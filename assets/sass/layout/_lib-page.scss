@@ -1,6 +1,7 @@
 .c-lib-page {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 
   // TO-DO: rätt breakpoint
   @media (min-width: 744px) {

@@ -17,4 +17,9 @@
     // TO-DO: font-size typskala variabel + lineheight
     font-size: 1rem;
   }
+
+  // fusk flr att gömma allataggar tagen, funkar bara om den står sist i json arrayen
+  &:last-child {
+    display: none;
+  }
 }
