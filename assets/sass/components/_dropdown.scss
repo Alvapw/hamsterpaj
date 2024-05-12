@@ -5,11 +5,6 @@
   background-color: var(--dropdown-bg-color);
   color: var(--dropdown-text-color);
   position: relative;
-  // TO-DO: dropdown font style
-  font-size: 14px;
-
-  // TO-DO: width dropdown
-  width: 220px;
 
   --dropdown-border-color: var(--color-border-inputfield);
   --dropdown-bg-color: transparent;
@@ -19,9 +14,6 @@
   &--lg {
     // som --lg blir den lite längre, större typsnitt, annan border color, bakgrund och text color
     width: 100%;
-
-    // TO-DO: dropdown font style
-    font-size: 16px;
 
     --dropdown-border-color: var(--color-border-stroke);
     --dropdown-bg-color: var(--color-bg);
@@ -42,10 +34,6 @@
       // som --lg försvinner dopdown funktionen i större skärmstorlekar och heading blir synlig
       display: block;
       padding: var(--space-2) var(--space-3);
-
-      // TO-DO: font style
-      font-size: 18px;
-      font-weight: 600;
       color: var(--color-text);
     }
   }
@@ -166,23 +154,22 @@
   }
 
   &__user-img {
-    // TO-DO: ta bort bg sen
-    background-color: grey;
-    // TO-DO: width + height
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: var(--border-radius-full);
   }
 
   &__number {
-    // TO-DO: font-style
-    font-size: 18px;
-    font-weight: 600;
     color: var(--color-text-onwhite);
     background-color: var(--color-bg-white);
+    // perfekt rund cirkel
     border-radius: var(--border-radius-full);
-    width: 20px;
-    height: 20px;
-    text-align: center;
+    flex: 0 0 1.25rem;
+    height: 1.25rem;
+
+    // centrera innehållet
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

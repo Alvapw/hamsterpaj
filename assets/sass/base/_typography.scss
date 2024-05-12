@@ -11,4 +11,149 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 744px) {
+    -webkit-line-clamp: 2;
+  }
+}
+
+// text i main menu i header
+.c-header__main-item {
+  font: var(--font-title-md);
+
+  // TO-DO: breakpoint
+  @media (min-width: 744px) {
+    font: var(--font-title-sm);
+  }
+}
+
+// text i icon menu i header
+.c-header__icon-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-size-body-xs);
+}
+
+// text i hero
+.c-hero__heading {
+  // TO-DO: mobil
+  text-align: center;
+  text-transform: uppercase;
+  font: var(--font-title-xl);
+
+  // TO-DO: breakpoint
+  @media (min-width: 744px) {
+    font: var(--font-title-2xl);
+  }
+}
+
+// text i dropdown
+.c-dropdown {
+  font: var(--font-body-sm);
+
+  &--lg {
+    font: var(--font-body-lg);
+  }
+
+  &__heading {
+    font: var(--font-title-sm);
+  }
+
+  &__number {
+    font: var(--font-title-sm);
+  }
+}
+
+// text i posts
+.c-post {
+  &__times-container {
+    font: var(--font-body-xs);
+  }
+
+  &__title {
+    font: var(--font-title-sm);
+  }
+
+  &__text {
+    font: var(--font-body-sm);
+  }
+
+  // de större kortvarianterna blir responsiva i textstorlekar
+  // TO-DO: breakpoint
+  &--to-horizontal,
+  &--full-post {
+    @media (min-width: 744px) {
+      .c-post__title {
+        font: var(--font-title-lg);
+      }
+
+      .c-post__text {
+        font: var(--font-body-md);
+      }
+    }
+  }
+}
+
+// text i user-box
+.c-user-box {
+  &__username {
+    font: var(--font-body-sm);
+  }
+
+  &__usertitle {
+    font: var(--font-body-xs);
+  }
+}
+
+// text i tags
+.c-tag {
+  text-transform: capitalize;
+  font: var(--font-body-xs);
+
+  // TO-DO: breakpoint
+  @media (min-width: 744px) {
+    font: var(--font-body-md);
+  }
+}
+
+// text i post-interactions
+.c-post-interactions__text {
+  font: var(--font-body-nr);
+}
+
+// text i button
+.c-button {
+  font: var(--font-btn);
+  text-transform: uppercase;
+}
+
+// text i comment
+.c-comment {
+  &__caption {
+    font: var(--font-body-xs);
+  }
+
+  &__title {
+    font: var(--font-title-sm);
+  }
+
+  &__text {
+    font: var(--font-body-sm);
+  }
+}
+
+.c-lib-page__heading {
+  font: var(--font-title-xl);
+  text-transform: uppercase;
+}
+
+// text i footer
+.c-footer {
+  &__page-link {
+    font: var(--font-title-md);
+  }
+
+  &__copyright {
+    font: var(--font-body-sm);
+  }
 }

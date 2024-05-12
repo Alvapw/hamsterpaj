@@ -1,9 +1,11 @@
 .c-hero {
   width: 100%;
+  min-height: 286px;
+  color: var(--color-text);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 286px;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,15 +30,5 @@
   // TO-DO: rätt breakpoint
   @media (min-eidth: 744px) {
     margin-bottom: 3.5rem;
-  }
-
-  .c-hero__info-box {
-    .c-hero__heading {
-      // TO-DO: font-style + variabler
-      font-size: 3rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
   }
 }

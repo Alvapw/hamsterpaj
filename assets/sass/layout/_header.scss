@@ -9,6 +9,11 @@
     padding: var(--space-4) var(--space-0) var(--space-5);
   }
 
+  &.open {
+    border-bottom-left-radius: var(--border-radius-sm);
+    border-bottom-right-radius: var(--border-radius-sm);
+  }
+
   &__nav {
     max-width: 1200px;
     margin: auto;
@@ -28,6 +33,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    // TO-DO: rätt break-point
+    @media (min-width: 744px) {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    &.open {
+      border-bottom: 2px solid var(--color-border-black);
+    }
   }
 
   &__logo-box {
@@ -68,6 +84,11 @@
 
   &__menus {
     margin-left: auto;
+
+    // TO-DO: breakpoint
+    @media (max-width: 744px) {
+      width: 100%;
+    }
   }
 
   &__top-menu {
@@ -94,7 +115,6 @@
   }
 
   &__icon-menu {
-    background-color: var(--color-bg-accent-third);
     color: var(--color-text-subdued);
 
     display: flex;
@@ -103,6 +123,9 @@
 
     // TO-DO: rätt break-point
     @media (max-width: 744px) {
+      background-color: var(--color-bg-black);
+      border-top-left-radius: var(--border-radius-sm);
+      border-top-right-radius: var(--border-radius-sm);
       position: fixed;
       bottom: 0;
       left: 0;
@@ -143,10 +166,6 @@
     margin: var(--space-6) var(--space-0);
     color: var(--color-text);
 
-    // TO-DO: font style
-    font-size: 20px;
-    font-weight: 600;
-
     display: none;
     transition: 0.2s;
 
@@ -172,6 +191,18 @@
   }
 
   &__main-item {
+    padding: var(--space-0) var(--space-2);
+
+    a {
+      &:hover {
+        color: var(--color-text-hover);
+      }
+    }
+
+    &.active {
+      border: 1px solid var(--color-border-selected);
+      border-radius: var(--border-radius-sm);
+    }
   }
 
   &__btn {

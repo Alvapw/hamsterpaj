@@ -1,54 +1,71 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.tinder {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 200px;
-  overflow: hidden;
+// cotainer för hela sektionen
+.c-swiper {
+  // display flex för att centrera containern
   display: flex;
   flex-direction: column;
-  position: relative;
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-}
-
-.loaded.tinder {
-  opacity: 1;
-}
-
-.tinder--cards {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1;
+  justify-content: center;
+
+  // jobbar med opacity och transitions för lite extra effekt
+  // opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+
+  // snygg fade in effekt bara
+  &.loaded {
+    opacity: 1;
+  }
+
+  // container som samlar alla cards
+  &__list {
+    // korten är relativa till denna box (kanske flytta till --cards)
+    position: relative;
+
+    // ska vara hundra procent bred och minst 600px hög, måste sätta width + height pga position absolute
+    width: 100%;
+    min-height: 294px;
+
+    // flex för att centrera innehållet
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // card
+  &__item {
+    // display: inline-block;
+
+    // height + width
+    max-width: 588px;
+    height: 294px;
+
+    // background-color
+    background: var(--color-bg-card);
+
+    // border-radius
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+
+    // positionerar den absolute relativt till tinder-containern
+    position: absolute;
+
+    will-change: transform;
+    transition: all 0.3s ease-in-out;
+
+    // muspekaren blir grab när man hovrar kortet (olika webbläsare)
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+
+    &.moving {
+      transition: none;
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+    }
+  }
 }
 
-.tinder--card {
-  display: inline-block;
-  width: 750px;
-  min-height: 600px;
-  position: absolute;
-  will-change: transform;
-  transition: all 0.3s ease-in-out;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
-}
-
-.moving.tinder--card {
-  transition: none;
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
+// bara style för buttons
 .tinder--buttons {
   flex: 0 0 100px;
   text-align: center;
