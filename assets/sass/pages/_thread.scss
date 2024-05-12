@@ -1,56 +1,45 @@
-.c-thread-page {
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
-
-  // TO-DO: rätt breakpoint
-  @media (min-width: 744px) {
-    // TO-DO: kolla spacing
-    padding: var(--space-7) var(--space-4) var(--space-16);
-
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__aside {
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      // TO-DO: procent eller pixlar
-      flex: 0 0 20%;
-    }
-  }
-
-  &__main {
-    padding: var(--space-4);
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      // TO-DO: procent eller pixlar
-      flex: 0 0 70%;
-      padding: var(--space-0);
-    }
-  }
-}
-
 .c-thread {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--flex-column-gap);
+  justify-content: space-between;
+
+  --flex-column-gap: var(--space-6);
+
   &__ts {
+    flex: 0 0 100%;
   }
 
-  // sätter max-width på comments-containern
   &__comments {
-    max-width: 594px;
+    flex: 0 0 100%;
+    // TO-DO: breakpoint
+    @media (min-width: 1000px) {
+      flex: 0 0 calc(75% - calc(var(--flex-column-gap) / 2));
+    }
   }
 
-  // position relative behövs för att kunna positionera ut before + after
+  &__rules {
+    display: none;
+    // TO-DO: breakpoint
+    @media (min-width: 1000px) {
+      margin-top: var(--space-16);
+      display: block;
+      flex: 0 0 calc(25% - calc(var(--flex-column-gap) / 2));
+    }
+  }
+
   &__list {
     position: relative;
 
     // yttersta nivån för kommentarslista
     &--lvl1 {
-      // padding på top + left för att skjuta in kommentarerna
-      padding-top: 52px;
-      padding-left: 24px;
-      // margin på left för att skjuta in hela listan
-      margin-left: 24px;
+      padding-top: var(--space-14);
+      padding-left: var(--space-6);
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        margin-left: var(--space-6);
+      }
 
       // detta skapar då den lodräta linjen för listan, satt som :before och inte :after för den ska ligga nederst (gå att täcka)
       &:before {
@@ -68,15 +57,13 @@
 
     // alla innerlistor alltså svar på kommentarer skapar egna listor som  namnges med lvl2
     &--lvl2 {
-      // dessa listor skjuts in lite kortare än lvl1
-      padding-left: 16px;
+      padding-left: var(--space-4);
 
-      // skapar en likadan listlinje
       &:before {
         content: "";
         // positioneras med -84px i top för att listlinjen ska börja från den övre kommentarens botten ( -84px = 44px pmargin + 20px border radius)
         position: absolute;
-        top: -64px;
+        top: -16rem;
         left: 0;
         background-color: var(--color-border-stroke);
         height: 100%;
@@ -84,10 +71,8 @@
       }
     }
   }
-
-  // style för kommentarerna
   &__comment {
-    margin-bottom: 44px;
+    margin-bottom: var(--space-12);
     position: relative;
 
     // de yttersta kommentarerna som svarar på ts
@@ -107,9 +92,7 @@
         height: 16px;
       }
 
-      // den sista kommentaren i en lista har en :after som täcker över listlinjens sista del för att listlinjen ska sluta vid sista kommentarens top
-      &:last-child {
-        // därför gjord som before för att den inte ska täcka över kommentarens :after vågräta linje
+      &.last-child {
         &:before {
           content: "";
           position: absolute;
@@ -142,9 +125,7 @@
         height: 16px;
       }
 
-      // den sista kommentaren i en lista har en :after som täcker över listlinjens sista del för att listlinjen ska sluta vid sista kommentarens top
-      &:last-child {
-        // därför gjord som before för att den inte ska täcka över kommentarens :after vågräta linje
+      &.last-child {
         &:before {
           content: "";
           position: absolute;
@@ -161,5 +142,3 @@
     }
   }
 }
-
-// test

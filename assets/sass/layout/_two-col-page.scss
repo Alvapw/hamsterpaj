@@ -1,0 +1,34 @@
+.c-two-col-page {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  // TO-DO: rätt breakpoint
+  @media (min-width: 1000px) {
+    // TO-DO: kolla spacing
+    padding: var(--space-20) var(--space-4);
+
+    display: flex;
+    justify-content: space-between;
+    gap: var(--flex-gap);
+
+    --flex-gap: var(--space-6);
+  }
+
+  &__aside {
+    width: 100%;
+    // TO-DO: rätt breakpoint
+    @media (min-width: 1000px) {
+      flex: 0 0 calc(25% - (var(--flex-gap) / 2));
+    }
+  }
+
+  &__main {
+    padding: var(--space-4);
+    // TO-DO: rätt breakpoint
+    @media (min-width: 1000px) {
+      flex: 0 0 calc(75% - (var(--flex-gap) / 2));
+      padding: var(--space-0);
+    }
+  }
+}

@@ -7,24 +7,35 @@
   color: var(--btn-text-color);
   box-shadow: var(--btn-box-shadow-default);
 
-  font-size: 20px;
-
   --btn-border-radius: var(--border-radius-xl);
-  --btn-box-shadow-default: -3px 4px 0px 0px rgba(0, 0, 0, 1);
-  --btn-box-shadow-hover: -6px 8px 0px 0px rgba(0, 0, 0, 1);
-  --btn-box-shadow-pressed: -1.5px 2px 0px 0px rgba(0, 0, 0, 1);
-
-  &:focus {
-    border: 3px solid yellow;
-  }
+  --btn-box-shadow-default: -3px 4px 0px 0px var(--color-bg-black);
+  --btn-box-shadow-hover: -6px 8px 0px 0px var(--color-bg-black);
+  --btn-box-shadow-pressed: -1.5px 2px 0px 0px var(--color-bg-black);
 
   &--primary {
-    --btn-bg-color: #ff7029;
+    --btn-bg-color: var(--color-btn);
     --btn-text-color: var(--color-text-onwhite);
 
     &:hover {
       box-shadow: var(--btn-box-shadow-hover);
+      // knappen förflyttas snett upp lite
       transform: translate(3px, -4px);
+    }
+
+    &:focus {
+      border: 3px solid var(--color-btn-border);
+    }
+
+    &.pressed {
+      box-shadow: var(--btn-box-shadow-pressed);
+      // knappen förflyttas snett upp lite
+      transform: translate(1.5px, -2px);
+    }
+
+    &.disabled {
+      // TO-DO: to this for fuck sake or should i just ignore
+      background-color: var(--color-btn-disabled);
+      color: var(--color);
     }
   }
 
@@ -36,15 +47,23 @@
       box-shadow: var(--btn-box-shadow-hover);
       transform: translate(3px, -4px);
     }
+
+    &:focus {
+      border: 3px solid var(--color-btn-border);
+    }
+
+    &.pressed {
+      box-shadow: var(--btn-box-shadow-pressed);
+      // knappen förflyttas snett upp lite
+      transform: translate(1.5px, -2px);
+    }
   }
 
+  // TO-DO: and this
   &--tertiary {
     --btn-border-radius: var(--border-radius-sm);
     --btn-bg-color: transparent;
     --btn-text-color: var(--color-text);
-    --btn-box-shadow-default: none;
-    --btn-box-shadown-hover: none;
-    --btn-box-shadow-pressed: none;
 
     &:hover {
       background-color: grey;

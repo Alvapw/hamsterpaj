@@ -10,9 +10,15 @@
   flex-direction: column;
   gap: var(--space-4);
 
+  &__see-less {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    position: absolute;
+    top: -2.25rem;
+    left: -2.25rem;
+  }
+
   &__text {
-    // TO-DO: font style
-    font-size: 14px;
     color: var(--color-text);
   }
 

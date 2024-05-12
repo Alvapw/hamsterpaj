@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/sass/style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
@@ -98,8 +104,8 @@
       </div>
     </section>
 
-    <section class="c-lib-page">
-      <aside class="c-lib-page__aside c-aside">
+    <section class="c-two-col-page">
+      <aside class="c-two-col-page__aside c-aside">
         <section
           class="c-dropdown c-dropdown--lg c-aside__box"
           data-fn-dropdown
@@ -168,21 +174,31 @@
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
             >
-              <div class="c-dropdown__user-img"></div>
-              <span>StrategySorceress</span>
+              <div class="c-dropdown__user-img">
+                <img
+                  src="assets/img/profile-images/jonkyboy-profile-img.png"
+                  alt="JånkyBoy's profilbild"
+                />
+              </div>
+              <span>JånkyBoy</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
             >
-              <div class="c-dropdown__user-img"></div>
-              <span>Wizardess</span>
+              <div class="c-dropdown__user-img">
+                <img
+                  src="assets/img/profile-images/lisselgit-profile-img.png"
+                  alt="LisselGit's profilbild"
+                />
+              </div>
+              <span>LisselGit</span>
             </li>
           </ul>
         </section>
       </aside>
 
-      <main class="c-lib-page__main">
+      <main class="c-two-col-page__main">
         <section class="c-lib-page__swiper"></section>
         <section class="c-lib-page__search-filter">
           <form
@@ -280,6 +296,9 @@
             </section>
           </section>
         </section>
+        <section class="c-lib-page__heading">
+          <h3>Senaste inläggen</h3>
+        </section>
         <section class="c-lib-page__feed">
           <div class="c-asymmetric-feed__post--60">
             <a href="thread.html">
@@ -338,11 +357,11 @@
                     <section class="c-post__info-container">
                       <div class="c-post-interactions">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span>22</span>
+                        <span class="c-post-interactions__text">22</span>
                       </div>
                       <div class="c-post-interactions">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span>7</span>
+                        <span class="c-post-interactions__text">7</span>
                       </div>
                     </section>
                   </section>
@@ -405,11 +424,11 @@
                     <section class="c-post__info-container">
                       <div class="c-post-interactions">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span>22</span>
+                        <span class="c-post-interactions__text">22</span>
                       </div>
                       <div class="c-post-interactions">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span>7</span>
+                        <span class="c-post-interactions__text">7</span>
                       </div>
                     </section>
                   </section>
@@ -425,11 +444,11 @@
                   <section class="c-comment__interactions">
                     <div class="c-post-interactions c-post-interactions--bg">
                       <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span>22</span>
+                      <span class="c-post-interactions__text">22</span>
                     </div>
                     <div class="c-post-interactions c-post-interactions--bg">
                       <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span>7</span>
+                      <span class="c-post-interactions__text">7</span>
                     </div>
                   </section>
                 </div>
@@ -470,11 +489,11 @@
               <section class="c-comment__interactions">
                 <div class="c-post-interactions c-post-interactions--bg">
                   <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                  <span>8</span>
+                  <span class="c-post-interactions__text">8</span>
                 </div>
                 <div class="c-post-interactions c-post-interactions--bg">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
-                  <span>3</span>
+                  <span class="c-post-interactions__text">3</span>
                 </div>
               </section>
             </article>
@@ -489,12 +508,12 @@
                     <div class="c-post-interactions c-post-interactions--bg">
                       <!-- TO-DO: icon size-->
                       <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span>22</span>
+                      <span class="c-post-interactions__text">22</span>
                     </div>
                     <div class="c-post-interactions c-post-interactions--bg">
                       <!-- TO-DO: icon size-->
                       <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span>7</span>
+                      <span class="c-post-interactions__text">7</span>
                     </div>
                   </section>
                 </div>
@@ -537,12 +556,12 @@
                 <div class="c-post-interactions c-post-interactions--bg">
                   <!-- TO-DO: icon size-->
                   <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                  <span>22</span>
+                  <span class="c-post-interactions__text">22</span>
                 </div>
                 <div class="c-post-interactions c-post-interactions--bg">
                   <!-- TO-DO: icon size-->
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
-                  <span>7</span>
+                  <span class="c-post-interactions__text">7</span>
                 </div>
               </section>
             </article>
@@ -601,11 +620,11 @@
                   <section class="c-post__info-container">
                     <div class="c-post-interactions">
                       <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span>22</span>
+                      <span class="c-post-interactions__text">22</span>
                     </div>
                     <div class="c-post-interactions">
                       <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span>7</span>
+                      <span class="c-post-interactions__text">7</span>
                     </div>
                   </section>
                 </section>
@@ -666,11 +685,11 @@
                   <section class="c-post__info-container">
                     <div class="c-post-interactions">
                       <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span>22</span>
+                      <span class="c-post-interactions__text">22</span>
                     </div>
                     <div class="c-post-interactions">
                       <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span>7</span>
+                      <span class="c-post-interactions__text">7</span>
                     </div>
                   </section>
                 </section>
@@ -687,12 +706,12 @@
                     <div class="c-post-interactions c-post-interactions--bg">
                       <!-- TO-DO: icon size-->
                       <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span>22</span>
+                      <span class="c-post-interactions__text">22</span>
                     </div>
                     <div class="c-post-interactions c-post-interactions--bg">
                       <!-- TO-DO: icon size-->
                       <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span>7</span>
+                      <span class="c-post-interactions__text">7</span>
                     </div>
                   </section>
                 </div>
@@ -735,12 +754,12 @@
                 <div class="c-post-interactions c-post-interactions--bg">
                   <!-- TO-DO: icon size-->
                   <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                  <span>22</span>
+                  <span class="c-post-interactions__text">22</span>
                 </div>
                 <div class="c-post-interactions c-post-interactions--bg">
                   <!-- TO-DO: icon size-->
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
-                  <span>7</span>
+                  <span class="c-post-interactions__text">7</span>
                 </div>
               </section>
             </article>
@@ -802,11 +821,11 @@
                     <section class="c-post__info-container">
                       <div class="c-post-interactions">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span>22</span>
+                        <span class="c-post-interactions__text">22</span>
                       </div>
                       <div class="c-post-interactions">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span>7</span>
+                        <span class="c-post-interactions__text">7</span>
                       </div>
                     </section>
                   </section>
@@ -869,11 +888,11 @@
                     <section class="c-post__info-container">
                       <div class="c-post-interactions">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span>22</span>
+                        <span class="c-post-interactions__text">22</span>
                       </div>
                       <div class="c-post-interactions">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span>7</span>
+                        <span class="c-post-interactions__text">7</span>
                       </div>
                     </section>
                   </section>
@@ -934,13 +953,14 @@
               </a>
             </li>
           </ul>
-          <div class="c-footer__cred-text">
+          <div class="c-footer__copyright">
             <span>© 2024 Hamsterpaj</span>
           </div>
         </div>
       </div>
     </footer>
 
+    <script src="assets/js/script.js" type="text/javascript"></script>
     <script src="assets/js/forum.js" type="text/javascript"></script>
   </body>
 </html>

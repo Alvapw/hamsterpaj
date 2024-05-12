@@ -1,38 +1,7 @@
 .c-lib-page {
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
-
-  // TO-DO: rätt breakpoint
-  @media (min-width: 744px) {
-    // TO-DO: kolla spacing
-    padding: var(--space-7) var(--space-4) var(--space-16);
-
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__aside {
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      // TO-DO: procent eller pixlar
-      flex: 0 0 20%;
-    }
-  }
-
-  &__main {
-    padding: var(--space-4);
-    // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
-      // TO-DO: procent eller pixlar
-      flex: 0 0 70%;
-      padding: var(--space-0);
-    }
-  }
-
   &__swiper {
     // skjuter in denna sektion lite till på sidorna
-    margin: var(--space-10) var(--space-8) var(--space-16);
+    margin: var(--space-10) var(--space-20) var(--space-10);
 
     // TO-DO: rätt breakpoint
     @media (min-width: 744px) {
@@ -42,7 +11,12 @@
 
   &__search-filter {
     // TO-DO: margin-bottom
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      margin: var(--space-0) var(--space-20) var(--space-10);
+    }
   }
 
   &__search {
@@ -53,8 +27,46 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: var(--space-4);
-    // TO-DO: sätt regler för width på dropdown
+    justify-content: normal;
+    gap: var(--flex-dropdowns-gap);
+
+    --flex-dropdowns-gap: var(--space-4);
+  }
+
+  &__dropdown {
+    flex: 0 0
+      calc(
+        (100% / var(--flex-items)) -
+          (
+            ((var(--flex-items) - 1) / var(--flex-items)) *
+              var(--flex-dropdowns-gap)
+          )
+      );
+
+    --flex-items: 2;
+
+    // TO-DO: rätt breakpoint
+    @media (min-width: 744px) {
+      // --flex-items: 3;
+
+      flex: 0 0 220px;
+    }
+
+    &.hide-in-mobile {
+      display: none;
+
+      // TO-DO: rätt breakpoint
+      @media (min-width: 744px) {
+        display: inline-block;
+
+        flex: 0 0 120px;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: var(--space-6);
+    color: var(--color-text);
   }
 
   &__feed {

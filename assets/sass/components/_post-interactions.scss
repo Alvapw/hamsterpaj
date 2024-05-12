@@ -12,23 +12,18 @@
   --post-interactions-padding: var(--space-1);
   --post-interactions-text-color: var(--color-text);
 
-  // TO-DO: fontstyle typskala .c-post-interactions__text
-  font-size: 0.75rem;
-  font-weight: 600;
-
   &--bg {
     border-radius: var(--border-radius-full);
 
-    // TO-DO: font weight heavier .c-post-interactions--bg
-
     --post-interactions-padding: var(--space-1) var(--space-2);
-    --post-interactions-bg-color: var(--vanilla-100);
+    --post-interactions-bg-color: var(--color-bg-white);
     --post-interactions-text-color: var(--color-text-onwhite);
 
-    // TO-DO: rätt state på .c-post-interactions
-
     &.pressed {
-      --post-interactions-bg-color: var(--raspberry-700);
+      // TO-DO: check this
+      box-shadow: 0px 0px 6px 2px var(--color-badge-neon);
+
+      --post-interactions-bg-color: var(--color-badge-neon);
       --post-interactions-text-color: var(--color-text);
       // TO-DO: neon effekt .c-post-interactions pressed state
     }
