@@ -13,7 +13,7 @@
   &__comments {
     flex: 0 0 100%;
     // TO-DO: breakpoint
-    @media (min-width: 1000px) {
+    @media (min-width: 1024px) {
       flex: 0 0 calc(75% - calc(var(--flex-column-gap) / 2));
     }
   }
@@ -21,7 +21,7 @@
   &__rules {
     display: none;
     // TO-DO: breakpoint
-    @media (min-width: 1000px) {
+    @media (min-width: 1024px) {
       margin-top: var(--space-16);
       display: block;
       flex: 0 0 calc(25% - calc(var(--flex-column-gap) / 2));
@@ -37,7 +37,7 @@
       padding-left: var(--space-6);
 
       // TO-DO: rätt breakpoint
-      @media (min-width: 744px) {
+      @media (min-width: 1024px) {
         margin-left: var(--space-6);
       }
 

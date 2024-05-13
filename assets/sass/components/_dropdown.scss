@@ -20,7 +20,7 @@
     --dropdown-text-color: var(--color-text-pale);
 
     // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       // som --lg försvinner dopdown funktionen i större skärmstorlekar och padding förändras
       padding: var(--space-6) var(--space-2);
     }
@@ -30,7 +30,7 @@
     display: none;
 
     // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       // som --lg försvinner dopdown funktionen i större skärmstorlekar och heading blir synlig
       display: block;
       padding: var(--space-2) var(--space-3);
@@ -56,7 +56,7 @@
       padding: var(--space-3) var(--space-4);
 
       // TO-DO: rätt breakpoint
-      @media (min-width: 744px) {
+      @media (min-width: 1024px) {
         // som --lg försvinner dopdown funktionen i större skärmstorlekar
         display: none;
       }
@@ -94,7 +94,7 @@
 
     &--lg {
       // TO-DO: rätt breakpoint
-      @media (min-width: 744px) {
+      @media (min-width: 1024px) {
         // som --lg försvinner dopdown funktionen i större skärmstorlekar och listan visas bara som vanligt
         opacity: 1;
         display: block;
@@ -136,7 +136,7 @@
       gap: var(--space-2);
 
       // TO-DO: rätt breakpoint
-      @media (min-width: 744px) {
+      @media (min-width: 1024px) {
         // som --lg försvinner dopdown funktionen i större skärmstorlekar och listan ska inte längre skjutas in på samma sätt
         padding: var(--space-2) var(--space-3);
         gap: var(--space-4);

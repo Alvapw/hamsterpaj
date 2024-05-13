@@ -5,7 +5,7 @@
   padding: var(--space-2) var(--space-4);
 
   // TO-DO: rätt break-point
-  @media (min-width: 744px) {
+  @media (min-width: 1024px) {
     padding: var(--space-4) var(--space-0) var(--space-5);
   }
 
@@ -22,7 +22,7 @@
     flex-direction: column;
 
     // TO-DO: rätt break-point
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
@@ -35,7 +35,7 @@
     align-items: center;
 
     // TO-DO: rätt break-point
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
@@ -68,7 +68,7 @@
     }
 
     // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
@@ -86,7 +86,7 @@
     margin-left: auto;
 
     // TO-DO: breakpoint
-    @media (max-width: 744px) {
+    @media (max-width: 1024px) {
       width: 100%;
     }
   }
@@ -108,7 +108,7 @@
     }
 
     // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       display: none;
       // TO-DO: mindre
     }
@@ -122,7 +122,7 @@
     justify-content: space-evenly;
 
     // TO-DO: rätt break-point
-    @media (max-width: 744px) {
+    @media (max-width: 1024px) {
       background-color: var(--color-bg-black);
       border-top-left-radius: var(--border-radius-sm);
       border-top-right-radius: var(--border-radius-sm);
@@ -134,7 +134,7 @@
     }
 
     // TO-DO: rätt break-point
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       margin-bottom: var(--space-1);
       justify-content: flex-end;
       // TO-DO: kolla spacing
@@ -157,7 +157,7 @@
 
   &__icon-text {
     // TO-DO: rätt break-point
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
@@ -179,7 +179,7 @@
     }
 
     // TO-DO: rätt break-point
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       margin: var(--space-2) var(--space-0);
 
       display: flex;
@@ -217,7 +217,7 @@
     }
 
     // TO-DO: rätt breakpoint
-    @media (min-width: 744px) {
+    @media (min-width: 1024px) {
       display: block;
       margin-left: var(--space-6);
     }
