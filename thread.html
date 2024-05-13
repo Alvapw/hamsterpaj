@@ -217,8 +217,13 @@
               </section>
               <section class="c-post__info-container">
                 <div class="c-post-interactions">
-                  <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                  <span class="c-post-interactions__text">134</span>
+                  <i
+                    class="ph ph-heart-straight c-icon c-icon--xs"
+                    data-fn-like-post
+                  ></i>
+                  <span class="c-post-interactions__text" data-fn-like-count
+                    >134</span
+                  >
                 </div>
                 <div class="c-post-interactions">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
@@ -244,113 +249,36 @@
             class="c-thread__list c-thread__list--lvl1"
             data-comments-list-lvl1
           >
-            <template data-comment-template>
-              <li>
-                <article
-                  class="c-comment c-thread__comment c-thread__comment--lvl1"
-                  data-comment-lvl1
-                >
-                  <i
-                    class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
-                  ></i>
-                  <p class="c-comment__text" data-replace-text-content>
-                    Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
-                    semper blandit aliquam. Habitant porttitor pellentesque
-                    venenatis sed maecenas egestas ac.Lorem ipsum dolor sit amet
-                    consectetur. Morbi adipiscing semper blandit aliquam.
-                    Habitant porttitor pellentesque venenatis sed maecenas
-                    egestas ac.
-                  </p>
-                  <section class="c-user-box">
-                    <div class="c-user-box__user-info">
-                      <div class="c-user-box__user-img">
-                        <img
-                          src="../assets/img/profile-images/broby-profile-img.png"
-                          alt="Retlig's profilbild"
-                        />
-                      </div>
-                      <div>
-                        <p class="c-user-box__username" data-replace-username>
-                          Brobygrafiska
-                        </p>
-                        <p class="c-user-box__usertitle" data-replace-usertitle>
-                          Gamer
-                        </p>
-                      </div>
-                    </div>
-                    <div class="c-user-box__more-info">
-                      <i class="ph ph-dots-three c-icon c-icon--xs"></i>
-                    </div>
-                  </section>
-                  <label for="postInput" class="visually-hidden"
-                    >Svara på post</label
-                  >
-                  <input
-                    type="text"
-                    id="postInput"
-                    placeholder="Svara"
-                    autocomplete="off"
-                    class="c-input c-comment__input"
-                  />
-                  <section class="c-comment__interactions">
-                    <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span class="c-post-interactions__text" data-replace-likes
-                        >00</span
-                      >
-                    </div>
-                    <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span
-                        class="c-post-interactions__text"
-                        data-replace-replies
-                        >0</span
-                      >
-                    </div>
-                  </section>
-                </article>
-              </li>
-            </template>
-            <!-- <li>
+            <li>
               <article
                 class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
               >
-                <section class="c-comment__img-container">
-                  <div class="c-comment__img-box">
-                    <img src="#" alt="" class="c-comment__img" />
-                    <section class="c-comment__interactions">
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">22</span>
-                      </div>
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">7</span>
-                      </div>
-                    </section>
-                  </div>
-                </section>
-                <p class="c-comment__text">
-                  Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
-                  semper blandit aliquam. Habitant porttitor pellentesque
-                  venenatis sed maecenas egestas ac.Lorem ipsum dolor sit amet
-                  consectetur. Morbi adipiscing semper blandit aliquam. Habitant
-                  porttitor pellentesque venenatis sed maecenas egestas ac.
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  Robin och Gorgi samlar kraft
                 </p>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
                       <img
-                        src="../assets/img/profile-images/retlig-profile-img.png"
-                        alt="Retlig's profilbild"
+                        src="../assets/img/profile-images/robinhood-profile-img.png"
+                        alt="RobinHood's profilbild"
                       />
                     </div>
                     <div>
-                      <p class="c-user-box__username">Retlig</p>
-                      <p class="c-user-box__usertitle">KontrastKung</p>
+                      <p class="c-user-box__username" data-replace-username>
+                        RobinHood
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        Solstrålen
+                      </p>
                     </div>
                   </div>
                   <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
                     <i class="ph ph-dots-three c-icon c-icon--xs"></i>
                   </div>
                 </section>
@@ -361,16 +289,27 @@
                   type="text"
                   id="postInput"
                   placeholder="Svara"
+                  autocomplete="off"
                   class="c-input c-comment__input"
                 />
                 <section class="c-comment__interactions">
-                  <div class="c-post-interactions c-post-interactions--bg">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
                     <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text">22</span>
+                    <span
+                      class="c-post-interactions__text"
+                      data-replace-likes
+                      data-fn-like-count
+                      >69</span
+                    >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
                     <i class="ph ph-chat c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text">7</span>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >1</span
+                    >
                   </div>
                 </section>
               </article>
@@ -378,49 +317,33 @@
                 <li>
                   <article
                     class="c-comment c-thread__comment c-thread__comment--lvl2"
+                    data-comment-lvl2
                   >
-                    <section class="c-comment__img-container">
-                      <div class="c-comment__img-box">
-                        <img src="#" alt="" class="c-comment__img" />
-                        <section class="c-comment__interactions">
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i
-                              class="ph ph-heart-straight c-icon c-icon--xs"
-                            ></i>
-                            <span class="c-post-interactions__text">22</span>
-                          </div>
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i class="ph ph-chat c-icon c-icon--xs"></i>
-                            <span class="c-post-interactions__text">7</span>
-                          </div>
-                        </section>
-                      </div>
-                    </section>
-                    <p class="c-comment__text">
-                      Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
-                      semper blandit aliquam. Habitant porttitor pellentesque
-                      venenatis sed maecenas egestas ac.Lorem ipsum dolor sit
-                      amet consectetur. Morbi adipiscing semper blandit aliquam.
-                      Habitant porttitor pellentesque venenatis sed maecenas
-                      egestas ac.
-                    </p>
+                    <i
+                      class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                    ></i>
                     <section class="c-user-box">
                       <div class="c-user-box__user-info">
                         <div class="c-user-box__user-img">
-                          <picture>
-                            <source data-replace-profile-img />
-                          </picture>
+                          <img
+                            src="../assets/img/profile-images/robinhood-profile-img.png"
+                            alt="RobinHood's profilbild"
+                          />
                         </div>
                         <div>
-                          <p class="c-user-box__username">AlwaysWinning</p>
-                          <p class="c-user-box__usertitle">DyslexiQueen</p>
+                          <p class="c-user-box__username" data-replace-username>
+                            RobinHood
+                          </p>
+                          <p
+                            class="c-user-box__usertitle"
+                            data-replace-usertitle
+                          >
+                            Solstrålen
+                          </p>
                         </div>
                       </div>
                       <div class="c-user-box__more-info">
+                        <p class="c-user-box__time">4 min</p>
                         <i class="ph ph-dots-three c-icon c-icon--xs"></i>
                       </div>
                     </section>
@@ -431,166 +354,28 @@
                       type="text"
                       id="postInput"
                       placeholder="Svara"
+                      autocomplete="off"
                       class="c-input c-comment__input"
                     />
                     <section class="c-comment__interactions">
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">22</span>
-                      </div>
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">7</span>
-                      </div>
-                    </section>
-                  </article>
-                  <ul class="c-thread__list c-thread__list--lvl2">
-                    <li>
-                      <article
-                        class="c-comment c-thread__comment c-thread__comment--lvl2"
+                      <div
+                        class="c-post-interactions c-post-interactions--bg"
+                        data-fn-like-post
                       >
-                        <section class="c-comment__img-container">
-                          <div class="c-comment__img-box">
-                            <img src="#" alt="" class="c-comment__img" />
-                            <section class="c-comment__interactions">
-                              <div
-                                class="c-post-interactions c-post-interactions--bg"
-                              >
-                                <i
-                                  class="ph ph-heart-straight c-icon c-icon--xs"
-                                ></i>
-                                <span class="c-post-interactions__text"
-                                  >22</span
-                                >
-                              </div>
-                              <div
-                                class="c-post-interactions c-post-interactions--bg"
-                              >
-                                <i class="ph ph-chat c-icon c-icon--xs"></i>
-                                <span class="c-post-interactions__text">7</span>
-                              </div>
-                            </section>
-                          </div>
-                        </section>
-                        <p class="c-comment__text">
-                          Lorem ipsum dolor sit amet consectetur. Morbi
-                          adipiscing semper blandit aliquam. Habitant porttitor
-                          pellentesque venenatis sed maecenas egestas ac.Lorem
-                          ipsum dolor sit amet consectetur. Morbi adipiscing
-                          semper blandit aliquam. Habitant porttitor
-                          pellentesque venenatis sed maecenas egestas ac.
-                        </p>
-                        <section class="c-user-box">
-                          <div class="c-user-box__user-info">
-                            <div class="c-user-box__user-img">
-                              <picture>
-                                <source data-replace-profile-img />
-                              </picture>
-                            </div>
-                            <div>
-                              <p class="c-user-box__username">PW</p>
-                              <p class="c-user-box__usertitle">CodeMastah</p>
-                            </div>
-                          </div>
-                          <div class="c-user-box__more-info">
-                            <i class="ph ph-dots-three c-icon c-icon--xs"></i>
-                          </div>
-                        </section>
-                        <label for="postInput" class="visually-hidden"
-                          >Svara på post</label
-                        >
-                        <input
-                          type="text"
-                          id="postInput"
-                          placeholder="Svara"
-                          class="c-input c-comment__input"
-                        />
-                        <section class="c-comment__interactions">
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i
-                              class="ph ph-heart-straight c-icon c-icon--xs"
-                            ></i>
-                            <span class="c-post-interactions__text">22</span>
-                          </div>
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i class="ph ph-chat c-icon c-icon--xs"></i>
-                            <span class="c-post-interactions__text">7</span>
-                          </div>
-                        </section>
-                      </article>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <article
-                    class="c-comment c-thread__comment c-thread__comment--lvl2"
-                  >
-                    <section class="c-comment__img-container">
-                      <div class="c-comment__img-box">
-                        <img src="#" alt="" class="c-comment__img" />
-                        <section class="c-comment__interactions">
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i
-                              class="ph ph-heart-straight c-icon c-icon--xs"
-                            ></i>
-                            <span class="c-post-interactions__text">22</span>
-                          </div>
-                          <div
-                            class="c-post-interactions c-post-interactions--bg"
-                          >
-                            <i class="ph ph-chat c-icon c-icon--xs"></i>
-                            <span class="c-post-interactions__text">7</span>
-                          </div>
-                        </section>
-                      </div>
-                    </section>
-                    <p class="c-comment__text">
-                      Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
-                      semper blandit aliquam. Habitant porttitor pellentesque
-                      venenatis sed maecenas egestas ac.Lorem ipsum dolor sit
-                      amet consectetur. Morbi adipiscing semper blandit aliquam.
-                      Habitant porttitor pellentesque venenatis sed maecenas
-                      egestas ac.
-                    </p>
-                    <section class="c-user-box">
-                      <div class="c-user-box__user-info">
-                        <div class="c-user-box__user-img">
-                          <picture>
-                            <source data-replace-profile-img />
-                          </picture>
-                        </div>
-                        <div>
-                          <p class="c-user-box__username">VRVixen</p>
-                          <p class="c-user-box__usertitle">Titel</p>
-                        </div>
-                      </div>
-                      <div class="c-user-box__more-info">
-                        <i class="ph ph-dots-three c-icon c-icon--xs"></i>
-                      </div>
-                    </section>
-                    <label for="postInput" class="visually-hidden"
-                      >Svara på post</label
-                    >
-                    <input
-                      type="text"
-                      id="postInput"
-                      placeholder="Svara"
-                      class="c-input c-comment__input"
-                    />
-                    <section class="c-comment__interactions">
-                      <div class="c-post-interactions c-post-interactions--bg">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">22</span>
+                        <span
+                          class="c-post-interactions__text"
+                          data-replace-likes
+                          >69</span
+                        >
                       </div>
                       <div class="c-post-interactions c-post-interactions--bg">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">7</span>
+                        <span
+                          class="c-post-interactions__text"
+                          data-replace-replies
+                          >0</span
+                        >
                       </div>
                     </section>
                   </article>
@@ -600,42 +385,37 @@
             <li>
               <article
                 class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
               >
-                <section class="c-comment__img-container">
-                  <div class="c-comment__img-box">
-                    <img src="#" alt="" class="c-comment__img" />
-                    <section class="c-comment__interactions">
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">22</span>
-                      </div>
-                      <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">7</span>
-                      </div>
-                    </section>
-                  </div>
-                </section>
-                <p class="c-comment__text">
-                  Lorem ipsum dolor sit amet consectetur. Morbi adipiscing
-                  semper blandit aliquam. Habitant porttitor pellentesque
-                  venenatis sed maecenas egestas ac.Lorem ipsum dolor sit amet
-                  consectetur. Morbi adipiscing semper blandit aliquam. Habitant
-                  porttitor pellentesque venenatis sed maecenas egestas ac.
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  När vi reser för att hitta våra drömmar måste vi naturligtvis
+                  komma långt hemifrån. Och hemmet är en varm plats. Det fanns
+                  aldrig en tid då jag kände mig osäker när jag kliva in på
+                  Brobygrafiska. Det finns bara härlighrt och säkethet som om
+                  det är ett andra hem.
                 </p>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
-                      <picture>
-                        <source data-replace-profile-img />
-                      </picture>
+                      <img
+                        src="../assets/img/profile-images/jolyne-profile-img.png"
+                        alt="Jolyne's profilbild"
+                      />
                     </div>
                     <div>
-                      <p class="c-user-box__username">VRVixen</p>
-                      <p class="c-user-box__usertitle">Titel</p>
+                      <p class="c-user-box__username" data-replace-username>
+                        Jolyne
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        AimingAtYou
+                      </p>
                     </div>
                   </div>
                   <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
                     <i class="ph ph-dots-three c-icon c-icon--xs"></i>
                   </div>
                 </section>
@@ -646,20 +426,348 @@
                   type="text"
                   id="postInput"
                   placeholder="Svara"
+                  autocomplete="off"
                   class="c-input c-comment__input"
                 />
                 <section class="c-comment__interactions">
-                  <div class="c-post-interactions c-post-interactions--bg">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
                     <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text">22</span>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >15</span
+                    >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
                     <i class="ph ph-chat c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text">7</span>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
                   </div>
                 </section>
               </article>
-            </li> -->
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
+              >
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  Kvällen innan turistsidan skulle in och en stor del av dd22
+                  satt i skolan så länge det var tillåtet. Då mötte jag Marielle
+                  i pentryt och ropar efter henne “du har tröjan ut och in!” hon
+                  vänder sig om, “och bak och fram!”.
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <img
+                        src="../assets/img/profile-images/mariellemagicspell-profile-img.png"
+                        alt="MarielleMagicSpell's profilbild"
+                      />
+                    </div>
+                    <div>
+                      <p class="c-user-box__username" data-replace-username>
+                        MarielleMagicSpell
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        Gullhulken
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  autocomplete="off"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >25</span
+                    >
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
+                  </div>
+                </section>
+              </article>
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
+              >
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  Det har varit två riktigt roliga och intensiva år. Även fast
+                  det bara har varit två år tycker jag att vi har hunnit med
+                  väldigt mycket, att två år också kan kännas som en livstid.
+                  När jag flyttade till Sunne hade jag lite panik och tänkte
+                  “vilka idioter är det egentligen som tar sitt liv och flyttar
+                  till Sunne”, men det visade sig vara livets finaste idioter.
+                  Jag är glad att jag råkade hamna här just nu så att jag fick
+                  gå samtidigt som er. Tack för de här två sagolika åren.
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <img
+                        src="../assets/img/profile-images/alwayswinning-profile-img.png"
+                        alt="AlwaysWinning's profilbild"
+                      />
+                    </div>
+                    <div>
+                      <p class="c-user-box__username" data-replace-username>
+                        AlwaysWinning
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        DyslexiQueen
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  autocomplete="off"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >13</span
+                    >
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
+                  </div>
+                </section>
+              </article>
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
+              >
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  Skulle nog säga alla fina, roliga och inspirerande människor
+                  som man träffat. Både klasskamrater och lärare som gjort
+                  studierna både mycket lättare och roligare. 💗
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <img
+                        src="../assets/img/profile-images/west-profile-img.png"
+                        alt="West's profilbild"
+                      />
+                    </div>
+                    <div>
+                      <p class="c-user-box__username" data-replace-username>
+                        West
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        Lesserwisser
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  autocomplete="off"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >23</span
+                    >
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
+                  </div>
+                </section>
+              </article>
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
+              >
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <p class="c-comment__text" data-replace-text-content>
+                  Jag har uppskattat och imponerats av lärarna, som varit så
+                  engagerade, roliga och kunniga!
+                </p>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <img
+                        src="../assets/img/profile-images/sosso-profile-img.png"
+                        alt="Sosso's profilbild"
+                      />
+                    </div>
+                    <div>
+                      <p class="c-user-box__username" data-replace-username>
+                        Sosso
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        Stallgarl
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  autocomplete="off"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >88</span
+                    >
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
+                  </div>
+                </section>
+              </article>
+            </li>
+            <li>
+              <article
+                class="c-comment c-thread__comment c-thread__comment--lvl1"
+                data-comment-lvl1
+              >
+                <i
+                  class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+                ></i>
+                <section class="c-user-box">
+                  <div class="c-user-box__user-info">
+                    <div class="c-user-box__user-img">
+                      <img
+                        src="../assets/img/profile-images/djcajsa-profile-img.png"
+                        alt="DjCajsa's profilbild"
+                      />
+                    </div>
+                    <div>
+                      <p class="c-user-box__username" data-replace-username>
+                        DjCajsa
+                      </p>
+                      <p class="c-user-box__usertitle" data-replace-usertitle>
+                        Dj
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-user-box__more-info">
+                    <p class="c-user-box__time">5 min</p>
+                    <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+                  </div>
+                </section>
+                <label for="postInput" class="visually-hidden"
+                  >Svara på post</label
+                >
+                <input
+                  type="text"
+                  id="postInput"
+                  placeholder="Svara"
+                  autocomplete="off"
+                  class="c-input c-comment__input"
+                />
+                <section class="c-comment__interactions">
+                  <div
+                    class="c-post-interactions c-post-interactions--bg"
+                    data-fn-like-post
+                  >
+                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-likes
+                      >69</span
+                    >
+                  </div>
+                  <div class="c-post-interactions c-post-interactions--bg">
+                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <span class="c-post-interactions__text" data-replace-replies
+                      >0</span
+                    >
+                  </div>
+                </section>
+              </article>
+            </li>
           </ul>
         </section>
         <section
@@ -800,6 +908,70 @@
         </div>
       </div>
     </footer>
+
+    <!-- TEMPLATE FÖR COMMENT -->
+    <template data-comment-template>
+      <li>
+        <article
+          class="c-comment c-thread__comment c-thread__comment--lvl1"
+          data-comment-lvl1
+        >
+          <i
+            class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+          ></i>
+          <p class="c-comment__text" data-replace-text-content>
+            Lorem ipsum dolor sit amet consectetur. Morbi adipiscing semper
+            blandit aliquam. Habitant porttitor pellentesque venenatis sed
+            maecenas egestas ac.Lorem ipsum dolor sit amet consectetur. Morbi
+            adipiscing semper blandit aliquam. Habitant porttitor pellentesque
+            venenatis sed maecenas egestas ac.
+          </p>
+          <section class="c-user-box">
+            <div class="c-user-box__user-info">
+              <div class="c-user-box__user-img">
+                <img
+                  src="../assets/img/profile-images/broby-profile-img.png"
+                  alt="Retlig's profilbild"
+                />
+              </div>
+              <div>
+                <p class="c-user-box__username" data-replace-username>
+                  Brobygrafiska
+                </p>
+                <p class="c-user-box__usertitle" data-replace-usertitle>
+                  Gamer
+                </p>
+              </div>
+            </div>
+            <div class="c-user-box__more-info">
+              <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+            </div>
+          </section>
+          <label for="postInput" class="visually-hidden">Svara på post</label>
+          <input
+            type="text"
+            id="postInput"
+            placeholder="Svara"
+            autocomplete="off"
+            class="c-input c-comment__input"
+          />
+          <section class="c-comment__interactions">
+            <div class="c-post-interactions c-post-interactions--bg">
+              <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
+              <span class="c-post-interactions__text" data-replace-likes
+                >00</span
+              >
+            </div>
+            <div class="c-post-interactions c-post-interactions--bg">
+              <i class="ph ph-chat c-icon c-icon--xs"></i>
+              <span class="c-post-interactions__text" data-replace-replies
+                >0</span
+              >
+            </div>
+          </section>
+        </article>
+      </li>
+    </template>
 
     <script src="assets/js/thread.js" type="text/javascript"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>

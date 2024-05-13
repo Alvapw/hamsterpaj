@@ -25,7 +25,7 @@ dropdowns.forEach((dropdown) => {
   const caret = dropdown.querySelector("[data-dropdown-caret]");
   const list = dropdown.querySelector("[data-dropdown-list]");
   const options = dropdown.querySelectorAll("[data-dropdown-option]");
-  const optionIcons = dropdown.querySelectorAll("[data-dropdown-option-icon]");
+  // const optionIcons = dropdown.querySelectorAll("[data-dropdown-option-icon]");
 
   // lägger till en lyssnare på select
   select.addEventListener("click", () => {
@@ -41,11 +41,26 @@ dropdowns.forEach((dropdown) => {
   options.forEach((option) => {
     // lägger till lyssnare på option
     option.addEventListener("click", () => {
-      // console.log("click");
       // när ett option klickas på så ska selected innerText ändras till det klickade optionets innerText
       selected.innerText = option.innerText;
-      // om det finns en icon ska selectedIcon bytas ut till optionIcon
-      // TO-DO: byta ut ikon
+
+      // skapar variabel för att kolla om elementet har en icon
+      const hasIcon =
+        option.querySelector("[data-dropdown-option-icon]") != null;
+      // om den har en icon så ska vi ta bort och applicera classerna
+      if (hasIcon) {
+        // hämtar det klickade optionets ikon
+        const optionIcon = option.querySelector("[data-dropdown-option-icon]");
+        // hämtar ikones classer
+        const iconClasses = optionIcon.classList;
+        // tar bort tidigare classer från selectedIcon
+        selectedIcon.className = "";
+        // loopar igenom alla classer och applicerar på selectedIcon
+        iconClasses.forEach(function (klass) {
+          selectedIcon.classList.add(klass);
+        });
+      }
+
       // tar bort classer som förut lades till
       select.classList.remove("open");
       caret.classList.remove("rotate");
@@ -60,5 +75,22 @@ dropdowns.forEach((dropdown) => {
       // sen kan vi lägga till active class på det klickade optionet
       option.classList.toggle("active");
     });
+  });
+});
+
+// hämtar alla like-interactions
+const like = document.querySelectorAll("[data-fn-like-post]");
+
+like.forEach((likeInteraction) => {
+  likeInteraction.addEventListener("click", (e) => {
+    // lägger till class
+    likeInteraction.classList.toggle("pressed");
+    const text = likeInteraction.querySelector("[data-fn-like-count]");
+    // counter();
+    // var a = 0;
+    // function counter() {
+    //   a = +1;
+    //   text.innerText = a;
+    // }
   });
 });

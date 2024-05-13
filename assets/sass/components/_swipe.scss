@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+
+  position: relative;
 
   // jobbar med opacity och transitions för lite extra effekt
   // opacity: 0;
@@ -27,7 +29,7 @@
     // flex för att centrera innehållet
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   // card
