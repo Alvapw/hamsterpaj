@@ -5,6 +5,7 @@
   border-radius: var(--border-radius-sm);
   overflow: hidden;
   position: relative;
+  // TO-DO: height
   height: 413px;
 
   display: flex;
@@ -13,6 +14,7 @@
 
   // TO-DO: rätt breakpoint
   @media (min-width: 744px) {
+    // TO-DO: height
     height: 504px;
   }
 
@@ -21,9 +23,9 @@
 
     // TO-DO: rätt breakpoint
     @media (min-width: 744px) {
-      // TO-DO: kolla detta
-      height: 294px;
-      width: 588px;
+      // // TO-DO: kolla detta
+      // height: 294px;
+      // width: 588px;
 
       justify-content: space-between;
       flex-direction: row;

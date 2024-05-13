@@ -18,6 +18,10 @@
     left: -2.25rem;
   }
 
+  &__label {
+    margin-bottom: var(--space-1);
+  }
+
   &__text {
     color: var(--color-text);
   }
