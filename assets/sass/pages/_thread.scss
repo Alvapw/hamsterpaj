@@ -14,17 +14,18 @@
     flex: 0 0 100%;
     // TO-DO: breakpoint
     @media (min-width: 1024px) {
-      flex: 0 0 calc(75% - calc(var(--flex-column-gap) / 2));
+      flex: 0 0 calc(70% - calc(var(--flex-column-gap) / 2));
     }
   }
 
+  // TO-DO: hur ska denna bete sig, fixed, set height
   &__rules {
     display: none;
     // TO-DO: breakpoint
     @media (min-width: 1024px) {
       margin-top: var(--space-16);
       display: block;
-      flex: 0 0 calc(25% - calc(var(--flex-column-gap) / 2));
+      flex: 0 0 calc(30% - calc(var(--flex-column-gap) / 2));
     }
   }
 
@@ -63,7 +64,7 @@
         content: "";
         // positioneras med -84px i top för att listlinjen ska börja från den övre kommentarens botten ( -84px = 44px pmargin + 20px border radius)
         position: absolute;
-        top: -16rem;
+        top: -4rem;
         left: 0;
         background-color: var(--color-border-stroke);
         height: 100%;
@@ -74,6 +75,15 @@
   &__comment {
     margin-bottom: var(--space-12);
     position: relative;
+
+    // stylar see-less-ikonen här eftersom den är relativ till tråden snarare än kommentaren
+    .c-comment__see-less {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      position: absolute;
+      top: -2.25rem;
+      left: -2.25rem;
+    }
 
     // de yttersta kommentarerna som svarar på ts
     &--lvl1 {
@@ -138,6 +148,10 @@
           height: calc(100% + 4px);
           width: 1px;
         }
+      }
+
+      .c-comment__see-less {
+        left: -1.75rem;
       }
     }
   }

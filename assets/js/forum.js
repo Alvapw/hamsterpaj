@@ -1,6 +1,7 @@
 let forumThreads = [];
 const filters = {
   tags: [],
+  category: [],
   search: "",
 };
 const postTeaserTemplate = document.querySelector(
@@ -9,7 +10,8 @@ const postTeaserTemplate = document.querySelector(
 const forumFeed = document.querySelector("[data-forum-feed]");
 const searchInput = document.querySelector("[data-search]");
 const tags = document.querySelectorAll("[data-tag]");
-// console.log(tags);
+const catys = document.querySelectorAll("[data-caty]");
+const sorting = document.querySelectorAll("[data-sort]");
 
 // lyssnar efter input i sökfältet och hämtar värdet
 searchInput.addEventListener("input", (e) => {
@@ -36,8 +38,13 @@ function createPostTeaser(thread) {
   const post = postTeaserTemplate.content.cloneNode(true).children[0];
 
   // byter ut datan i kortet
-  const coverImg = post.querySelector("[data-replace-cover-img]");
-  coverImg.setAttribute("src", thread.coverImg);
+  const coverImgMobile = post.querySelector("[data-replace-mobile-cover-img]");
+  coverImgMobile.setAttribute("srcset", thread.coverImgMobile);
+
+  const coverImgDesktop = post.querySelector(
+    "[data-replace-desktop-cover-img]"
+  );
+  coverImgDesktop.setAttribute("srcset", thread.coverImgDesktop);
 
   const createdDate = post.querySelector("[data-replace-created-date]");
   createdDate.textContent = thread.dateStarted;
@@ -95,6 +102,15 @@ function render(data) {
   if (data) {
     filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
   }
+  // if (data) {
+  //   filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
+  // }
+
+  // if (popular) {
+  //   const sortedByPopular = filteredThreads.sort((a, b) => a.likes - b.likes);
+  //   console.log(sortedByPopular);
+  // }
+
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
 }
@@ -107,6 +123,22 @@ tags.forEach((tag) => {
     const currentTag = e.target.dataset.tag;
     // toggleItemArray(currentTag, filters.tags);
     render(currentTag);
+  });
+});
+
+catys.forEach((caty) => {
+  caty.addEventListener("click", (e) => {
+    console.log(e.target.dataset.caty);
+    const currentCaty = e.target.dataset.caty;
+    render(currentCaty);
+  });
+});
+
+sorting.forEach((sort) => {
+  sort.addEventListener("click", (e) => {
+    console.log(e.target.dataset.sort);
+    const currentSort = e.target.dataset.sort;
+    render(currentSort);
   });
 });
 

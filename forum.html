@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamsterpaj - forum</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
     <link rel="stylesheet" href="assets/sass/style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -130,6 +133,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg active"
               data-dropdown-option
+              data-caty="allakategorier"
             >
               <i
                 class="ph ph-eyes c-icon c-icon--sm"
@@ -140,6 +144,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="animemanga"
             >
               <i
                 class="ph ph-rabbit c-icon c-icon--sm"
@@ -150,6 +155,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="böckerserier"
             >
               <i
                 class="ph ph-books c-icon c-icon--sm"
@@ -160,6 +166,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="cosplayconventions"
             >
               <i
                 class="ph ph-mask-happy c-icon c-icon--sm"
@@ -170,6 +177,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="fanartfanfiction"
             >
               <i
                 class="ph ph-newspaper-clipping c-icon c-icon--sm"
@@ -180,6 +188,7 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="spelbrädspel"
             >
               <i
                 class="ph ph-game-controller c-icon c-icon--sm"
@@ -212,13 +221,19 @@
           <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
             <li class="c-dropdown__option c-dropdown__option--lg">
               <div class="c-dropdown__user-img">
-                <img src="assets/img/profile-images/jonkyboy-profile-img.png" alt="JånkyBoy's profilbild">
+                <img
+                  src="assets/img/profile-images/jonkyboy-profile-img.png"
+                  alt="JånkyBoy's profilbild"
+                />
               </div>
               <span>JånkyBoy</span>
             </li>
             <li class="c-dropdown__option c-dropdown__option--lg">
               <div class="c-dropdown__user-img">
-                <img src="assets/img/profile-images/lisselgit-profile-img.png" alt="LisselGit's profilbild">
+                <img
+                  src="assets/img/profile-images/lisselgit-profile-img.png"
+                  alt="LisselGit's profilbild"
+                />
               </div>
               <span>LisselGit</span>
             </li>
@@ -226,20 +241,21 @@
         </section>
       </aside>
 
-      <main class="c-lib-page__main">
+      <main class="c-two-col-page__main">
         <section class="c-lib-page__swiper c-swiper" data-fn-swiper-container>
           <div class="c-swiper__list">
-            <article class="c-post c-post--to-horizontal c-swiper__item" data-swiper-item>
+            <article
+              class="c-post c-post--to-horizontal c-swiper__item"
+              data-swiper-item
+            >
               <picture
                 class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
               >
-                <source media="(min-width:768px)" srcset="assets/img/Rectangle 213.png"/>
+                <!-- <source media="(min-width:768px)" srcset="assets/img/Rectangle 213.png"/>
                 <source media="(max-width:769px)" srcset="assets/img/Rectangle 213.png"/>
-                <img src="assets/img/Rectangle 213.png" alt="" />
-            </picture>
-              <section
-                class="c-post__content c-post__content--to-horizontal"
-              >
+                <img src="assets/img/Rectangle 213.png" alt="" /> -->
+              </picture>
+              <section class="c-post__content c-post__content--to-horizontal">
                 <section class="c-post__post-info">
                   <section class="c-post__times-container">
                     <div class="c-post__time-box">
@@ -254,14 +270,18 @@
                   <section class="c-post__text-container">
                     <h3 class="c-post__title">Spel som liknar RDRII</h3>
                     <p class="c-post__text cut-text">
-                      Mitt favoritspel är Red Dead Redemption. Tycker inte det har kommit några nya liknande spel, har jag missat något?
+                      Mitt favoritspel är Red Dead Redemption. Tycker inte det
+                      har kommit några nya liknande spel, har jag missat något?
                     </p>
                   </section>
                 </section>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
-                      <img src="assets/img/profile-images/scifisiren-profile-img.png" alt="ScifiSiren's profilbild">
+                      <img
+                        src="assets/img/profile-images/scifisiren-profile-img.png"
+                        alt="ScifiSiren's profilbild"
+                      />
                     </div>
                     <div>
                       <p class="c-user-box__username">ScifiSiren</p>
@@ -291,7 +311,10 @@
                 </section>
               </section>
             </article>
-            <article class="c-post c-post--to-horizontal c-swiper__item" data-swiper-item>
+            <article
+              class="c-post c-post--to-horizontal c-swiper__item"
+              data-swiper-item
+            >
               <section
                 class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
               >
@@ -299,9 +322,7 @@
                   <source data-replace-cover-img />
                 </picture>
               </section>
-              <section
-                class="c-post__content c-post__content--to-horizontal"
-              >
+              <section class="c-post__content c-post__content--to-horizontal">
                 <section class="c-post__post-info">
                   <section class="c-post__times-container">
                     <div class="c-post__time-box">
@@ -314,16 +335,23 @@
                     </div>
                   </section>
                   <section class="c-post__text-container">
-                    <h3 class="c-post__title">Hur får man bort glitter från lim som torkat?</h3>
+                    <h3 class="c-post__title">
+                      Hur får man bort glitter från lim som torkat?
+                    </h3>
                     <p class="c-post__text cut-text">
-                      Har råkat få glitter i limmet på min senaste cosplay som INTE ska vara glittrigt. Behöver era bästa tips och trix ASAP!!!!!!
+                      Har råkat få glitter i limmet på min senaste cosplay som
+                      INTE ska vara glittrigt. Behöver era bästa tips och trix
+                      ASAP!!!!!!
                     </p>
                   </section>
                 </section>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
-                      <img src="assets/img/profile-images/cutecraftress-profile-img.png" alt="CuteCraftress's profilbild">
+                      <img
+                        src="assets/img/profile-images/cutecraftress-profile-img.png"
+                        alt="CuteCraftress's profilbild"
+                      />
                     </div>
                     <div>
                       <p class="c-user-box__username">CuteCraftress</p>
@@ -353,7 +381,10 @@
                 </section>
               </section>
             </article>
-            <article class="c-post c-post--to-horizontal c-swiper__item" data-swiper-item>
+            <article
+              class="c-post c-post--to-horizontal c-swiper__item"
+              data-swiper-item
+            >
               <section
                 class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
               >
@@ -361,9 +392,7 @@
                   <source data-replace-cover-img />
                 </picture>
               </section>
-              <section
-                class="c-post__content c-post__content--to-horizontal"
-              >
+              <section class="c-post__content c-post__content--to-horizontal">
                 <section class="c-post__post-info">
                   <section class="c-post__times-container">
                     <div class="c-post__time-box">
@@ -378,14 +407,19 @@
                   <section class="c-post__text-container">
                     <h3 class="c-post__title">Sarah J Maas överhypad?</h3>
                     <p class="c-post__text cut-text">
-                      Vill lyssna på mer fantasy och har sett hypen på tiktok över Sarah J Maas. TELL ME är hon överhypad eller kommer jag bli obsessed?!
+                      Vill lyssna på mer fantasy och har sett hypen på tiktok
+                      över Sarah J Maas. TELL ME är hon överhypad eller kommer
+                      jag bli obsessed?!
                     </p>
                   </section>
                 </section>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
-                      <img src="assets/img/profile-images/pixelprincess-profile-img.png" alt="PixelPrincess's profilbild">
+                      <img
+                        src="assets/img/profile-images/pixelprincess-profile-img.png"
+                        alt="PixelPrincess's profilbild"
+                      />
                     </div>
                     <div>
                       <p class="c-user-box__username">PixelPrincess</p>
@@ -415,7 +449,10 @@
                 </section>
               </section>
             </article>
-            <article class="c-post c-post--to-horizontal c-swiper__item" data-swiper-item>
+            <article
+              class="c-post c-post--to-horizontal c-swiper__item"
+              data-swiper-item
+            >
               <section
                 class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
               >
@@ -423,9 +460,7 @@
                   <source data-replace-cover-img />
                 </picture>
               </section>
-              <section
-                class="c-post__content c-post__content--to-horizontal"
-              >
+              <section class="c-post__content c-post__content--to-horizontal">
                 <section class="c-post__post-info">
                   <section class="c-post__times-container">
                     <div class="c-post__time-box">
@@ -440,14 +475,19 @@
                   <section class="c-post__text-container">
                     <h3 class="c-post__title">Bästa spellistan för RPG?</h3>
                     <p class="c-post__text cut-text">
-                      Behöver bakgrundsmusik som ger rätt stämning när jag spelar RPG, så kom igen nu, vad är era go-tos? Behöver mera insp typ nuuuuu!
+                      Behöver bakgrundsmusik som ger rätt stämning när jag
+                      spelar RPG, så kom igen nu, vad är era go-tos? Behöver
+                      mera insp typ nuuuuu!
                     </p>
                   </section>
                 </section>
                 <section class="c-user-box">
                   <div class="c-user-box__user-info">
                     <div class="c-user-box__user-img">
-                      <img src="assets/img/profile-images/techtinkerer-profile-img.png" alt="TechTinkerer's profilbild">
+                      <img
+                        src="assets/img/profile-images/techtinkerer-profile-img.png"
+                        alt="TechTinkerer's profilbild"
+                      />
                     </div>
                     <div>
                       <p class="c-user-box__username">TechTinkerer</p>
@@ -477,7 +517,10 @@
                 </section>
               </section>
             </article>
-          </ul>
+          </div>
+          <!-- <p class="c-swiper__empty-text">
+            Listan är tom, ladda om sidan för att få ny inspiration
+          </p> -->
         </section>
 
         <section class="c-lib-page__search-filter">
@@ -514,13 +557,25 @@
                 ></i>
               </div>
               <ul class="c-dropdown__list" data-dropdown-list>
-                <li class="c-dropdown__option active" data-dropdown-option>
+                <li
+                  class="c-dropdown__option active"
+                  data-dropdown-option
+                  data-sort="time"
+                >
                   Senaste
                 </li>
-                <li class="c-dropdown__option" data-dropdown-option>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-sort="popular"
+                >
                   Populära
                 </li>
-                <li class="c-dropdown__option" data-dropdown-option>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-sort="recommend"
+                >
                   Rekommenderas för dig
                 </li>
               </ul>
@@ -673,8 +728,7 @@
         <section class="c-lib-page__heading">
           <h3>Senaste Inläggen</h3>
         </section>
-        <section class="c-lib-page__feed" data-forum-feed>
-        </section>
+        <section class="c-lib-page__feed" data-forum-feed></section>
       </main>
     </section>
 
@@ -738,9 +792,11 @@
     <template data-post-teaser-template>
       <a href="thread.html" class="c-lib-page__post">
         <article class="c-post">
-          <section class="c-post__cover-img-box">
-            <img src="" alt="" data-replace-cover-img />
-          </section>
+          <picture class="c-post__cover-img-box">
+            <source media="(max-width:743px)" data-replace-mobile-cover-img />
+            <source media="(min-width:744px)" data-replace-desktop-cover-img />
+            <img data-replace-fallback-cover-img />
+          </picture>
           <section class="c-post__content">
             <section class="c-post__post-info">
               <section class="c-post__times-container">
@@ -777,13 +833,19 @@
                 data-replace-tags
               ></section>
               <section class="c-post__info-container">
-                <div class="c-post-interactions">
+                <div class="c-post-interactions" data-fn-like-post>
                   <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                  <span class="c-post-interactions__text" data-replace-likes></span>
+                  <span
+                    class="c-post-interactions__text"
+                    data-replace-likes
+                  ></span>
                 </div>
                 <div class="c-post-interactions">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
-                  <span class="c-post-interactions__text" data-replace-comments></span>
+                  <span
+                    class="c-post-interactions__text"
+                    data-replace-comments
+                  ></span>
                 </div>
               </section>
             </section>

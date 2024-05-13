@@ -28,7 +28,7 @@
     // TO-DO: rätt breakpoint
     @media (min-width: 1024px) {
       flex: 0 0 calc(75% - (var(--flex-gap) / 2));
-      padding: var(--space-0);
+      padding: var(--space-4);
     }
   }
 }

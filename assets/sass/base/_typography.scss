@@ -103,6 +103,10 @@ body {
   &__usertitle {
     font: var(--font-body-xs);
   }
+
+  &__time {
+    font: var(--font-body-xs);
+  }
 }
 
 // text i tags
@@ -142,9 +146,33 @@ body {
   }
 }
 
+// text i input
+.c-input {
+  font: var(--font-body-xs);
+
+  &::placeholder {
+    font: var(--font-body-xs);
+  }
+}
+
+// text i search
+.c-search {
+  font: var(--font-body-sm);
+
+  &::placeholder {
+    font: var(--font-body-sm);
+  }
+}
+
+// text heading över feed
 .c-lib-page__heading {
   font: var(--font-title-xl);
   text-transform: uppercase;
+}
+
+// text i swiper
+.c-swiper__empty-text {
+  font: var(--font-body-sm);
 }
 
 // text i footer

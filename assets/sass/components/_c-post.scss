@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
   // TO-DO: height
-  height: 413px;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   // TO-DO: rätt breakpoint
   @media (min-width: 744px) {
     // TO-DO: height
-    height: 504px;
+    // height: 504px;
   }
 
   &--to-horizontal {
@@ -33,6 +33,7 @@
   }
 
   &--full-post {
+    height: auto;
     // TO-DO: rätt breakpoint
     @media (min-width: 744px) {
       padding: var(--space-2) var(--space-6) var(--space-6);

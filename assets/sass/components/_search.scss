@@ -3,29 +3,29 @@
   align-items: center;
 
   .c-search__input {
-    //   TO-DO: variabler
     outline: none;
+    color: var(--color-text);
     background-color: transparent;
     padding: var(--space-4) var(--space-3);
     border: 1px solid var(--color-border-scrollbar);
     border-radius: var(--border-radius-sm);
     margin-right: var(--space-2);
 
-    // TO-DO: font style
-    font-size: 14px;
-    color: var(--color-text);
-
     // sökfältet ska ta upp så mycket plats som möjligt
     flex: 1;
 
     &::placeholder {
-      // TO-DO: font style
-      font-size: 14px;
       color: var(--color-text);
     }
 
     &:focus {
       box-shadow: 4px 4px 15px 0px var(--opacity-grey-25);
+    }
+
+    &--to-sm {
+      @media (min-width: 1024px) {
+        padding: var(--space-1) var(--space-2);
+      }
     }
   }
 
