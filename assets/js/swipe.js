@@ -1,13 +1,15 @@
 "use strict";
 
 // hämtar containern
-var swiperContainer = document.querySelector("[data-fn-swiper-container]");
+const swiperContainer = document.querySelector("[data-fn-swiper-container]");
 // hämtar alla cards
-var allCards = document.querySelectorAll("[data-swiper-item]");
+const allCards = document.querySelectorAll("[data-swiper-item]");
+// hämtar alla kortens inre kort (innehållet)
+// const cardContent = document.querySelectorAll("[data-swiper-content]");
 // hämtar swipe-vänster knapp
-var nope = document.getElementById("nope");
+// const nope = document.getElementById("nope");
 // hämtar swipe-höger knapp
-var love = document.getElementById("love");
+// const love = document.getElementById("love");
 
 // skapar funktion
 function initCards(card, index) {
@@ -63,9 +65,9 @@ allCards.forEach(function (el) {
     el.classList.remove("moving");
 
     // här beräknar vi bredden på skärmen för att sedan bestämma gur långt kortet ska röra sig åt sidan när det dras bort
-    var moveOutWidth = document.body.clientWidth;
+    const moveOutWidth = document.body.clientWidth;
     // här bestämmer vi om korten ska dras ut från sidan eller stanna kvar, om det har dragits mindre än 80px i sidled eller i kortare än .5s så stannar det kvar
-    var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
+    const keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
     // beroende på värdet på keep kommer classen remove på kortet att togglas eller inte
     event.target.classList.toggle("removed", !keep);
@@ -73,17 +75,20 @@ allCards.forEach(function (el) {
     if (keep) {
       // om keep är sant så ska kortet behållas och dess position återtar ursprungspositionen
       event.target.style.transform = "";
+      // kortets innehåll ska följa itemets position
+      // cardContent.style.transform = "";
     } else {
       // om keep är falskt ska kortet dras ut från skärmen i en viss hastighet och rörelse beroende på användarens drag
-      var endX = Math.max(
+      const endX = Math.max(
         Math.abs(event.velocityX) * moveOutWidth,
         moveOutWidth
       );
       // deltaX används för att bestämma hur långt kortet ska dras åt sidan
-      var toX = event.deltaX > 0 ? endX : -endX;
+      const toX = event.deltaX > 0 ? endX : -endX;
 
       // translateX uppdaterar kortet horizontella position
       event.target.style.transform = "translateX(" + toX + "px)";
+      // cardContent.style.transform = "translateX(" + toX + "px)";
 
       // kallar på funktionen
       initCards();

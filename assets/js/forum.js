@@ -94,26 +94,19 @@ function render(data) {
       r.title.toLowerCase().includes(search)
     );
   }
-  // if (filters.tags.length > 0) {
-  //   filteredThreads = filteredThreads.filter((r) =>
-  //     filters.tags.every((f) => r.tags.includes(f))
-  //   );
+
+  // if (data) {
+  //   filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
   // }
   if (data) {
-    filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
+    filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
   }
-  // if (data) {
-  //   filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
-  // }
-
-  // if (popular) {
-  //   const sortedByPopular = filteredThreads.sort((a, b) => a.likes - b.likes);
-  //   console.log(sortedByPopular);
-  // }
 
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
 }
+
+// HELP de fungerar inte tillsammans
 
 // console.log(tags);
 tags.forEach((tag) => {
@@ -126,19 +119,12 @@ tags.forEach((tag) => {
   });
 });
 
+// HELP fungerar bara i mobil som dropdown
 catys.forEach((caty) => {
   caty.addEventListener("click", (e) => {
     console.log(e.target.dataset.caty);
     const currentCaty = e.target.dataset.caty;
     render(currentCaty);
-  });
-});
-
-sorting.forEach((sort) => {
-  sort.addEventListener("click", (e) => {
-    console.log(e.target.dataset.sort);
-    const currentSort = e.target.dataset.sort;
-    render(currentSort);
   });
 });
 

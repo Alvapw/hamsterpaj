@@ -19,7 +19,9 @@
       <nav class="c-header__nav">
         <div class="c-header__mobile-container">
           <div class="c-header__logo-box">
-            <img src="../assets/img/logotyp/hamster+text-img.png" alt="" />
+            <a href="index.html">
+              <img src="../assets/img/logotyp/logo.png" alt="" />
+            </a>
           </div>
           <div class="c-header__menu-icon" data-fn-toggle-menu>
             <span class="c-header__menu-line"></span>
@@ -145,6 +147,86 @@
             </li>
           </ul>
         </section>
+        <section
+          class="c-dropdown c-dropdown--lg c-aside__rules"
+          data-fn-dropdown
+        >
+          <h3 class="c-dropdown__heading">Regler</h3>
+          <div
+            class="c-dropdown__select c-dropdown__select--lg"
+            data-dropdown-select
+          >
+            <span
+              class="c-dropdown__selected c-dropdown__selected--lg"
+              data-dropdown-selected
+              >Regler</span
+            >
+            <i
+              class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
+              data-dropdown-caret
+            ></i>
+          </div>
+          <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">1</span>
+              <span>Bete er fint mot varandra</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">2</span>
+              <span>Attackera åsikter och inte varandra</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">3</span>
+              <span>Inget våld eller hot</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">4</span>
+              <span>Ingen rasism</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">5</span>
+              <span>Diskussioner är målet</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">6</span>
+              <span>Inga diskussioner om droger</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">7</span>
+              <span>Inget material av sexuell karaktär</span>
+            </li>
+            <li
+              class="c-dropdown__option c-dropdown__option--lg"
+              data-dropdown-option
+            >
+              <span class="c-dropdown__number">8</span>
+              <span
+                >Håll texterna korta, ingen vill läsa en roman i tråden!</span
+              >
+            </li>
+          </ul>
+        </section>
       </aside>
 
       <main class="c-two-col-page__main c-thread">
@@ -165,7 +247,15 @@
             class="c-post__cover-img-box c-post__cover-img-box--full-post"
           >
             <picture>
-              <source data-replace-cover-img />
+              <source
+                media="(max-width:744px)"
+                srcset="assets/img/cover-images/mobile/polaroids.webp"
+              />
+              <source
+                media="(min-width:744px)"
+                srcset="assets/img/cover-images/desktop/polaroids.webp"
+              />
+              <img src="" alt="" />
             </picture>
           </section>
           <section class="c-post__content c-post__content--full-post">
@@ -186,8 +276,10 @@
                 </h3>
                 <p class="c-post__text">
                   Då är dagen kommen, idag tar vi examen, den dag vi pratat om i
-                  snart två års tid. Vad kommer du ta med dig från dessa
-                  sagolika åren?
+                  snart två års tid. Två år kan också kännas som en evighet då
+                  vi ändå hunnit med så mycket. Skriv gärna en rad om Sunne
+                  eller brobygrafiska, ett speciellt minne, något du uppskattat
+                  lite extra, vad kommer du ta med dig från dessa sagolika åren?
                 </p>
               </section>
             </section>
@@ -205,7 +297,6 @@
                 </div>
               </div>
               <div class="c-user-box__more-info">
-                <!-- TO-DO: icon size-->
                 <i class="ph ph-dots-three c-icon c-icon--xs"></i>
               </div>
             </section>
@@ -213,20 +304,23 @@
               <section class="c-post__info-container">
                 <span class="c-tag">Throwbacks</span>
                 <span class="c-tag">Studentliv</span>
+                <span class="c-tag">Examination</span>
                 <span class="c-tag">allataggar</span>
               </section>
               <section class="c-post__info-container">
-                <div class="c-post-interactions">
+                <div class="c-post-interactions" data-fn-like-post>
                   <i
-                    class="ph ph-heart-straight c-icon c-icon--xs"
-                    data-fn-like-post
+                    class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                    data-icon
                   ></i>
-                  <span class="c-post-interactions__text" data-fn-like-count
+                  <span class="c-post-interactions__text" data-count="134"
                     >134</span
                   >
                 </div>
                 <div class="c-post-interactions">
-                  <i class="ph ph-chat c-icon c-icon--xs"></i>
+                  <i
+                    class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                  ></i>
                   <span class="c-post-interactions__text">8</span>
                 </div>
               </section>
@@ -291,25 +385,26 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span
-                      class="c-post-interactions__text"
-                      data-replace-likes
-                      data-fn-like-count
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="69"
                       >69</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-replies
-                      >1</span
-                    >
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
+                    <span class="c-post-interactions__text">1</span>
                   </div>
                 </section>
               </article>
@@ -356,21 +451,25 @@
                       placeholder="Svara"
                       autocomplete="off"
                       class="c-input c-comment__input"
+                      data-fn-comment-input
                     />
                     <section class="c-comment__interactions">
                       <div
                         class="c-post-interactions c-post-interactions--bg"
                         data-fn-like-post
                       >
-                        <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span
-                          class="c-post-interactions__text"
-                          data-replace-likes
-                          >69</span
+                        <i
+                          class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                          data-icon
+                        ></i>
+                        <span class="c-post-interactions__text" data-count="30"
+                          >30</span
                         >
                       </div>
                       <div class="c-post-interactions c-post-interactions--bg">
-                        <i class="ph ph-chat c-icon c-icon--xs"></i>
+                        <i
+                          class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                        ></i>
                         <span
                           class="c-post-interactions__text"
                           data-replace-replies
@@ -428,19 +527,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="15"
                       >15</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -493,19 +598,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="25"
                       >25</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -562,19 +673,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="13"
                       >13</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -626,19 +743,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="23"
                       >23</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -689,19 +812,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="88"
                       >88</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -748,19 +877,25 @@
                   placeholder="Svara"
                   autocomplete="off"
                   class="c-input c-comment__input"
+                  data-fn-comment-input
                 />
                 <section class="c-comment__interactions">
                   <div
                     class="c-post-interactions c-post-interactions--bg"
                     data-fn-like-post
                   >
-                    <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                    <span class="c-post-interactions__text" data-replace-likes
-                      >69</span
+                    <i
+                      class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                      data-icon
+                    ></i>
+                    <span class="c-post-interactions__text" data-count="45"
+                      >45</span
                     >
                   </div>
                   <div class="c-post-interactions c-post-interactions--bg">
-                    <i class="ph ph-chat c-icon c-icon--xs"></i>
+                    <i
+                      class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+                    ></i>
                     <span class="c-post-interactions__text" data-replace-replies
                       >0</span
                     >
@@ -856,10 +991,7 @@
     <footer class="c-footer">
       <div class="c-footer__container">
         <div class="c-footer__logo">
-          <img
-            src="../assets/img/logotyp/hamster+text-img.png"
-            alt="Hamsterpajs logotyp"
-          />
+          <img src="../assets/img/logotyp/logo.png" alt="Hamsterpajs logotyp" />
         </div>
         <div class="c-footer__content">
           <ul class="c-footer__page-links">
@@ -910,8 +1042,8 @@
     </footer>
 
     <!-- TEMPLATE FÖR COMMENT -->
-    <template data-comment-template>
-      <li>
+    <template data-comment-lvl1-template>
+      <li data-list-item>
         <article
           class="c-comment c-thread__comment c-thread__comment--lvl1"
           data-comment-lvl1
@@ -956,14 +1088,84 @@
             class="c-input c-comment__input"
           />
           <section class="c-comment__interactions">
-            <div class="c-post-interactions c-post-interactions--bg">
-              <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-              <span class="c-post-interactions__text" data-replace-likes
-                >00</span
-              >
+            <div
+              class="c-post-interactions c-post-interactions--bg"
+              data-fn-like-post
+            >
+              <i
+                class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                data-icon
+              ></i>
+              <span class="c-post-interactions__text" data-count="0">0</span>
             </div>
             <div class="c-post-interactions c-post-interactions--bg">
-              <i class="ph ph-chat c-icon c-icon--xs"></i>
+              <i
+                class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+              ></i>
+              <span class="c-post-interactions__text" data-replace-replies
+                >0</span
+              >
+            </div>
+          </section>
+        </article>
+      </li>
+    </template>
+
+    <template data-comment-lvl2-template>
+      <li data-list-item>
+        <article
+          class="c-comment c-thread__comment c-thread__comment--lvl2"
+          data-comment-lvl2
+        >
+          <i
+            class="ph ph-minus-circle c-icon c-icon--sm c-comment__see-less"
+          ></i>
+          <section class="c-user-box">
+            <div class="c-user-box__user-info">
+              <div class="c-user-box__user-img">
+                <img
+                  src="../assets/img/profile-images/robinhood-profile-img.png"
+                  alt="RobinHood's profilbild"
+                />
+              </div>
+              <div>
+                <p class="c-user-box__username" data-replace-username>
+                  RobinHood
+                </p>
+                <p class="c-user-box__usertitle" data-replace-usertitle>
+                  Solstrålen
+                </p>
+              </div>
+            </div>
+            <div class="c-user-box__more-info">
+              <p class="c-user-box__time">4 min</p>
+              <i class="ph ph-dots-three c-icon c-icon--xs"></i>
+            </div>
+          </section>
+          <label for="postInput" class="visually-hidden">Svara på post</label>
+          <input
+            type="text"
+            id="postInput"
+            placeholder="Svara"
+            autocomplete="off"
+            class="c-input c-comment__input"
+            data-fn-comment-input
+          />
+          <section class="c-comment__interactions">
+            <div
+              class="c-post-interactions c-post-interactions--bg"
+              data-fn-like-post
+            >
+              <i
+                class="ph ph-heart-straight c-icon c-icon--xs c-post-interactions__icon"
+                data-icon
+              ></i>
+              <span class="c-post-interactions__text" data-count="0">0</span>
+            </div>
+            <div class="c-post-interactions c-post-interactions--bg">
+              <i
+                class="ph ph-chat c-icon c-icon--xs c-post-interactions__icon"
+              ></i>
               <span class="c-post-interactions__text" data-replace-replies
                 >0</span
               >

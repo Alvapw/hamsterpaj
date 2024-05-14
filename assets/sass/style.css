@@ -745,6 +745,7 @@ body {
 }
 
 .c-post-interactions {
+  transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -763,11 +764,11 @@ body {
   --post-interactions-text-color: var(--color-text-onwhite);
 }
 .c-post-interactions--bg.pressed {
+  transition: 0.3s;
   box-shadow: 0px 0px 6px 2px var(--color-badge-neon);
   --post-interactions-bg-color: var(--color-badge-neon);
   --post-interactions-text-color: var(--color-text);
 }
-
 .c-user-box {
   color: var(--color-text-subdued);
   display: flex;
@@ -907,6 +908,19 @@ body {
 .c-post__time-box--right {
   text-align: right;
 }
+.c-post__title-device-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+}
+.c-post__devices {
+  color: var(--color-text-subdued);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
+}
 .c-post__title {
   margin-bottom: var(--space-2);
 }
@@ -922,6 +936,9 @@ body {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+}
+.c-post__stars {
+  color: var(--color-interactions-stars);
 }
 
 .c-comment {
@@ -974,6 +991,7 @@ body {
   justify-content: flex-end;
 }
 .c-swiper__item {
+  display: inline-block;
   max-width: 588px;
   height: 294px;
   background: var(--color-bg-card);
@@ -987,6 +1005,9 @@ body {
 .c-swiper__item.moving {
   transition: none;
   cursor: grabbing;
+}
+.c-swiper__post-content {
+  pointer-events: none;
 }
 
 .tinder--buttons {
@@ -1315,6 +1336,11 @@ body {
 }
 .c-aside__box:last-child {
   margin-bottom: var(--space-0);
+}
+@media (min-width: 1024px) {
+  .c-aside__rules {
+    display: none;
+  }
 }
 
 .c-lib-page__swiper {

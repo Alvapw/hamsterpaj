@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "coverImgMobile": "assets/img/cover-images/mobile/robotunicornattack.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/robotunicornattack.webp",
+    "screen": ["desktop"],
+    "title": "Robot Unicorn Attack II",
+    "text": "I Robot Unicorn Attack 2 tar spelaren rollen som en robotisk enhörning som springer genom en färgglad och fantasifull värld. Spelet har ett enkelt och beroendeframkallande spelupplägg där spelaren måste undvika hinder och samla ädelstenar och andra föremål längs vägen för att hålla sin enhörning springande så långt som möjligt.",
+    "category": ["action", "allakategorier"],
+    "tags": ["singleplayer", "action", "runner", "allataggar"],
+    "stars": 5
+  },
+  {
+    "id": 2,
+    "coverImgMobile": "assets/img/cover-images/mobile/cleaningbedroom.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/cleaningbedroom.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Cleaning Bedroom",
+    "text": "Med en interaktiv och engagerande spelupplevelse ger 'Cleaning Bedroom Spel' spelarna möjlighet att ha kul samtidigt som de lär sig vikten av att hålla ordning och rengöra sitt rum.",
+    "category": ["livsstil", "allakategorier"],
+    "tags": ["chill", "stiliserade", "livsstil", "allataggar"],
+    "stars": 5
+  },
+  {
+    "id": 3,
+    "coverImgMobile": "assets/img/cover-images/mobile/builtforspeed.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/builtforspeed.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Built for Speed",
+    "text": "Ett adrenalinfyllt bilspel som tar spelaren med på en resa genom spännande racingmiljöer. Med ett fokus på fart och spänning erbjuder spelet en rad olika banor, från livliga stadsgator till utmanande terrängbanor och snabba motorvägar.",
+    "category": ["multiplayer", "allakategorier"],
+    "tags": ["multiplayer", "racing", "sport", "allataggar"],
+    "stars": 5
+  },
+  {
+    "id": 4,
+    "coverImgMobile": "assets/img/cover-images/mobile/hiddencatsinparid.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/hiddencatsinparis.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Hidden Cats in Paris",
+    "text": "Medan du promenerar längs de vackra gatorna i Paris, från de pittoreska kaféerna till de livliga marknaderna och de historiska monumenten...",
+    "category": ["pussel", "allakategorier"],
+    "tags": ["pussel", "singleplayer", "stiliserade", "allataggar"],
+    "stars": 4
+  },
+  {
+    "id": 5,
+    "coverImgMobile": "assets/img/cover-images/mobile/dreamescape.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/dreamescape.webp",
+    "screen": ["desktop"],
+    "title": "Dream Escape",
+    "text": "I Dream Escape vaknar spelaren plötsligt upp mitt i en skrämmande och dunkel mardrömsvärld. Instängd i en labyrint av skuggor och förlorade minnen, kämpar spelaren för att överleva och hitta vägen ut.",
+    "category": ["action", "allakategorier"],
+    "tags": ["action", "dark", "labyrint", "allataggar"],
+    "stars": 4
+  },
+  {
+    "id": 6,
+    "coverImgMobile": "assets/img/cover-images/mobile/findingwords.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/findingwords.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Finding Words",
+    "text": "Hitta ord som gömmer sig bland ett rutnät med massa bokstäver",
+    "category": ["pussel", "allakategorier"],
+    "tags": ["pussel", "tankenötter", "singleplayer", "allataggar"],
+    "stars": 4
+  },
+  {
+    "id": 7,
+    "coverImgMobile": "assets/img/cover-images/mobile/shootingducks.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/shootingducks.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Shooting Ducks",
+    "text": "Ett klassiskt spel där det gäller att vara så träffsäker som det bara går. Du ska nämligen sjuta på ett par ankor.",
+    "category": ["action", "allakategorier"],
+    "tags": ["multiplayer", "action", "simulering", "allataggar"],
+    "stars": 4
+  },
+  {
+    "id": 8,
+    "coverImgMobile": "assets/img/cover-images/mobile/tengokustruggle.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/tengokustruggle.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "Tengoku Struggle",
+    "text": "Genom en överenskommelse omvandlades Asakusa till en turistattraktion där de levande kan möta de döda.",
+    "category": ["romance", "allakategorier"],
+    "tags": ["romance", "otome", "singleplayer", "allataggar"],
+    "stars": 4
+  },
+  {
+    "id": 9,
+    "coverImgMobile": "assets/img/cover-images/mobile/mylittlefarmies.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/mylittlefarmies.webp",
+    "screen": ["mobile", "desktop"],
+    "title": "My Little Farmies",
+    "text": "Tillsammans med dina vänner ska du försöka hålla en bondgård i drift. Alla spelare har egna roller de måste fullfölja för att klara av spelet och driva en framgångsrik gård.",
+    "category": ["multiplayer", "allakategorier"],
+    "tags": ["multiplayer", "farm", "simulering", "allataggar"],
+    "stars": 4
+  }
+]

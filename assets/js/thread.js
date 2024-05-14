@@ -1,9 +1,10 @@
 // hämtar element
 const tsInput = document.querySelector("[data-fn-ts-input]");
 const commentsListLvl1 = document.querySelector("[data-comments-list-lvl1]");
-const commentTemplate = document.querySelector("[data-comment-template]");
+const commentLvl1Template = document.querySelector(
+  "[data-comment-lvl1-template]"
+);
 
-// TO-DO: kanske ne knapp istället...
 // lyssnar efter ett keypress på tsInput
 tsInput.addEventListener("keypress", function (event) {
   // om enter klickas på
@@ -12,13 +13,12 @@ tsInput.addEventListener("keypress", function (event) {
     event.preventDefault();
 
     // hämtar värdet i input
-    console.log(tsInput.value);
     tsInputValue = tsInput.value;
     // rensar input
     tsInput.value = "";
 
     // skapar en klon av comment template
-    const comment = commentTemplate.content.cloneNode(true).children[0];
+    const comment = commentLvl1Template.content.cloneNode(true).children[0];
 
     // hämtar textcontent arean
     const commentTextContent = comment.querySelector(
@@ -30,46 +30,27 @@ tsInput.addEventListener("keypress", function (event) {
     // spottar ut kommentaren i listan
     commentsListLvl1.append(comment);
 
-    // hämtar alla kommentarer i listan
-    const commentsLvl1 = document.querySelectorAll("[data-comment-lvl1]");
-    // tar bort .last-child från alla element om något har den aktiverad redan
-    commentsLvl1.forEach((element) => {
-      element.classList.remove("last-child");
-    });
-
-    // lägg till classen på enbart den sista kommentaren
-    const lastCommentLvl1 = commentsLvl1[commentsLvl1.length - 1];
-    lastCommentLvl1.classList.add("last-child");
-
-    const commentsLvl2 = document.querySelectorAll("[data-comment-lvl2]");
-    // tar bort .last-child från alla element om något har den aktiverad redan
-    commentsLvl2.forEach((element) => {
-      element.classList.remove("last-child");
-    });
-
-    // lägg till classen på enbart den sista kommentaren
-    const lastCommentLvl2 = commentsLvl2[commentsLvl2.length - 1];
-    lastCommentLvl2.classList.add("last-child");
+    // använd funktionen för att lägga till klassen för nivå 1-kommentarer
+    addLastChildClass("[data-comment-lvl1]");
   }
 });
 
-// hämtar alla kommentarer i listan
-const commentsLvl1 = document.querySelectorAll("[data-comment-lvl1]");
-// tar bort .last-child från alla element om något har den aktiverad redan
-commentsLvl1.forEach((element) => {
-  element.classList.remove("last-child");
-});
+function addLastChildClass(commentSelector) {
+  const comments = document.querySelectorAll(commentSelector);
+  // tar bort .last-child från alla element om något har den aktiverad redan
+  comments.forEach((element) => {
+    element.classList.remove("last-child");
+  });
 
-// lägg till classen på enbart den sista kommentaren
-const lastCommentLvl1 = commentsLvl1[commentsLvl1.length - 1];
-lastCommentLvl1.classList.add("last-child");
+  // lägg till classen på enbart den sista kommentaren
+  const lastComment = comments[comments.length - 1];
+  if (lastComment) {
+    lastComment.classList.add("last-child");
+  }
+}
 
-const commentsLvl2 = document.querySelectorAll("[data-comment-lvl2]");
-// tar bort .last-child från alla element om något har den aktiverad redan
-commentsLvl2.forEach((element) => {
-  element.classList.remove("last-child");
-});
+// använd funktionen för att lägga till klassen för nivå 1-kommentarer
+addLastChildClass("[data-comment-lvl1]");
 
-// lägg till classen på enbart den sista kommentaren
-const lastCommentLvl2 = commentsLvl2[commentsLvl2.length - 1];
-lastCommentLvl2.classList.add("last-child");
+// använd funktionen för att lägga till klassen för nivå 2-kommentarer
+addLastChildClass("[data-comment-lvl2]");

@@ -23,6 +23,7 @@
     display: none;
     // TO-DO: breakpoint
     @media (min-width: 1024px) {
+      // TO-DO: height
       margin-top: var(--space-16);
       display: block;
       flex: 0 0 calc(30% - calc(var(--flex-column-gap) / 2));
