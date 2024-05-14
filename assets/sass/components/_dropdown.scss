@@ -172,4 +172,16 @@
     align-items: center;
     justify-content: center;
   }
+
+  &__icon {
+    &--lg {
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    &--lg {
+      pointer-events: none;
+    }
+  }
 }
