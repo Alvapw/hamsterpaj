@@ -7,7 +7,7 @@
   justify-content: flex-end;
 
   position: relative;
-
+  overflow: hidden;
   // jobbar med opacity och transitions för lite extra effekt
   // opacity: 0;
   transition: opacity 0.1s ease-in-out;

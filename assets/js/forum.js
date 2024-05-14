@@ -95,13 +95,13 @@ function render(data) {
     );
   }
 
-  if (data) {
-    filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
-  }
-
   // if (data) {
-  //   filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
+  //   filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
   // }
+
+  if (data) {
+    filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
+  }
 
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
