@@ -1,4 +1,5 @@
 .c-post-interactions {
+  transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -20,12 +21,20 @@
     --post-interactions-text-color: var(--color-text-onwhite);
 
     &.pressed {
-      // TO-DO: check this
+      transition: 0.3s;
       box-shadow: 0px 0px 6px 2px var(--color-badge-neon);
 
       --post-interactions-bg-color: var(--color-badge-neon);
       --post-interactions-text-color: var(--color-text);
       // TO-DO: neon effekt .c-post-interactions pressed state
     }
+  }
+
+  &__icon {
+    &.pressed {
+    }
+  }
+
+  &__text {
   }
 }

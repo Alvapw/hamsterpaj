@@ -81,16 +81,32 @@ dropdowns.forEach((dropdown) => {
 // hämtar alla like-interactions
 const like = document.querySelectorAll("[data-fn-like-post]");
 
+// lyssnare på vardera like
 like.forEach((likeInteraction) => {
   likeInteraction.addEventListener("click", (e) => {
     // lägger till class
     likeInteraction.classList.toggle("pressed");
-    const text = likeInteraction.querySelector("[data-fn-like-count]");
-    // counter();
-    // var a = 0;
-    // function counter() {
-    //   a = +1;
-    //   text.innerText = a;
-    // }
+
+    // hämtar icon och togglar fill
+    const icon = likeInteraction.querySelector("[data-icon]");
+    icon.classList.toggle("ph-fill");
+
+    // hämtar referens till nrtexten
+    const countNr = likeInteraction.querySelector("[data-count]");
+
+    // hämta nuvarande siffervärde
+    let count = parseInt(countNr.dataset.count);
+
+    if (likeInteraction.classList.contains("pressed")) {
+      // om elementet innehåller klassen pressed så ökar vi siffran med ett
+      count++;
+    } else {
+      // om inte så minskar vi siffran med ett
+      count--;
+    }
+
+    // uppdatera siffran i DOM och dataset
+    countNr.textContent = count;
+    countNr.dataset.count = count;
   });
 });

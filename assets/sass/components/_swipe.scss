@@ -34,7 +34,7 @@
 
   // card
   &__item {
-    // display: inline-block;
+    display: inline-block;
 
     // height + width
     max-width: 588px;
@@ -64,6 +64,10 @@
       cursor: -moz-grabbing;
       cursor: grabbing;
     }
+  }
+
+  &__post-content {
+    pointer-events: none;
   }
 }
 

@@ -159,6 +159,21 @@
     }
   }
 
+  &__title-device-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  &__devices {
+    color: var(--color-text-subdued);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-1);
+  }
+
   &__title {
     margin-bottom: var(--space-2);
   }
@@ -177,5 +192,9 @@
     display: flex;
     align-items: center;
     gap: var(--space-2);
+  }
+
+  &__stars {
+    color: var(--color-interactions-stars);
   }
 }

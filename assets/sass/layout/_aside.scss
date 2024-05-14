@@ -26,4 +26,10 @@
       margin-bottom: var(--space-0);
     }
   }
+
+  &__rules {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
 }
