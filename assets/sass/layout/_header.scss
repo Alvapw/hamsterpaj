@@ -1,49 +1,39 @@
 .c-header {
   width: 100%;
   background-color: var(--color-bg-accent-third);
-  border-bottom: 2px solid var(--color-border-black);
-  padding: var(--space-2) var(--space-4);
 
-  // TO-DO: rätt break-point
   @media (min-width: 1024px) {
-    padding: var(--space-4) var(--space-0) var(--space-5);
-  }
-
-  &.open {
-    border-bottom-left-radius: var(--border-radius-sm);
-    border-bottom-right-radius: var(--border-radius-sm);
+    border-bottom: 4px solid var(--color-border-black);
   }
 
   &__nav {
     max-width: 1200px;
     margin: auto;
+    // dropdown är relativ till denna
+    position: relative;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    // TO-DO: rätt break-point
     @media (min-width: 1024px) {
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
+      padding: var(--space-4) var(--space-4) var(--space-5);
+      border-bottom: 4px solid var(--color-border-black);
+    }
+
+    @media (min-width: 1200px) {
+      // när vi når max-width så tas padding på sidorna bort
+      padding: var(--space-4) var(--space-0) var(--space-5);
     }
   }
 
-  &__mobile-container {
+  &__mobile-only {
+    padding: var(--space-2) var(--space-4);
+    border-bottom: 2px solid var(--color-border-black);
+    flex: 0 0 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    // TO-DO: rätt break-point
-    @media (min-width: 1024px) {
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
-
-    &.open {
-      border-bottom: 2px solid var(--color-border-black);
-    }
   }
 
   &__logo-box {
@@ -52,22 +42,20 @@
 
   &__menu-icon {
     &.exit {
-      &__menu-line {
+      .c-header__menu-line {
         &:first-child {
-          transform: rotate(45deg) translate(5px, 0px);
+          transform: rotate(45deg) translate(.3125rem, 0px);
         }
 
         &:nth-child(2) {
           display: none;
         }
-
         &:last-child {
-          transform: rotate(-45deg) translate(5px, 0px);
+          transform: rotate(-45deg) translate(.3125rem, 0px);
         }
       }
     }
 
-    // TO-DO: rätt breakpoint
     @media (min-width: 1024px) {
       display: none;
     }
@@ -76,150 +64,258 @@
   &__menu-line {
     background-color: var(--color-text);
     width: 1.5rem;
-    height: 0.125rem;
+    height: .125rem;
     display: block;
-    margin: 0.25rem 0;
-    transition: 0.2s;
+    margin: .25rem 0;
+    transition: .2s;
   }
 
-  &__menus {
-    margin-left: auto;
-
-    // TO-DO: breakpoint
-    @media (max-width: 1024px) {
-      width: 100%;
-    }
-  }
-
-  &__top-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__search {
-    width: 100%;
-
+  &__dropdown {
     display: none;
+    opacity: 0;
+    transition: .3s;
 
-    &.active {
-      margin-top: var(--space-3);
-      display: flex;
-    }
+    &.open {
+      display: block;
+      opacity: 1;
+      transition: .3s;
 
-    // TO-DO: rätt breakpoint
-    @media (min-width: 1024px) {
-      display: none;
-      // TO-DO: mindre
-    }
-  }
-
-  &__icon-menu {
-    color: var(--color-text-subdued);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    // TO-DO: rätt break-point
-    @media (max-width: 1024px) {
-      background-color: var(--color-bg-black);
-      border-top-left-radius: var(--border-radius-sm);
-      border-top-right-radius: var(--border-radius-sm);
-      position: fixed;
+      position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 999;
-    }
 
-    // TO-DO: rätt break-point
-    @media (min-width: 1024px) {
-      margin-bottom: var(--space-1);
-      justify-content: flex-end;
-      // TO-DO: kolla spacing
-      gap: var(--space-8);
-    }
-  }
-
-  &__icon-item {
-    padding: var(--space-1) var(--space-0);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-1);
-
-    // TO-DO: font style
-    font-size: 12px;
-  }
-
-  &__icon-text {
-    // TO-DO: rätt break-point
-    @media (min-width: 1024px) {
-      display: none;
-    }
-  }
-
-  &__main-menu {
-    margin: var(--space-6) var(--space-0);
-    color: var(--color-text);
-
-    display: none;
-    transition: 0.2s;
-
-    &.active {
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: var(--space-4);
-    }
-
-    // TO-DO: rätt break-point
-    @media (min-width: 1024px) {
-      margin: var(--space-2) var(--space-0);
-
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      // TO-DO: kolla spacing
-      gap: var(--space-6);
-    }
-  }
-
-  &__main-item {
-    padding: var(--space-0) var(--space-2);
-
-    a {
-      &:hover {
-        color: var(--color-text-hover);
-      }
-    }
-
-    &.active {
-      border: 1px solid var(--color-border-selected);
-      border-radius: var(--border-radius-sm);
-    }
-  }
-
-  &__btn {
-    display: none;
-    transition: 0.2s;
-
-    &.active {
-      margin-left: auto;
-      margin-bottom: var(--space-6);
-
-      display: block;
-    }
-
-    // TO-DO: rätt breakpoint
-    @media (min-width: 1024px) {
-      display: block;
-      margin-left: var(--space-6);
+      padding: var(--space-3) var(--space-4) var(--space-6);
+      border-bottom: 2px solid var(--color-border-black);
+      border-bottom-left-radius: var(--border-radius-xs);
+      border-bottom-right-radius: var(--border-radius-xs);
     }
   }
 }
+
+
+// .c-header {
+//   width: 100%;
+//   background-color: var(--color-bg-accent-third);
+//   border-bottom: 2px solid var(--color-border-black);
+//   padding: var(--space-2) var(--space-4);
+
+//   // TO-DO: rätt break-point
+//   @media (min-width: 1024px) {
+//     padding: var(--space-4) var(--space-0) var(--space-5);
+//   }
+
+//   &.open {
+//     border-bottom-left-radius: var(--border-radius-sm);
+//     border-bottom-right-radius: var(--border-radius-sm);
+//   }
+
+//   &__nav {
+//     max-width: 1200px;
+//     margin: auto;
+
+//     display: flex;
+//     flex-direction: column;
+
+//     // TO-DO: rätt break-point
+//     @media (min-width: 1024px) {
+//       flex-direction: row;
+//       align-items: flex-end;
+//       justify-content: space-between;
+//     }
+//   }
+
+//   &__mobile-only {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     // TO-DO: rätt break-point
+//     @media (min-width: 1024px) {
+//       flex-direction: row;
+//       align-items: flex-end;
+//       justify-content: space-between;
+//     }
+
+//     &.open {
+//       border-bottom: 2px solid var(--color-border-black);
+//     }
+//   }
+
+//   &__logo-box {
+//     max-width: 250px;
+//   }
+
+//   &__menu-icon {
+//     &.exit {
+//       &__menu-line {
+//         &:first-child {
+//           transform: rotate(45deg) translate(5px, 0px);
+//         }
+
+//         &:nth-child(2) {
+//           display: none;
+//         }
+
+//         &:last-child {
+//           transform: rotate(-45deg) translate(5px, 0px);
+//         }
+//       }
+//     }
+
+//     // TO-DO: rätt breakpoint
+//     @media (min-width: 1024px) {
+//       display: none;
+//     }
+//   }
+
+//   &__menu-line {
+//     background-color: var(--color-text);
+//     width: 1.5rem;
+//     height: 0.125rem;
+//     display: block;
+//     margin: 0.25rem 0;
+//     transition: 0.2s;
+//   }
+
+//   &__menus {
+//     margin-left: auto;
+
+//     // TO-DO: breakpoint
+//     @media (max-width: 1024px) {
+//       width: 100%;
+//     }
+//   }
+
+//   &__top-menu {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   &__search {
+//     width: 100%;
+
+//     display: none;
+
+//     &.active {
+//       margin-top: var(--space-3);
+//       display: flex;
+//     }
+
+//     // TO-DO: rätt breakpoint
+//     @media (min-width: 1024px) {
+//       display: none;
+//       // TO-DO: mindre
+//     }
+//   }
+
+//   &__icon-menu {
+//     color: var(--color-text-subdued);
+
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
+
+//     // TO-DO: rätt break-point
+//     @media (max-width: 1024px) {
+//       background-color: var(--color-bg-black);
+//       border-top-left-radius: var(--border-radius-sm);
+//       border-top-right-radius: var(--border-radius-sm);
+//       position: fixed;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       z-index: 999;
+//     }
+
+//     // TO-DO: rätt break-point
+//     @media (min-width: 1024px) {
+//       margin-bottom: var(--space-1);
+//       justify-content: flex-end;
+//       // TO-DO: kolla spacing
+//       gap: var(--space-8);
+//     }
+//   }
+
+//   &__icon-item {
+//     padding: var(--space-1) var(--space-0);
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: var(--space-1);
+
+//     // TO-DO: font style
+//     font-size: 12px;
+//   }
+
+//   &__icon-text {
+//     // TO-DO: rätt break-point
+//     @media (min-width: 1024px) {
+//       display: none;
+//     }
+//   }
+
+//   &__main-menu {
+//     margin: var(--space-6) var(--space-0);
+//     color: var(--color-text);
+
+//     display: none;
+//     transition: 0.2s;
+
+//     &.active {
+//       width: 100%;
+
+//       display: flex;
+//       flex-direction: column;
+//       align-items: flex-end;
+//       gap: var(--space-4);
+//     }
+
+//     // TO-DO: rätt break-point
+//     @media (min-width: 1024px) {
+//       margin: var(--space-2) var(--space-0);
+
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       // TO-DO: kolla spacing
+//       gap: var(--space-6);
+//     }
+//   }
+
+//   &__main-item {
+//     padding: var(--space-0) var(--space-2);
+
+//     a {
+//       &:hover {
+//         color: var(--color-text-hover);
+//       }
+//     }
+
+//     &.active {
+//       border: 1px solid var(--color-border-selected);
+//       border-radius: var(--border-radius-sm);
+//     }
+//   }
+
+//   &__btn {
+//     display: none;
+//     transition: 0.2s;
+
+//     &.active {
+//       margin-left: auto;
+//       margin-bottom: var(--space-6);
+
+//       display: block;
+//     }
+
+//     // TO-DO: rätt breakpoint
+//     @media (min-width: 1024px) {
+//       display: block;
+//       margin-left: var(--space-6);
+//     }
+//   }
+// }
