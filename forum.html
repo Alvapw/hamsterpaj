@@ -18,6 +18,79 @@
   <body>
     <header class="c-header">
       <nav class="c-header__nav">
+        <section class="c-header__mobile-only">
+          <div class="c-header__logo-box">
+            <a href="index.html">
+              <img src="assets/img/logotyp/logo.png" alt="Hamsterpaj's logotyp">
+            </a>
+          </div>
+          <div class="c-header__menu-icon" data-fn-toggle-menu>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+            <span class="c-header__menu-line"></span>
+          </div>
+        </section>
+        <section class="c-header__dropdown">
+          <div class="c-header__menus">
+            <nav class="c-header__search-icon-nav">
+              <form id="headerSearch" role="search" autocomplete="off" class="c-search c-header__search" data-header-search>
+                <label for="search" class="visually-hidden">
+                  <span>Sök på hela sidan</span>
+                </label>
+                <input type="search" id="search" placeholder="Sök" class="c-search__input c-header__search-input">
+                <button class="c-search__button c-header__search-btn">
+                  <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
+                  <span class="visually-hidden">Klicka för att söka på hela sidan</span>
+                </button>
+              </form>
+              <ul class="c-header__icon-nav">
+                <li class="c-header__icon-item">
+                  <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Vänner</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-book-open c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Gästboken</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-chat c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Meddelande</span>
+                </li>
+                <li class="c-header__icon-item c-header__icon-item--mobile-only">
+                  <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Lägg till</span>
+                </li>
+              </ul>
+            </nav>
+            <nav class="c-header__main-nav">
+              <ul class="c-header__main-list" data-main-menu>
+                <li class="c-header__main-item">
+                  <a href="#">Om Hamsterpaj</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="forum.html">Forum</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="games.html">Onlinespel</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="#">Snackis</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="krypin.html">Min profil</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button class="c-button c-button--secondary c-header__btn" data-header-btn>
+            <span>Logga ut</span>
+          </button>
+        </section>
+      </nav>
+    </header>
+
+    <!-- <header class="c-header">
+      <nav class="c-header__nav">
         <div class="c-header__mobile-container">
           <div class="c-header__logo-box">
             <a href="index.html">
@@ -97,7 +170,7 @@
           <span>Logga in</span>
         </button>
       </nav>
-    </header>
+    </header> -->
 
     <section class="c-hero c-hero--forum-img">
       <div class="c-hero__info-box">
