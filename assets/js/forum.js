@@ -95,12 +95,13 @@ function render(data) {
     );
   }
 
-  // if (data) {
-  //   filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
-  // }
   if (data) {
-    filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
+    filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
   }
+
+  // if (data) {
+  //   filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
+  // }
 
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
@@ -119,7 +120,6 @@ tags.forEach((tag) => {
   });
 });
 
-// HELP fungerar bara i mobil som dropdown
 catys.forEach((caty) => {
   caty.addEventListener("click", (e) => {
     console.log(e.target.dataset.caty);

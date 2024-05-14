@@ -130,6 +130,7 @@
   --border-radius-xl: 1.25rem;
   --border-radius-xxll: 2.5rem;
   --border-radius-full: 9999rem;
+  --bottom-menu-mobile-height: 3.25rem;
 }
 
 *,
@@ -743,6 +744,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.c-dropdown__icon--lg {
+  pointer-events: none;
+}
+.c-dropdown__text--lg {
+  pointer-events: none;
+}
 
 .c-post-interactions {
   transition: 0.3s;
@@ -1221,6 +1228,11 @@ body {
   width: 100%;
   padding: var(--space-4) var(--space-4) var(--space-6);
   border-top: 3px solid var(--color-border-black);
+}
+@media (max-width: 1024px) {
+  .c-footer {
+    margin-bottom: var(--bottom-menu-mobile-height);
+  }
 }
 .c-footer__container {
   max-width: 1200px;
