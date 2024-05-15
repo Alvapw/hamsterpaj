@@ -14,6 +14,7 @@ const catys = document.querySelectorAll("[data-caty]");
 const sorting = document.querySelectorAll("[data-sort]");
 let saveCategory;
 let saveFilter = [];
+
 // lyssnar efter input i sökfältet och hämtar värdet
 searchInput.addEventListener("input", (e) => {
   const valueInput = e.target.value.toLowerCase();
@@ -34,7 +35,6 @@ fetch("assets/json/forumData.json")
 
 // funktion för att skapa korten
 function createPostTeaser(thread) {
-  // console.log(thread);
   // klonar template
   const post = postTeaserTemplate.content.cloneNode(true).children[0];
 
@@ -74,101 +74,21 @@ function createPostTeaser(thread) {
   // filtrerar ut hur många och vilka tags som ska skrivas ut i kortet och skapar elementet med rätt class
   const tagsContainer = post.querySelector("[data-replace-tags]");
   thread.tags.forEach((tag) => {
-    // console.log(tag);
     const spanTag = document.createElement("span");
     spanTag.classList.add("c-tag");
     spanTag.textContent = tag;
     tagsContainer.append(spanTag);
   });
 
+  if (thread.trending === true) {
+    post.querySelector("[data-post]").classList.add("trending");
+  }
+
   // spottar ut kortet i rätt container
   forumFeed.append(post);
 }
 
-// funktion för att rendera ut korten
-// function render(data, check) {
-//   let filteredThreads = [...forumThreads];
-
-//   if (filters.search.length > 0) {
-//     const search = filters.search.toLowerCase();
-//     filteredThreads = filteredThreads.filter((r) =>
-//       r.title.toLowerCase().includes(search)
-//     );
-//   }
-//   // console.log(data);
-//   // if (filters.category.length > 0) {
-//   //   filteredThreads = filteredThreads.filter(r => filters.category.every(f => r.category.includes(f)));
-//   // }
-  
-
-  
-//   if(check === 'tag'){
-//     console.log('tag');
-//     console.log(filteredThreads);
-//     if(saveCategory){
-//       console.log('japp du har en sparad');
-//       filters.category[0] = saveCategory;
-//       // console.log(filters.category);
-//       // console.log(saveFilter);
-//       // console.log(filteredThreads[0].tags);
-//       console.log(saveFilter);
-//       saveFilter = saveFilter.filter((r) => r.tags.includes(data));
-//       // console.log(saveFilter);
-//       filteredThreads = saveFilter;
-//       console.log(filteredThreads);
-//       // filteredThreads = filteredThreads.filter(r => filters.category.every(f => f.includes(r)));
-      
-      
-//     }else{
-//       console.log('nej du');
-//       filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
-//     }
-//   }
-  
-//   if(check === 'caty'){
-//     console.log('caty');
-//     if (data) {
-//       filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
-//       saveFilter = filteredThreads;
-      
-      
-//     }
-//   }
-//   // console.log(filteredThreads);
-  
-//   forumFeed.innerHTML = "";
-//   // console.log(filteredThreads);
-//   filteredThreads.forEach((thread) => createPostTeaser(thread));
-// }
-
-// HELP de fungerar inte tillsammans
 let ok;
-// console.log(tags);
-tags.forEach((tag) => {
-  // console.log(tag);
-  tag.addEventListener("click", (e) => {
-    // console.log(e.target.dataset.tag);
-    const currentTag = e.target.dataset.tag;
-    // toggleItemArray(currentTag, filters.tags);
-    ok = 'tag';
-    render(currentTag, ok);
-  });
-});
-
-catys.forEach((caty) => {
-  caty.addEventListener("click", (e) => {
-    // console.log(e.target.dataset.caty);
-    const currentCaty = e.target.dataset.caty;
-    // toggleItemArray(currentCaty,filters.category);
-    // console.log(currentCaty);
-    // console.log(filters.category);
-    // filters.category.splice(0,0,currentCaty);
-    // console.log(filters.category);
-    ok = 'caty';
-    saveCategory = currentCaty
-    render(currentCaty,ok);
-  });
-});
 
 function toggleItemArray(item, array) {
   //Om det finns i arrray ta bort
@@ -180,41 +100,92 @@ function toggleItemArray(item, array) {
   } else {
     array.push(item);
   }
-  // console.log(array);
 }
 
+let currentCategory = null;
+let currentTag = null;
+let currentSort = null;
 
-// CHATGPT
-function render(data, check) {
+tags.forEach((tag) => {
+  tag.addEventListener("click", (e) => {
+    currentTag = e.target.dataset.tag;
+    render();
+  });
+});
+
+catys.forEach((caty) => {
+  caty.addEventListener("click", (e) => {
+    currentCategory = e.target.dataset.caty;
+    render();
+  });
+});
+
+sorting.forEach((sort) => {
+  sort.addEventListener("click", (e) => {
+    currentSort = e.target.dataset.sort;
+    sortThreads(currentSort);
+    render();
+    // ändrar heading innehåll beroende på vilken sortering som är aktuell
+    const feedHeading = document.querySelector("[data-replace-feed-heading]");
+    if (currentSort === "time") {
+      feedHeading.textContent = "Senaste inläggen";
+    }
+    if (currentSort === "popular") {
+      feedHeading.textContent = "Populära inlägg";
+    }
+    if (currentSort === "recommend") {
+      feedHeading.textContent = "Rekommenderade inlägg för dig";
+    }
+  });
+});
+
+function render() {
   let filteredThreads = [...forumThreads];
 
+  // Filtrera efter sökning
   if (filters.search.length > 0) {
     const search = filters.search.toLowerCase();
-    filteredThreads = filteredThreads.filter((r) =>
-      r.title.toLowerCase().includes(search)
+    filteredThreads = filteredThreads.filter((thread) =>
+      thread.title.toLowerCase().includes(search)
     );
   }
 
-  if (check === 'tag') {
-    if (saveCategory) {
-      // Om det finns en sparad kategori, använd den
-      filteredThreads = saveFilter.filter((r) => r.tags.includes(data) && r.category.includes(saveCategory));
-    } else {
-      // Om ingen sparad kategori finns, filtrera endast efter tagg
-      filteredThreads = filteredThreads.filter((r) => r.tags.includes(data));
-    }
+  // Filtrera efter vald kategori
+  if (currentCategory) {
+    filteredThreads = filteredThreads.filter((thread) =>
+      thread.category.includes(currentCategory)
+    );
   }
-  
-  if (check === 'caty') {
-    if (data) {
-      // Om en kategori väljs, spara den och filtrera korten
-      saveCategory = data;
-      filteredThreads = filteredThreads.filter((r) => r.category.includes(data));
-      // Spara filtrerade trådar för att använda när man filtrerar efter taggar
-      saveFilter = filteredThreads;
-    }
+
+  // Filtrera efter vald tagg
+  if (currentTag) {
+    filteredThreads = filteredThreads.filter((thread) =>
+      thread.tags.includes(currentTag)
+    );
+  }
+
+  // Sortera
+  if (currentSort) {
+    sortThreads(currentSort);
   }
 
   forumFeed.innerHTML = "";
   filteredThreads.forEach((thread) => createPostTeaser(thread));
+}
+
+function sortThreads(criteria) {
+  switch (criteria) {
+    case "time": // Sortera efter datum
+      forumThreads.sort((a, b) => new Date(a.id) - new Date(b.id));
+      break;
+    case "popular": // Sortera efter antal gillningar
+      forumThreads.sort((a, b) => b.likes - a.likes);
+      break;
+    case "recommend": // Slumpmässig ordning
+      forumThreads.sort(() => Math.random() - 0.5);
+      break;
+    default:
+      // Om inget giltigt sorteringskriterium hittades, använd standardordning
+      return;
+  }
 }

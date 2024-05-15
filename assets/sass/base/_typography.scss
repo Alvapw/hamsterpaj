@@ -175,6 +175,11 @@ body {
   font: var(--font-body-sm);
 }
 
+// text i scroll
+.c-scroll__heading {
+  font: var(--font-title-lg);
+}
+
 // text i footer
 .c-footer {
   &__page-link {

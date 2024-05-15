@@ -107,8 +107,15 @@
 
     &--scroll {
       // för att listan inte ska bli för långradig så har jag satt en max-width och scroll
-      max-height: 200px;
+      max-height: 210px;
       overflow-y: scroll;
+
+      //För att ta bort scroll-bar i firefox
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
