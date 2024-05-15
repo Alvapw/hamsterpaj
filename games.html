@@ -528,7 +528,7 @@
             <section class="c-dropdown c-lib-page__dropdown" data-fn-dropdown>
               <div class="c-dropdown__select" data-dropdown-select>
                 <span class="c-dropdown__selected" data-dropdown-selected
-                  >Senaste</span
+                  >Betyg, högst till lägst</span
                 >
                 <i
                   class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
@@ -539,16 +539,9 @@
                 <li
                   class="c-dropdown__option active"
                   data-dropdown-option
-                  data-sort="time"
+                  data-sort="stars"
                 >
-                  Senaste
-                </li>
-                <li
-                  class="c-dropdown__option"
-                  data-dropdown-option
-                  data-sort="popular"
-                >
-                  Populära
+                  Betyg, högst till lägst
                 </li>
                 <li
                   class="c-dropdown__option"
@@ -705,7 +698,7 @@
           </section>
         </section>
         <section class="c-lib-page__heading">
-          <h3>Betyg, från högst till lägst</h3>
+          <h3 data-replace-feed-heading>Betyg, från högst till lägst</h3>
         </section>
         <section class="c-lib-page__feed" data-game-feed></section>
       </main>
@@ -766,7 +759,7 @@
 
     <!-- TEMPLATE FÖR TEASER POST -->
     <template data-game-teaser-template>
-      <article class="c-post c-lib-page__post">
+      <article class="c-post c-lib-page__post" data-game>
         <picture class="c-post__cover-img-box">
           <source media="(max-width:744px)" data-replace-mobile-cover-img />
           <source media="(min-width:744px)" data-replace-desktop-cover-img />
@@ -777,23 +770,17 @@
             <section class="c-post__text-container">
               <div class="c-post__title-device-container">
                 <h3 class="c-post__title" data-replace-title></h3>
-                <div class="c-post__devices">
-                  <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
-                  <i class="ph ph-desktop c-icon c-icon--xs"></i>
-                </div>
+                <div class="c-post__devices" data-replace-screens></div>
               </div>
               <p class="c-post__text cut-text" data-replace-text></p>
             </section>
           </section>
           <section class="c-post__additional-info">
             <section class="c-post__info-container" data-replace-tags></section>
-            <section class="c-post__info-container c-post__stars">
-              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
-              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
-              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
-              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
-              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
-            </section>
+            <section
+              class="c-post__info-container c-post__stars"
+              data-replace-stars
+            ></section>
           </section>
         </section>
       </article>

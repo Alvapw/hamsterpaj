@@ -774,7 +774,7 @@
             >
               <div class="c-dropdown__select" data-dropdown-select>
                 <span class="c-dropdown__selected" data-dropdown-selected
-                  >Galleri</span
+                  >Kompakt</span
                 >
                 <i
                   class="ph ph-caret-down c-icon c-icon--xs c-dropdown__caret"
@@ -783,17 +783,15 @@
               </div>
               <ul class="c-dropdown__list" data-dropdown-list>
                 <li class="c-dropdown__option active" data-dropdown-option>
-                  Galleri
+                  Kompakt
                 </li>
-                <li class="c-dropdown__option" data-dropdown-option>
-                  Annan vy
-                </li>
+                <li class="c-dropdown__option" data-dropdown-option>Galleri</li>
               </ul>
             </section>
           </section>
         </section>
         <section class="c-lib-page__heading">
-          <h3>Senaste Inläggen</h3>
+          <h3 data-replace-feed-heading>Senaste Inläggen</h3>
         </section>
         <section class="c-lib-page__feed" data-forum-feed></section>
       </main>
@@ -855,7 +853,7 @@
     <!-- TEMPLATE FÖR TEASER POST -->
     <template data-post-teaser-template>
       <a href="thread.html" class="c-lib-page__post">
-        <article class="c-post">
+        <article class="c-post" data-post>
           <picture class="c-post__cover-img-box">
             <source media="(max-width:743px)" data-replace-mobile-cover-img />
             <source media="(min-width:744px)" data-replace-desktop-cover-img />

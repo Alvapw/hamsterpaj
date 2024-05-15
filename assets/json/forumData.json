@@ -12,7 +12,8 @@
     "category": ["cosplayconventions", "allakategorier"],
     "tags": ["cosplay", "crafting", "tips", "allataggar"],
     "likes": 76,
-    "comments": 22
+    "comments": 22,
+    "trending": false
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["konsol", "rpg", "spel", "allataggar"],
     "likes": 76,
-    "comments": 22
+    "comments": 22,
+    "trending": false
   },
   {
     "id": 3,
@@ -42,7 +44,8 @@
     "category": ["böckerserier", "allakategorier"],
     "tags": ["fantasy", "böcker", "allataggar"],
     "likes": 69,
-    "comments": 201
+    "comments": 201,
+    "trending": true
   },
   {
     "id": 4,
@@ -57,7 +60,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["spel", "dark", "rpg", "allataggar"],
     "likes": 22,
-    "comments": 7
+    "comments": 7,
+    "trending": false
   },
   {
     "id": 5,
@@ -72,7 +76,8 @@
     "category": ["fanartfanfiction", "allakategorier"],
     "tags": ["fanart", "crafting", "allataggar"],
     "likes": 3344,
-    "comments": 5446
+    "comments": 5446,
+    "trending": true
   },
   {
     "id": 6,
@@ -87,7 +92,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["spel", "tips", "allataggar"],
     "likes": 77,
-    "comments": 78
+    "comments": 78,
+    "trending": false
   },
   {
     "id": 7,
@@ -102,7 +108,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["musik", "rpg", "allataggar"],
     "likes": 12,
-    "comments": 99
+    "comments": 99,
+    "trending": false
   },
   {
     "id": 8,
@@ -117,7 +124,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["humor", "spel", "allataggar"],
     "likes": 134,
-    "comments": 64
+    "comments": 64,
+    "trending": false
   },
   {
     "id": 9,
@@ -132,7 +140,8 @@
     "category": ["animemanga", "allakategorier"],
     "tags": ["manga", "anime", "dark", "allataggar"],
     "likes": 34,
-    "comments": 78
+    "comments": 78,
+    "trending": false
   },
   {
     "id": 10,
@@ -147,7 +156,8 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["spel", "gamer", "girlproblems", "allataggar"],
     "likes": 307,
-    "comments": 79
+    "comments": 79,
+    "trending": true
   },
   {
     "id": 11,
@@ -162,7 +172,8 @@
     "category": ["animemanga", "allakategorier"],
     "tags": ["livsstil", "gamer", "girlproblems", "allataggar"],
     "likes": 29,
-    "comments": 84
+    "comments": 84,
+    "trending": false
   },
   {
     "id": 12,
@@ -177,6 +188,7 @@
     "category": ["spelbrädspel", "allakategorier"],
     "tags": ["underhållning", "gaming", "tips", "allataggar"],
     "likes": 70,
-    "comments": 47
+    "comments": 47,
+    "trending": false
   }
 ]

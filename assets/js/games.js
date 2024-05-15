@@ -52,6 +52,28 @@ function createGameTeaser(game) {
   const title = gameTeaser.querySelector("[data-replace-title]");
   title.textContent = game.title;
 
+  // filtrerar ut vilka screens som skaskrivas ut i kortet
+  const screensContainer = gameTeaser.querySelector("[data-replace-screens]");
+
+  // om mobile är true så skapar vi element med rätt icon
+  if (game.mobile === true) {
+    const mobileScreen = document.createElement("i");
+    mobileScreen.classList.add(
+      "ph",
+      "ph-device-mobile",
+      "c-icon",
+      "c-icon--xs"
+    );
+    screensContainer.append(mobileScreen);
+  }
+
+  // om desktop är true så skapr vi ett element med rätt icon
+  if (game.desktop === true) {
+    const desktopScreen = document.createElement("i");
+    desktopScreen.classList.add("ph", "ph-desktop", "c-icon", "c-icon--xs");
+    screensContainer.append(desktopScreen);
+  }
+
   const text = gameTeaser.querySelector("[data-replace-text]");
   text.textContent = game.text;
 
@@ -65,26 +87,33 @@ function createGameTeaser(game) {
     tagsContainer.append(spanTag);
   });
 
+  // filtrerar ut hur många fyllda stjärnor som ska skrivas ut i kortet och skapar elmenten
+  const starsContainer = gameTeaser.querySelector("[data-replace-stars]");
+
+  const stars = game.stars;
+  var starHTML = "";
+  for (var i = 1; i <= 5; i++) {
+    const star = document.createElement("i");
+    star.classList.add("c-icon", "c-icon--sm", "ph", "ph-star");
+
+    if (i <= stars) {
+      star.classList.add("ph-fill");
+    }
+
+    starHTML += star.outerHTML;
+  }
+
+  starsContainer.innerHTML = starHTML;
+
+  if (game.trending === true) {
+    gameTeaser.querySelector("[data-game]").classList.add("trending");
+  }
+
   // spottar ut kortet i rätt container
   gameFeed.append(gameTeaser);
 }
-let ok;
-tags.forEach((tag) => {
-  tag.addEventListener("click", (e) => {
-    const currentTag = e.target.dataset.tag;
-    ok = "tag";
-    render(currentTag, ok);
-  });
-});
 
-catys.forEach((caty) => {
-  caty.addEventListener("click", (e) => {
-    const currentCaty = e.target.dataset.caty;
-    ok = "caty";
-    saveCategory = currentCaty;
-    render(currentCaty, ok);
-  });
-});
+let ok;
 
 function toggleItemArray(item, array) {
   //Om det finns i arrray ta bort
@@ -98,39 +127,84 @@ function toggleItemArray(item, array) {
   }
 }
 
-// CHATGPT
-function render(data, check) {
+let currentCategory = null;
+let currentTag = null;
+let currentSort = null;
+
+tags.forEach((tag) => {
+  tag.addEventListener("click", (e) => {
+    currentTag = e.target.dataset.tag;
+    render();
+  });
+});
+
+catys.forEach((caty) => {
+  caty.addEventListener("click", (e) => {
+    currentCategory = e.target.dataset.caty;
+    render();
+  });
+});
+
+sorting.forEach((sort) => {
+  sort.addEventListener("click", (e) => {
+    currentSort = e.target.dataset.sort;
+    sortGames(currentSort);
+    render();
+    // ändrar heading innehåll beroende på vilken sortering som är aktuell
+    const feedHeading = document.querySelector("[data-replace-feed-heading]");
+    if (currentSort === "stars") {
+      feedHeading.textContent = "Betyg, från högst till lägst";
+    }
+    if (currentSort === "recommend") {
+      feedHeading.textContent = "Rekommenderade spel för dig";
+    }
+  });
+});
+
+function render() {
   let filteredGames = [...games];
 
+  // Filtrera efter sökning
   if (filters.search.length > 0) {
     const search = filters.search.toLowerCase();
-    filteredGames = filteredGames.filter((r) =>
-      r.title.toLowerCase().includes(search)
+    filteredGames = filteredGames.filter((game) =>
+      game.title.toLowerCase().includes(search)
     );
   }
 
-  if (check === "tag") {
-    if (saveCategory) {
-      // Om det finns en sparad kategori, använd den
-      filteredGames = saveFilter.filter(
-        (r) => r.tags.includes(data) && r.category.includes(saveCategory)
-      );
-    } else {
-      // Om ingen sparad kategori finns, filtrera endast efter tagg
-      filteredGames = filteredGames.filter((r) => r.tags.includes(data));
-    }
+  // Filtrera efter vald kategori
+  if (currentCategory) {
+    filteredGames = filteredGames.filter((game) =>
+      game.category.includes(currentCategory)
+    );
   }
 
-  if (check === "caty") {
-    if (data) {
-      // Om en kategori väljs, spara den och filtrera korten
-      saveCategory = data;
-      filteredGames = filteredGames.filter((r) => r.category.includes(data));
-      // Spara filtrerade trådar för att använda när man filtrerar efter taggar
-      saveFilter = filteredGames;
-    }
+  // Filtrera efter vald tagg
+  if (currentTag) {
+    filteredGames = filteredGames.filter((game) =>
+      game.tags.includes(currentTag)
+    );
+  }
+
+  // Sortera
+  if (currentSort) {
+    sortGames(currentSort);
   }
 
   gameFeed.innerHTML = "";
   filteredGames.forEach((game) => createGameTeaser(game));
+}
+
+function sortGames(criteria) {
+  switch (criteria) {
+    case "stars": // Sortera efter antal gillningar
+      games.sort((a, b) => b.stars - a.stars);
+      break;
+    case "recommend": // Slumpmässig ordning
+      games.sort(() => Math.random() - 0.5);
+      break;
+    default:
+      // Om inget giltigt sorteringskriterium hittades, använd standardordning
+      return;
+  }
 }

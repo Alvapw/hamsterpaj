@@ -36,7 +36,7 @@
   --raspberry-400: #e98391;
   --raspberry-500: #dc576d;
   --raspberry-600: #c83756;
-  --raspberry-700: #a72947;
+  --raspberry-700: rgb(167, 41, 71);
 
   --pumpkin-200: #ffcda8;
   --pumpkin-300: #ffa970;
@@ -52,6 +52,7 @@
 
   --opacity-black-30: rgba(13, 13, 13, 0.3);
   --opacity-grey-25: rgba(134, 134, 134, 0.25);
+  --opacity-neon-45: rgba(167, 41, 71, 0.45);
 
   // alias colors
   --color-bg: var(--blueberry-900);
@@ -111,8 +112,6 @@
   --font-title-2xl: 700 3.3124rem/135% "Kanit", sans-serif;
   --font-btn: 400 1.25rem "Kanit", sans-serif;
 
-  // break-points
-
   // spacing
   --space-0: 0rem; // 0px
   --space-0-5: 0.125rem; // 2px
@@ -129,6 +128,7 @@
   --space-12: 3rem; // 48px
   --space-14: 3.5rem; // 56px
   --space-16: 4rem; // 64px
+  --space-18: 4.5rem; // 72px
   --space-20: 5rem; // 80px
   --space-24: 6rem; // 96px
   --space-26: 6.5rem; // 104px
