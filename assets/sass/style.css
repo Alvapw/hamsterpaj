@@ -556,7 +556,7 @@ body {
   color: var(--color);
 }
 .c-button--secondary {
-  --btn-color: var(--color-btn-secondary);
+  --btn-bg-color: var(--color-btn-secondary);
   --btn-text-color: var(--color-text);
 }
 .c-button--secondary:hover {
@@ -571,12 +571,16 @@ body {
   transform: translate(1.5px, -2px);
 }
 .c-button--tertiary {
+  --btn-box-shadow-default: none;
   --btn-border-radius: var(--border-radius-sm);
   --btn-bg-color: transparent;
-  --btn-text-color: var(--color-text);
+  --btn-text-color: var(--color-text-onwhite);
 }
 .c-button--tertiary:hover {
   background-color: grey;
+}
+.c-button--tertiary:focus {
+  border: 3px solid var(--color-btn-border);
 }
 
 .c-tag {
@@ -1173,6 +1177,9 @@ body {
     flex: 0 0 calc(75% - 1.5rem);
   }
 }
+.c-scroll__item {
+  flex: 0 0 300px;
+}
 
 .c-header {
   width: 100%;
@@ -1627,6 +1634,9 @@ body {
 }
 
 /*If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.*/
+.c-asymmetric-feed {
+  align-items: stretch;
+}
 .c-asymmetric-feed__post {
   --flex-gap: var(--space-4);
 }
@@ -1650,6 +1660,11 @@ body {
     --flex-items: 3;
     flex: 0 0 calc(100% / var(--flex-items) - (var(--flex-items) - 1) / var(--flex-items) * var(--flex-gap));
   }
+}
+
+.c-comment {
+  height: calc(100% - 1rem);
+  justify-content: space-between;
 }
 
 @media (min-width: 1024px) {
@@ -1734,6 +1749,9 @@ body {
   border-bottom-left-radius: var(--border-radius-sm);
   width: 25px;
   height: 16px;
+}
+.c-thread__comment--lvl1.last-child {
+  margin-bottom: 0;
 }
 .c-thread__comment--lvl1.last-child:before {
   content: "";

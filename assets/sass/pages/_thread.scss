@@ -107,6 +107,7 @@
       }
 
       &.last-child {
+        margin-bottom: 0;
         &:before {
           content: "";
           position: absolute;
