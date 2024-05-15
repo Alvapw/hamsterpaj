@@ -29,17 +29,13 @@
     gap: var(--space-4);
   }
 
-  // &__img-container {
-  //   display: flex;
-  //   gap: var(--space-4);
-  //   margin-bottom: var(--space-5);
-  // }
+  &__img-container {
+    display: flex;
+    gap: var(--space-4);
+  }
 
   &__img-box {
     position: relative;
     margin-bottom: var(--space-5);
-  }
-
-  &__img {
   }
 }

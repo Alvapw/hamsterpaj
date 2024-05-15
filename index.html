@@ -18,10 +18,13 @@
   <body>
     <header class="c-header">
       <nav class="c-header__nav">
-        <div class="c-header__mobile-container">
+        <section class="c-header__mobile-top">
           <div class="c-header__logo-box">
             <a href="index.html">
-              <img src="../assets/img/logotyp/logo.png" alt="" />
+              <img
+                src="assets/img/logotyp/logo.png"
+                alt="Hamsterpaj's logotyp"
+              />
             </a>
           </div>
           <div class="c-header__menu-icon" data-fn-toggle-menu>
@@ -29,74 +32,108 @@
             <span class="c-header__menu-line"></span>
             <span class="c-header__menu-line"></span>
           </div>
-        </div>
-        <div class="c-header__menus">
-          <div class="c-header__top-menu">
-            <form
-              id="search"
-              role="search"
-              autocomplete="off"
-              class="c-search c-header__search"
-              data-header-search
-            >
-              <label for="search">
-                <span class="visually-hidden">Sök</span>
-              </label>
-              <input
-                type="search"
-                id="search"
-                placeholder="Sök"
-                class="c-search__input c-header__search-input"
-              />
-              <button class="c-search__button">
-                <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
-                <span class="visually-hidden">Klicka för att söka</span>
-              </button>
-            </form>
+        </section>
+        <section class="c-header__dropdown" data-fn-header-dropdown>
+          <div class="c-header__menus">
+            <nav class="c-header__search-icon-nav">
+              <form
+                id="headerSearch"
+                role="search"
+                autocomplete="off"
+                class="c-search c-header__search"
+                data-header-search
+              >
+                <label for="search" class="visually-hidden">
+                  <span>Sök på hela sidan</span>
+                </label>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Sök"
+                  class="c-search__input c-header__search-input"
+                />
+                <button class="c-search__button c-search__button--in-header">
+                  <i
+                    class="ph ph-magnifying-glass c-icon c-icon--md c-header__search-icon"
+                  ></i>
+                  <span class="visually-hidden"
+                    >Klicka för att söka på hela sidan</span
+                  >
+                </button>
+              </form>
+              <ul
+                class="c-header__icon-nav c-header__icon-nav--desktop-only"
+                data-fn-icon-nav
+              >
+                <li class="c-header__icon-item">
+                  <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Vänner</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-book-open c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Gästboken</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-chat c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Meddelande</span>
+                </li>
+                <li
+                  class="c-header__icon-item c-header__icon-item--mobile-only"
+                >
+                  <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Lägg till</span>
+                </li>
+              </ul>
+            </nav>
+            <nav class="c-header__main-nav">
+              <ul class="c-header__main-list" data-main-menu>
+                <li class="c-header__main-item">
+                  <a href="#">Om Hamsterpaj</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="forum.html">Forum</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="games.html">Onlinespel</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="#">Snackis</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="krypin.html">Min profil</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <ul class="c-header__icon-menu">
-            <li class="c-header__icon-item">
-              <i class="ph ph-user-plus c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Vänner</span>
-            </li>
-            <li class="c-header__icon-item">
-              <i class="ph ph-book-open c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Gästboken</span>
-            </li>
-            <li class="c-header__icon-item">
-              <i class="ph ph-chat c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Meddelande</span>
-            </li>
-            <li class="c-header__icon-item c-header__icon-item--mobile-only">
-              <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Lägg till</span>
-            </li>
-          </ul>
-          <ul class="c-header__main-menu" data-main-menu>
-            <li class="c-header__main-item">
-              <a href="#">Om Hamsterpaj</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="forum.html">Forum</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="#">Onlinespel</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="#">Snackis</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="#">Min profil</a>
-            </li>
-          </ul>
-        </div>
-        <button
-          class="c-button c-button--primary c-header__btn"
-          data-header-btn
-        >
-          <span>Logga in</span>
-        </button>
+          <button
+            class="c-button c-button--secondary c-header__btn"
+            data-header-btn
+          >
+            <span>Logga ut</span>
+          </button>
+        </section>
       </nav>
+      <ul
+        class="c-header__icon-nav c-header__icon-nav--mobile-only"
+        data-fn-icon-nav
+      >
+        <li class="c-header__icon-item">
+          <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Vänner</span>
+        </li>
+        <li class="c-header__icon-item">
+          <i class="ph ph-book-open c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Gästboken</span>
+        </li>
+        <li class="c-header__icon-item">
+          <i class="ph ph-chat c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Meddelande</span>
+        </li>
+        <li class="c-header__icon-item c-header__icon-item--mobile-only">
+          <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Lägg till</span>
+        </li>
+      </ul>
     </header>
 
     <section class="c-hero c-hero--start-img">
@@ -367,7 +404,7 @@
                       </div>
                       <div class="c-post__time-box c-post__time-box--right">
                         <p>Senast besvarad</p>
-                        <p>Idag, 10min</p>
+                        <p>Idag, 10 min</p>
                       </div>
                     </section>
                     <section class="c-post__text-container">
@@ -401,6 +438,7 @@
                     <section class="c-post__info-container">
                       <span class="c-tag">Spel</span>
                       <span class="c-tag">Gamer</span>
+                      <span class="c-tag">Girlproblems</span>
                       <span class="c-tag">allataggar</span>
                     </section>
                     <section class="c-post__info-container">
@@ -640,11 +678,11 @@
                     <section class="c-post__info-container">
                       <div class="c-post-interactions">
                         <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">7</span>
+                        <span class="c-post-interactions__text">70</span>
                       </div>
                       <div class="c-post-interactions">
                         <i class="ph ph-chat c-icon c-icon--xs"></i>
-                        <span class="c-post-interactions__text">4</span>
+                        <span class="c-post-interactions__text">47</span>
                       </div>
                     </section>
                   </section>
@@ -710,15 +748,20 @@
               </section>
               <section class="c-comment__img-container">
                 <div class="c-comment__img-box">
-                  <img src="#" alt="" class="c-comment__img" />
+                  <picture>
+                    <source
+                      media="(max-width:744px)"
+                      srcset="assets/img/cover-images/mobile/led.webp"
+                    />
+                    <source
+                      media="(min-width:744px)"
+                      srcset="assets/img/cover-images/desktop/led.webp"
+                    />
+                    <img src="" alt="" />
+                  </picture>
                   <section class="c-comment__interactions">
                     <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span class="c-post-interactions__text">22</span>
-                    </div>
-                    <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span class="c-post-interactions__text">7</span>
+                      <i class="ph ph-plus-circle c-icon c-icon--xs"></i>
                     </div>
                   </section>
                 </div>
@@ -765,6 +808,9 @@
                 <div class="c-post-interactions c-post-interactions--bg">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
                   <span class="c-post-interactions__text">3</span>
+                </div>
+                <div class="c-post-interactions c-post-interactions--bg">
+                  <i class="ph ph-plus-circle c-icon c-icon--xs"></i>
                 </div>
               </section>
             </article>
@@ -820,6 +866,9 @@
                 <div class="c-post-interactions c-post-interactions--bg">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
                   <span class="c-post-interactions__text">7</span>
+                </div>
+                <div class="c-post-interactions c-post-interactions--bg">
+                  <i class="ph ph-plus-circle c-icon c-icon--xs"></i>
                 </div>
               </section>
             </article>
@@ -944,15 +993,20 @@
               </section>
               <section class="c-comment__img-container">
                 <div class="c-comment__img-box">
-                  <img src="#" alt="" class="c-comment__img" />
+                  <picture>
+                    <source
+                      media="(max-width:744px)"
+                      srcset="assets/img/cover-images/mobile/starwars.webp"
+                    />
+                    <source
+                      media="(min-width:744px)"
+                      srcset="assets/img/cover-images/desktop/starwars.webp"
+                    />
+                    <img src="" alt="" />
+                  </picture>
                   <section class="c-comment__interactions">
                     <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-heart-straight c-icon c-icon--xs"></i>
-                      <span class="c-post-interactions__text">22</span>
-                    </div>
-                    <div class="c-post-interactions c-post-interactions--bg">
-                      <i class="ph ph-chat c-icon c-icon--xs"></i>
-                      <span class="c-post-interactions__text">7</span>
+                      <i class="ph ph-plus-circle c-icon c-icon--xs"></i>
                     </div>
                   </section>
                 </div>
@@ -1001,6 +1055,9 @@
                 <div class="c-post-interactions c-post-interactions--bg">
                   <i class="ph ph-chat c-icon c-icon--xs"></i>
                   <span class="c-post-interactions__text">7</span>
+                </div>
+                <div class="c-post-interactions c-post-interactions--bg">
+                  <i class="ph ph-plus-circle c-icon c-icon--xs"></i>
                 </div>
               </section>
             </article>

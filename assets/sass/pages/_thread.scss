@@ -1,37 +1,47 @@
 .c-thread {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--flex-column-gap);
-  justify-content: space-between;
-
-  --flex-column-gap: var(--space-6);
-
   &__ts {
-    flex: 0 0 100%;
+    width: 100%;
   }
 
   &__comments {
-    flex: 0 0 100%;
-    // TO-DO: breakpoint
+    width: 100%;
+
     @media (min-width: 1024px) {
-      flex: 0 0 calc(70% - calc(var(--flex-column-gap) / 2));
+      position: relative;
+
+      display: flex;
+      column-gap: var(--flex-column-gap);
+      justify-content: space-between;
+
+      --flex-column-gap: var(--space-6);
     }
   }
 
-  // TO-DO: hur ska denna bete sig, fixed, set height
   &__rules {
     display: none;
-    // TO-DO: breakpoint
+
     @media (min-width: 1024px) {
-      // TO-DO: height
-      margin-top: var(--space-16);
+      margin-top: var(--space-14);
+
       display: block;
       flex: 0 0 calc(30% - calc(var(--flex-column-gap) / 2));
+
+      position: sticky;
+      top: 1rem;
+      bottom: 1rem;
+      right: 0;
+      height: calc(100svh - 2rem);
     }
   }
 
   &__list {
     position: relative;
+
+    flex: 0 0 100%;
+
+    @media (min-width: 1024px) {
+      flex: 0 0 calc(70% - calc(var(--flex-column-gap) / 2));
+    }
 
     // yttersta nivån för kommentarslista
     &--lvl1 {

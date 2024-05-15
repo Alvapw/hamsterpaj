@@ -125,10 +125,10 @@
       display: none;
     }
 
-    // &:hover {
-    //   background-color: var(--color-bg-accent-third);
-    //   border-radius: var(--border-radius-sm);
-    // }
+    &:hover {
+      background-color: var(--color-bg-accent-third);
+      border-radius: var(--border-radius-sm);
+    }
 
     &--lg {
       // som --lg blir padding mycket större och den skjuts längre in men gap blir mindre

@@ -1,15 +1,12 @@
 // MENU
 const menuIcon = document.querySelector("[data-fn-toggle-menu]");
-const headerSearch = document.querySelector("[data-header-search]");
-const mainMenuList = document.querySelector("[data-main-menu]");
-const headerBtn = document.querySelector("[data-header-btn]");
+const headerDropdown = document.querySelector("[data-fn-header-dropdown]");
+const iconNav = document.querySelector("[data-fn-icon-nav]");
 
-// TO-DO: lägg till fler klasser i header
+// tooglar klasser när man klickar fram menu
 menuIcon.addEventListener("click", function () {
-  headerSearch.classList.toggle("active");
-  mainMenuList.classList.toggle("active");
-  headerBtn.classList.toggle("active");
   menuIcon.classList.toggle("exit");
+  headerDropdown.classList.toggle("open");
 });
 
 // DROPDOWNS

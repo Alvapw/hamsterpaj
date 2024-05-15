@@ -1,8 +1,11 @@
 .c-post-interactions {
+  min-height: 1.75rem;
+  min-width: 3.125rem;
   transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--post-interactions-gap);
 
   padding: var(--post-interactions-padding);
