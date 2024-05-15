@@ -76,33 +76,65 @@ dropdowns.forEach((dropdown) => {
 });
 
 // hämtar alla like-interactions
-const like = document.querySelectorAll("[data-fn-like-post]");
+const likeContainer = document.querySelectorAll("[data-fn-like-post]");
 
-// lyssnare på vardera like
-like.forEach((likeInteraction) => {
+// loopar igenom varje likeInteraction
+likeContainer.forEach((likeInteraction) => {
+  // sätter lyssnare på klick
   likeInteraction.addEventListener("click", (e) => {
-    // lägger till class
-    likeInteraction.classList.toggle("pressed");
-
-    // hämtar icon och togglar fill
+    // hämtar icon
     const icon = likeInteraction.querySelector("[data-icon]");
-    icon.classList.toggle("ph-fill");
-
-    // hämtar referens till nrtexten
+    // hämtar text
     const countNr = likeInteraction.querySelector("[data-count]");
 
-    // hämta nuvarande siffervärde
+    // när man klickar ska också countvärdet gå upp med ett
+    // så vi hämtar nuvarande siffervärde
     let count = parseInt(countNr.dataset.count);
 
+    // först kollar vi om den redan är gillad
     if (likeInteraction.classList.contains("pressed")) {
-      // om elementet innehåller klassen pressed så ökar vi siffran med ett
-      count++;
-    } else {
-      // om inte så minskar vi siffran med ett
-      count--;
-    }
+      // om containern redan har klassen 'pressed', ta bort alla tillagda klasser
+      likeInteraction.classList.remove("pressed");
+      icon.classList.remove("ph-fill", "pressed-color", "animation-color");
+      countNr.classList.remove("pressed-color", "animation-opacity");
 
-    // uppdatera siffran i DOM och dataset
+      // siffran ska minska med ett
+      count--;
+    } else {
+      // det första som händer är att texten får opacity 0, så vi lägger då på den classen
+      countNr.classList.add("animation-opacity");
+
+      // sen ska iconen på en rosa border samtidigt som den växer
+      // lägger till classen för color
+      icon.classList.add("animation-color");
+      // i js får vi iconen att förstoras
+      setTimeout(() => {
+        icon.style.transform = "scale(2.5)";
+      }, 100); // .1s efter man klickat
+      // sen ska iconen återgå till normal storlek
+      setTimeout(() => {
+        icon.style.transform = "scale(1)";
+        // när iconen är tillbaks till ursprungsstorlek så star vi bort opacity-animation från text, med hjälp av timer
+        countNr.classList.remove("animation-opacity");
+      }, 500); // .5s efter klick är den tillbaks till normal storlek
+
+      // då ska också pressed state läggas till på hela containern
+      setTimeout(() => {
+        likeInteraction.classList.add("pressed");
+        // samtidigt lägger vi till fill class på icon
+        icon.classList.add("ph-fill");
+        // och tar bort icon pink color
+        icon.classList.remove("animation-color");
+        // och lägger till vit färg på icon
+        icon.classList.add("pressed-color");
+        // och på text
+        countNr.classList.add("pressed-color");
+      }, 700);
+
+      // siffran ska öka med ett
+      count++;
+    }
+    // uppdaterar siffran i DOM och dataset
     countNr.textContent = count;
     countNr.dataset.count = count;
   });

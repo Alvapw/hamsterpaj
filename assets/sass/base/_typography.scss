@@ -5,17 +5,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.cut-text {
+.cut-text--3 {
   // Gör så att p-tagg har tre rader och ... efter
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  // TO-DO: rätt breakpoint
-  @media (min-width: 744px) {
+  @media (min-width: 724px) {
     -webkit-line-clamp: 2;
   }
+}
+.cut-text--4 {
+  // Gör så att p-tagg har tre rader och ... efter
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 // text i main menu i header
@@ -178,6 +184,7 @@ body {
 // text i scroll
 .c-scroll__heading {
   font: var(--font-title-lg);
+  text-align: center;
 }
 
 // text i footer
