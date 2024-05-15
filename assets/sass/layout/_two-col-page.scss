@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
+  padding: var(--space-0) var(--space-0) var(--space-30);
 
   // TO-DO: rätt breakpoint
   @media (min-width: 1024px) {
@@ -13,6 +14,10 @@
     gap: var(--flex-gap);
 
     --flex-gap: var(--space-6);
+  }
+
+  @media (min-width: 1200px) {
+    padding: var(--space-20) var(--space-0);
   }
 
   &__aside {

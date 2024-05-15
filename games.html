@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hamsterpaj - spel</title>
+    <title>Hamsterpajs spel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
     <link rel="stylesheet" href="assets/sass/style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
@@ -17,10 +18,13 @@
   <body>
     <header class="c-header">
       <nav class="c-header__nav">
-        <div class="c-header__mobile-container">
+        <section class="c-header__mobile-top">
           <div class="c-header__logo-box">
             <a href="index.html">
-              <img src="../assets/img/logotyp/hamster+text-img.png" alt="" />
+              <img
+                src="assets/img/logotyp/logo.png"
+                alt="Hamsterpaj's logotyp"
+              />
             </a>
           </div>
           <div class="c-header__menu-icon" data-fn-toggle-menu>
@@ -28,74 +32,108 @@
             <span class="c-header__menu-line"></span>
             <span class="c-header__menu-line"></span>
           </div>
-        </div>
-        <div class="c-header__menus">
-          <div class="c-header__top-menu">
-            <form
-              id="search"
-              role="search"
-              autocomplete="off"
-              class="c-search c-header__search"
-              data-header-search
-            >
-              <label for="search">
-                <span class="visually-hidden">Sök</span>
-              </label>
-              <input
-                type="search"
-                id="search"
-                placeholder="Sök"
-                class="c-search__input c-header__search-input"
-              />
-              <button class="c-search__button">
-                <i class="ph ph-magnifying-glass c-icon c-icon--md"></i>
-                <span class="visually-hidden">Klicka för att söka</span>
-              </button>
-            </form>
+        </section>
+        <section class="c-header__dropdown" data-fn-header-dropdown>
+          <div class="c-header__menus">
+            <nav class="c-header__search-icon-nav">
+              <form
+                id="headerSearch"
+                role="search"
+                autocomplete="off"
+                class="c-search c-header__search"
+                data-header-search
+              >
+                <label for="search" class="visually-hidden">
+                  <span>Sök på hela sidan</span>
+                </label>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Sök"
+                  class="c-search__input c-header__search-input"
+                />
+                <button class="c-search__button c-search__button--in-header">
+                  <i
+                    class="ph ph-magnifying-glass c-icon c-icon--md c-header__search-icon"
+                  ></i>
+                  <span class="visually-hidden"
+                    >Klicka för att söka på hela sidan</span
+                  >
+                </button>
+              </form>
+              <ul
+                class="c-header__icon-nav c-header__icon-nav--desktop-only"
+                data-fn-icon-nav
+              >
+                <li class="c-header__icon-item">
+                  <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Vänner</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-book-open c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Gästboken</span>
+                </li>
+                <li class="c-header__icon-item">
+                  <i class="ph ph-chat c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Meddelande</span>
+                </li>
+                <li
+                  class="c-header__icon-item c-header__icon-item--mobile-only"
+                >
+                  <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+                  <span class="c-header__icon-text">Lägg till</span>
+                </li>
+              </ul>
+            </nav>
+            <nav class="c-header__main-nav">
+              <ul class="c-header__main-list" data-main-menu>
+                <li class="c-header__main-item">
+                  <a href="#">Om Hamsterpaj</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="forum.html">Forum</a>
+                </li>
+                <li class="c-header__main-item active">
+                  <a href="games.html">Onlinespel</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="#">Snackis</a>
+                </li>
+                <li class="c-header__main-item">
+                  <a href="krypin.html">Min profil</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <ul class="c-header__icon-menu">
-            <li class="c-header__icon-item">
-              <i class="ph ph-user-plus c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Vänner</span>
-            </li>
-            <li class="c-header__icon-item">
-              <i class="ph ph-book-open c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Gästboken</span>
-            </li>
-            <li class="c-header__icon-item">
-              <i class="ph ph-chat c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Meddelande</span>
-            </li>
-            <li class="c-header__icon-item c-header__icon-item--mobile-only">
-              <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
-              <span class="c-header__icon-text">Lägg till</span>
-            </li>
-          </ul>
-          <ul class="c-header__main-menu" data-main-menu>
-            <li class="c-header__main-item">
-              <a href="#">Om Hamsterpaj</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="forum.html">Forum</a>
-            </li>
-            <li class="c-header__main-item active">
-              <a href="#">Onlinespel</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="#">Snackis</a>
-            </li>
-            <li class="c-header__main-item">
-              <a href="#">Min profil</a>
-            </li>
-          </ul>
-        </div>
-        <button
-          class="c-button c-button--primary c-header__btn"
-          data-header-btn
-        >
-          <span>Logga in</span>
-        </button>
+          <button
+            class="c-button c-button--secondary c-header__btn"
+            data-header-btn
+          >
+            <span>Logga ut</span>
+          </button>
+        </section>
       </nav>
+      <ul
+        class="c-header__icon-nav c-header__icon-nav--mobile-only"
+        data-fn-icon-nav
+      >
+        <li class="c-header__icon-item">
+          <i class="ph ph-user-plus c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Vänner</span>
+        </li>
+        <li class="c-header__icon-item">
+          <i class="ph ph-book-open c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Gästboken</span>
+        </li>
+        <li class="c-header__icon-item">
+          <i class="ph ph-chat c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Meddelande</span>
+        </li>
+        <li class="c-header__icon-item c-header__icon-item--mobile-only">
+          <i class="ph ph-plus-circle c-icon c-icon--sm"></i>
+          <span class="c-header__icon-text">Lägg till</span>
+        </li>
+      </ul>
     </header>
 
     <section class="c-hero c-hero--spel-img">
@@ -104,8 +142,8 @@
       </div>
     </section>
 
-    <section class="c-lib-page">
-      <aside class="c-lib-page__aside c-aside">
+    <section class="c-two-col-page">
+      <aside class="c-two-col-page__aside c-aside">
         <section
           class="c-dropdown c-dropdown--lg c-aside__box"
           data-fn-dropdown
@@ -132,62 +170,68 @@
             <li
               class="c-dropdown__option c-dropdown__option--lg active"
               data-dropdown-option
+              data-caty="allakategorier"
             >
               <i
-                class="ph ph-eyes c-icon c-icon--sm"
+                class="ph ph-eyes c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Alla kategorier</span>
+              <span class="c-dropdown__text--lg">Alla kategorier</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="action"
             >
               <i
-                class="ph ph-rabbit c-icon c-icon--sm"
+                class="ph ph-sword c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Anime & manga</span>
+              <span class="c-dropdown__text--lg">Action</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="livsstil"
             >
               <i
-                class="ph ph-books c-icon c-icon--sm"
+                class="ph ph-flying-saucer c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Böcker & serier</span>
+              <span class="c-dropdown__text--lg">Livsstil</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="multiplayer"
             >
               <i
-                class="ph ph-mask-happy c-icon c-icon--sm"
+                class="ph ph-finn-the-human c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Cosplay & conventions</span>
+              <span class="c-dropdown__text--lg">Multiplayer</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="pussel"
             >
               <i
-                class="ph ph-newspaper-clipping c-icon c-icon--sm"
+                class="ph ph-puzzle-piece c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Fanart & fanfiction</span>
+              <span class="c-dropdown__text--lg">Pussel</span>
             </li>
             <li
               class="c-dropdown__option c-dropdown__option--lg"
               data-dropdown-option
+              data-caty="romance"
             >
               <i
-                class="ph ph-game-controller c-icon c-icon--sm"
+                class="ph ph-heart-break c-icon c-icon--sm c-dropdown__icon--lg"
                 data-dropdown-option-icon
               ></i>
-              <span>Spel & brädspel</span>
+              <span class="c-dropdown__text--lg">Romance</span>
             </li>
           </ul>
         </section>
@@ -213,18 +257,251 @@
           </div>
           <ul class="c-dropdown__list c-dropdown__list--lg" data-dropdown-list>
             <li class="c-dropdown__option c-dropdown__option--lg">
-              <div class="c-dropdown__user-img"></div>
-              <span>StrategySorceress</span>
+              <div class="c-dropdown__user-img">
+                <img
+                  src="assets/img/profile-images/jonkyboy-profile-img.png"
+                  alt="JånkyBoy's profilbild"
+                />
+              </div>
+              <span>JånkyBoy</span>
             </li>
             <li class="c-dropdown__option c-dropdown__option--lg">
-              <div class="c-dropdown__user-img"></div>
-              <span>Wizardess</span>
+              <div class="c-dropdown__user-img">
+                <img
+                  src="assets/img/profile-images/lisselgit-profile-img.png"
+                  alt="LisselGit's profilbild"
+                />
+              </div>
+              <span>LisselLeGit</span>
             </li>
           </ul>
         </section>
       </aside>
 
-      <main class="c-lib-page__main">
+      <main class="c-two-col-page__main">
+        <section class="c-lib-page__swiper c-swiper" data-fn-swiper-container>
+          <ul class="c-swiper__list">
+            <li class="c-swiper__item" data-swiper-item>
+              <article
+                class="c-post c-post--to-horizontal c-swiper__post-content"
+                data-swiper-content
+              >
+                <picture
+                  class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
+                >
+                  <source
+                    media="(max-width:744px)"
+                    srcset="assets/img/cover-images/mobile/minishop.webp"
+                  />
+                  <source
+                    media="(min-width:744px)"
+                    srcset="assets/img/cover-images/desktop/minishop.webp"
+                  />
+                  <img src="" alt="" />
+                </picture>
+                <section class="c-post__content c-post__content--to-horizontal">
+                  <section class="c-post__post-info">
+                    <section class="c-post__text-container">
+                      <div class="c-post__title-device-container">
+                        <h3 class="c-post__title">Mini Shop</h3>
+                        <div class="c-post__devices">
+                          <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
+                          <i class="ph ph-desktop c-icon c-icon--xs"></i>
+                        </div>
+                      </div>
+                      <p class="c-post__text cut-text">
+                        Bygg din egen drömbutik från grunden! Börja litet och
+                        arbeta dig uppåt. Välj vilken inriktning du vill ha och
+                        hur butiken ska se ut.
+                      </p>
+                    </section>
+                  </section>
+                  <section class="c-post__additional-info">
+                    <section class="c-post__info-container">
+                      <span class="c-tag">Cozy</span>
+                      <span class="c-tag">Livsstil</span>
+                      <span class="c-tag">Långsamt</span>
+                      <span class="c-tag">allataggar</span>
+                    </section>
+                    <section class="c-post__info-container c-post__stars">
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                    </section>
+                  </section>
+                </section>
+              </article>
+            </li>
+            <li class="c-swiper__item" data-swiper-item>
+              <article
+                class="c-post c-post--to-horizontal c-swiper__post-content"
+                data-swiper-content
+              >
+                <picture
+                  class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
+                >
+                  <source
+                    media="(max-width:744px)"
+                    srcset="assets/img/cover-images/mobile/ninjahighschoolwebp"
+                  />
+                  <source
+                    media="(min-width:744px)"
+                    srcset="
+                      assets/img/cover-images/desktop/ninjahighschool.webp
+                    "
+                  />
+                  <img src="" alt="" />
+                </picture>
+                <section class="c-post__content c-post__content--to-horizontal">
+                  <section class="c-post__post-info">
+                    <section class="c-post__text-container">
+                      <div class="c-post__title-device-container">
+                        <h3 class="c-post__title">Ninja High School</h3>
+                        <div class="c-post__devices">
+                          <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
+                          <i class="ph ph-desktop c-icon c-icon--xs"></i>
+                        </div>
+                      </div>
+                      <p class="c-post__text cut-text">
+                        Bland många sökande är du en av de få antagna till den
+                        prestigefyllda skolan för blivande ninjor! Men överlever
+                        du fram till examen?
+                      </p>
+                    </section>
+                  </section>
+                  <section class="c-post__additional-info">
+                    <section class="c-post__info-container">
+                      <span class="c-tag">Fantasy</span>
+                      <span class="c-tag">Rpg</span>
+                      <span class="c-tag">Action</span>
+                      <span class="c-tag">allataggar</span>
+                    </section>
+                    <section class="c-post__info-container c-post__stars">
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                    </section>
+                  </section>
+                </section>
+              </article>
+            </li>
+            <li class="c-swiper__item" data-swiper-item>
+              <article
+                class="c-post c-post--to-horizontal c-swiper__post-content"
+                data-swiper-content
+              >
+                <picture
+                  class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
+                >
+                  <source
+                    media="(max-width:744px)"
+                    srcset="
+                      assets/img/cover-images/mobile/embroiderypuzzle.webp
+                    "
+                  />
+                  <source
+                    media="(min-width:744px)"
+                    srcset="
+                      assets/img/cover-images/desktop/embroiderypuzzle.webp
+                    "
+                  />
+                  <img src="" alt="" />
+                </picture>
+                <section class="c-post__content c-post__content--to-horizontal">
+                  <section class="c-post__post-info">
+                    <section class="c-post__text-container">
+                      <div class="c-post__title-device-container">
+                        <h3 class="c-post__title">Embroidery Puzzle</h3>
+                        <div class="c-post__devices">
+                          <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
+                          <i class="ph ph-desktop c-icon c-icon--xs"></i>
+                        </div>
+                      </div>
+                      <p class="c-post__text cut-text">
+                        Brodera fram historiern om en katt som ger sig ut i
+                        stora världen. För varje lyckat broderi låser du upp
+                        nästa kapitel i berättelsen.
+                      </p>
+                    </section>
+                  </section>
+                  <section class="c-post__additional-info">
+                    <section class="c-post__info-container">
+                      <span class="c-tag">Cozy</span>
+                      <span class="c-tag">Livsstil</span>
+                      <span class="c-tag">Långsamt</span>
+                      <span class="c-tag">allataggar</span>
+                    </section>
+                    <section class="c-post__info-container c-post__stars">
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                    </section>
+                  </section>
+                </section>
+              </article>
+            </li>
+            <li class="c-swiper__item" data-swiper-item>
+              <article
+                class="c-post c-post--to-horizontal c-swiper__post-content"
+                data-swiper-content
+              >
+                <picture
+                  class="c-post__cover-img-box c-post__cover-img-box--to-horizontal"
+                >
+                  <source
+                    media="(max-width:744px)"
+                    srcset="assets/img/cover-images/mobile/galacticpet.webp"
+                  />
+                  <source
+                    media="(min-width:744px)"
+                    srcset="assets/img/cover-images/desktop/galacticpet.webp"
+                  />
+                  <img src="" alt="" />
+                </picture>
+                <section class="c-post__content c-post__content--to-horizontal">
+                  <section class="c-post__post-info">
+                    <section class="c-post__text-container">
+                      <div class="c-post__title-device-container">
+                        <h3 class="c-post__title">Galactic pet II</h3>
+                        <div class="c-post__devices">
+                          <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
+                          <i class="ph ph-desktop c-icon c-icon--xs"></i>
+                        </div>
+                      </div>
+                      <p class="c-post__text cut-text">
+                        Old school otaku game i sitt esse! I spelet blir du
+                        adopterad som husdjur av en utomjordisk ras. Men du är
+                        inte familjens enda husdjur.
+                      </p>
+                    </section>
+                  </section>
+                  <section class="c-post__additional-info">
+                    <section class="c-post__info-container">
+                      <span class="c-tag">Romance</span>
+                      <span class="c-tag">Otaku</span>
+                      <span class="c-tag">Science fiction</span>
+                      <span class="c-tag">allataggar</span>
+                    </section>
+                    <section class="c-post__info-container c-post__stars">
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+                      <i class="ph ph-star c-icon c-icon--sm"></i>
+                    </section>
+                  </section>
+                </section>
+              </article>
+            </li>
+          </ul>
+        </section>
+
         <section class="c-lib-page__search-filter">
           <form
             id="search"
@@ -233,7 +510,7 @@
             class="c-search c-lib-page__search"
           >
             <label for="search">
-              <span class="visually-hidden">Sök forum</span>
+              <span class="visually-hidden">Sök spel</span>
             </label>
             <input
               type="search"
@@ -248,7 +525,7 @@
             </button>
           </form>
           <section class="c-lib-page__dropdowns">
-            <section class="c-dropdown" data-fn-dropdown data-fn-dropdown-sort>
+            <section class="c-dropdown c-lib-page__dropdown" data-fn-dropdown>
               <div class="c-dropdown__select" data-dropdown-select>
                 <span class="c-dropdown__selected" data-dropdown-selected
                   >Senaste</span
@@ -259,18 +536,30 @@
                 ></i>
               </div>
               <ul class="c-dropdown__list" data-dropdown-list>
-                <li class="c-dropdown__option active" data-dropdown-option>
+                <li
+                  class="c-dropdown__option active"
+                  data-dropdown-option
+                  data-sort="time"
+                >
                   Senaste
                 </li>
-                <li class="c-dropdown__option" data-dropdown-option>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-sort="popular"
+                >
                   Populära
                 </li>
-                <li class="c-dropdown__option" data-dropdown-option>
+                <li
+                  class="c-dropdown__option"
+                  data-dropdown-option
+                  data-sort="recommend"
+                >
                   Rekommenderas för dig
                 </li>
               </ul>
             </section>
-            <section class="c-dropdown" data-fn-dropdown>
+            <section class="c-dropdown c-lib-page__dropdown" data-fn-dropdown>
               <div class="c-dropdown__select" data-dropdown-select>
                 <span class="c-dropdown__selected" data-dropdown-selected
                   >Alla taggar</span
@@ -392,9 +681,8 @@
               </ul>
             </section>
             <section
-              class="c-dropdown c-lib__dropdown"
+              class="c-dropdown c-lib-page__dropdown hide-in-mobile"
               data-fn-dropdown
-              data-fn-dropdown-view
             >
               <div class="c-dropdown__select" data-dropdown-select>
                 <span class="c-dropdown__selected" data-dropdown-selected
@@ -416,17 +704,17 @@
             </section>
           </section>
         </section>
-        <section class="c-lib-page__feed" data-forum-feed></section>
+        <section class="c-lib-page__heading">
+          <h3>Betyg, från högst till lägst</h3>
+        </section>
+        <section class="c-lib-page__feed" data-game-feed></section>
       </main>
     </section>
 
     <footer class="c-footer">
       <div class="c-footer__container">
         <div class="c-footer__logo">
-          <img
-            src="../assets/img/logotyp/hamster+text-img.png"
-            alt="Hamsterpajs logotyp"
-          />
+          <img src="../assets/img/logotyp/logo.png" alt="Hamsterpajs logotyp" />
         </div>
         <div class="c-footer__content">
           <ul class="c-footer__page-links">
@@ -476,50 +764,35 @@
       </div>
     </footer>
 
-    <!-- TEMPLATE GAME -->
-    <template>
-      <article class="c-post">
+    <!-- TEMPLATE FÖR TEASER POST -->
+    <template data-game-teaser-template>
+      <article class="c-post c-lib-page__post">
         <picture class="c-post__cover-img-box">
-          <source
-            media="(max-width:744px)"
-            srcset="assets/img/cover-images/mobile/googledino.webp"
-          />
-          <source
-            media="(min-width:744px)"
-            srcset="assets/img/cover-images/desktop/googledino.webp"
-          />
+          <source media="(max-width:744px)" data-replace-mobile-cover-img />
+          <source media="(min-width:744px)" data-replace-desktop-cover-img />
           <img src="" alt="" />
         </picture>
         <section class="c-post__content">
           <section class="c-post__post-info">
             <section class="c-post__text-container">
               <div class="c-post__title-device-container">
-                <h3 class="c-post__title">Google's Simplistic Dinosaur</h3>
+                <h3 class="c-post__title" data-replace-title></h3>
                 <div class="c-post__devices">
                   <i class="ph ph-device-mobile c-icon c-icon--xs"></i>
                   <i class="ph ph-desktop c-icon c-icon--xs"></i>
                 </div>
               </div>
-              <p class="c-post__text cut-text">
-                Ett intensivt online multiplayer spel där spelare tävlar mot
-                varandra i en futuristisk dystopi. Vem klarar sig längst i
-                Google's Simplistic Dinosaur Game?
-              </p>
+              <p class="c-post__text cut-text" data-replace-text></p>
             </section>
           </section>
           <section class="c-post__additional-info">
-            <section class="c-post__info-container">
-              <span class="c-tag">Multiplayer</span>
-              <span class="c-tag">Ranking</span>
-              <span class="c-tag">Nivåer</span>
-              <span class="c-tag">allataggar</span>
-            </section>
+            <section class="c-post__info-container" data-replace-tags></section>
             <section class="c-post__info-container c-post__stars">
-              <i class="ph ph-star c-icon c-icon--sm"></i>
-              <i class="ph ph-star c-icon c-icon--sm"></i>
-              <i class="ph ph-star c-icon c-icon--sm"></i>
-              <i class="ph ph-star c-icon c-icon--sm"></i>
-              <i class="ph ph-star c-icon c-icon--sm"></i>
+              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
+              <i class="ph-fill ph-star c-icon c-icon--sm"></i>
             </section>
           </section>
         </section>
@@ -527,5 +800,7 @@
     </template>
 
     <script src="assets/js/script.js" type="text/javascript"></script>
+    <script src="assets/js/swipe.js" type="text/javascript"></script>
+    <script src="assets/js/games.js" type="text/javascript"></script>
   </body>
 </html>

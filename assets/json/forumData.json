@@ -133,5 +133,50 @@
     "tags": ["manga", "anime", "dark", "allataggar"],
     "likes": 34,
     "comments": 78
+  },
+  {
+    "id": 10,
+    "coverImgMobile": "assets/img/cover-images/mobile/kattmeme.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/kattmeme.webp",
+    "dateStarted": "Idag, 08:30",
+    "dateUpdated": "Idag, 10 min",
+    "title": "Vilka spel har fullständigt förgört er efteråt?",
+    "text": "För mig är det lätt Horizon-spelen. Storyn är så bra och alla huvudkaraktärer så relaterbara att det kändes som jag förlorat vänner på riktigt när spelen var slut...",
+    "profileImg": "assets/img/profile-images/rainbowrider-profile-img.png",
+    "userName": "RainbowRider",
+    "category": ["spelbrädspel", "allakategorier"],
+    "tags": ["spel", "gamer", "girlproblems", "allataggar"],
+    "likes": 307,
+    "comments": 79
+  },
+  {
+    "id": 11,
+    "coverImgMobile": "assets/img/cover-images/mobile/mansplaining.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/mansplaining.webp",
+    "dateStarted": "Igår, 13:37",
+    "dateUpdated": "Nu",
+    "title": "Era roligaste mansplaining-minnen 🤡",
+    "text": "Som gamer-girl stöter man hela tiden på snoppbärare som    tror att de både kan och vet mer än vad man själv gör. Detta kan ibland leda till komiska ögonblick. Som TS börjar jag med att dela med mig av ett minne...",
+    "profileImg": "assets/img/profile-images/cybersorceress-profile-img.png",
+    "userName": "CyberSorceress",
+    "category": ["animemanga", "allakategorier"],
+    "tags": ["livsstil", "gamer", "girlproblems", "allataggar"],
+    "likes": 29,
+    "comments": 84
+  },
+  {
+    "id": 12,
+    "coverImgMobile": "assets/img/cover-images/mobile/thisbedwemade.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/thisbedwemade.webp",
+    "dateStarted": "1 maj 2024",
+    "dateUpdated": "Idag, 5 min",
+    "title": "Tips",
+    "text": "Jag vill verkligen dela med mig av ett fantastiskt indiespel som jag precis har upptäckt och som jag tror att ni också kommer att älska.",
+    "profileImg": "assets/img/profile-images/pixelpioneer-profile-img.png",
+    "userName": "PixelPioneer",
+    "category": ["spelbrädspel", "allakategorier"],
+    "tags": ["underhållning", "gaming", "tips", "allataggar"],
+    "likes": 70,
+    "comments": 47
   }
 ]
