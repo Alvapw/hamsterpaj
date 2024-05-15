@@ -40,7 +40,7 @@
   }
 
   &--secondary {
-    --btn-color: var(--color-btn-secondary);
+    --btn-bg-color: var(--color-btn-secondary);
     --btn-text-color: var(--color-text);
 
     &:hover {
@@ -61,12 +61,17 @@
 
   // TO-DO: and this
   &--tertiary {
+    --btn-box-shadow-default: none;
     --btn-border-radius: var(--border-radius-sm);
     --btn-bg-color: transparent;
-    --btn-text-color: var(--color-text);
+    --btn-text-color: var(--color-text-onwhite);
 
     &:hover {
       background-color: grey;
+    }
+
+    &:focus {
+      border: 3px solid var(--color-btn-border);
     }
   }
 }
