@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "coverImgMobile": "assets/img/cover-images/mobile/robotunicornattack.webp",
-    "coverImgDesktop": "assets/img/cover-images/desktop/robotunicornattack.webp",
+    "coverImgMobile": "assets/img/cover-images/mobile/robotunicorn-attack.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/robotunicorn-attack.webp",
     "mobile": false,
     "desktop": true,
     "title": "Robot Unicorn Attack II",
@@ -13,14 +13,14 @@
   },
   {
     "id": 2,
-    "coverImgMobile": "assets/img/cover-images/mobile/cleaningbedroom.webp",
-    "coverImgDesktop": "assets/img/cover-images/desktop/cleaningbedroom.webp",
+    "coverImgMobile": "assets/img/cover-images/mobile/minishop.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/minishop.webp",
     "mobile": true,
     "desktop": true,
-    "title": "Cleaning Bedroom",
-    "text": "Med en interaktiv och engagerande spelupplevelse ger 'Cleaning Bedroom Spel' spelarna möjlighet att ha kul samtidigt som de lär sig vikten av att hålla ordning och rengöra sitt rum.",
+    "title": "Mini Shop",
+    "text": "Bygg din egen drömbutik från grunden! Börja litet och arbeta dig uppåt. Välj vilken inriktning du vill ha och hur butiken ska se ut.",
     "category": ["livsstil", "allakategorier"],
-    "tags": ["chill", "stiliserade", "livsstil", "allataggar"],
+    "tags": ["cozy", "livsstil", "långsamt", "allataggar"],
     "stars": 5
   },
   {
@@ -61,14 +61,14 @@
   },
   {
     "id": 6,
-    "coverImgMobile": "assets/img/cover-images/mobile/findingwords.webp",
-    "coverImgDesktop": "assets/img/cover-images/desktop/findingwords.webp",
+    "coverImgMobile": "assets/img/cover-images/mobile/galacticpet.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/galacticpet.webp",
     "mobile": true,
     "desktop": true,
-    "title": "Finding Words",
-    "text": "Hitta ord som gömmer sig bland ett rutnät med massa bokstäver",
-    "category": ["pussel", "allakategorier"],
-    "tags": ["pussel", "tankenötter", "singleplayer", "allataggar"],
+    "title": "Galactic Pet II",
+    "text": "Old school otaku game i sitt esse! I spelet blir du adopterad som husdjur av en utomjordisk ras. Men du är inte familjens enda husdjur.",
+    "category": ["romance", "allakategorier"],
+    "tags": ["romance", "otaku", "sciencefiction", "allataggar"],
     "stars": 4
   },
   {
@@ -85,8 +85,8 @@
   },
   {
     "id": 8,
-    "coverImgMobile": "assets/img/cover-images/mobile/tengokustruggle.webp",
-    "coverImgDesktop": "assets/img/cover-images/desktop/tengokustruggle.webp",
+    "coverImgMobile": "assets/img/cover-images/mobile/tenggokustruggle.webp",
+    "coverImgDesktop": "assets/img/cover-images/desktop/tenggokustruggle.webp",
     "mobile": true,
     "desktop": true,
     "title": "Tengoku Struggle",

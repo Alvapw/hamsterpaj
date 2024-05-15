@@ -137,6 +137,12 @@
       border-radius: var(--border-radius-sm);
     }
 
+    &.no-hover {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
     &--lg {
       // som --lg blir padding mycket större och den skjuts längre in men gap blir mindre
       padding: var(--space-2) var(--space-14);

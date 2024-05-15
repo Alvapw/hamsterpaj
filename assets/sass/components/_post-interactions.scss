@@ -1,7 +1,10 @@
 .c-post-interactions {
+  // pga animation
+  position: relative;
+
   min-height: 1.75rem;
   min-width: 3.125rem;
-  transition: 0.3s;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -24,20 +27,36 @@
     --post-interactions-text-color: var(--color-text-onwhite);
 
     &.pressed {
-      transition: 0.3s;
       box-shadow: 0px 0px 6px 2px var(--color-badge-neon);
 
       --post-interactions-bg-color: var(--color-badge-neon);
-      --post-interactions-text-color: var(--color-text);
-      // TO-DO: neon effekt .c-post-interactions pressed state
     }
   }
 
   &__icon {
-    &.pressed {
+    // transition på färg och transform
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &.animation-color {
+      color: var(--color-badge-neon);
+    }
+
+    &.pressed-color {
+      color: var(--color-text);
     }
   }
 
   &__text {
+    // liten transition när texten gömmer sig
+    transition: opacity 0.3s ease;
+
+    &.animation-opacity {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &.pressed-color {
+      color: var(--color-text);
+    }
   }
 }
