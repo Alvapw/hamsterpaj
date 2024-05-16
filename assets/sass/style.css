@@ -865,6 +865,9 @@ body {
   align-items: center;
   gap: var(--space-2);
 }
+.c-user-box__dots-icon {
+  cursor: pointer;
+}
 
 .c-post {
   background-color: var(--color-bg-card);
@@ -1044,7 +1047,7 @@ body {
   padding: var(--space-0) var(--space-4);
   position: absolute;
   right: 0;
-  bottom: -0.75rem;
+  bottom: -1rem;
   display: flex;
   align-items: flex-end;
   gap: var(--space-4);
