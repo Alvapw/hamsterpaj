@@ -1142,11 +1142,6 @@ body {
   }
 }
 .c-scroll__front {
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
   flex: 0 0 50%;
   margin-right: var(--space-6);
   background-color: var(--front-scroll-bg-color);
@@ -1160,9 +1155,14 @@ body {
 .c-scroll__front--orange {
   --front-scroll-bg-color: var(--color-btn);
 }
-@media (min-width: 744px) {
+@media (min-width: 620px) {
   .c-scroll__front {
     flex: 0 0 25%;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
   }
 }
 @media (min-width: 1024px) {
