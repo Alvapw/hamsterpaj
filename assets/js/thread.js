@@ -1,41 +1,147 @@
-// Hämtar element
+// hämtar element
 const tsInput = document.querySelector("[data-fn-ts-input]");
 const commentsListLvl1 = document.querySelector("[data-comments-list-lvl1]");
 const commentLvl1Template = document.querySelector(
   "[data-comment-lvl1-template]"
 );
-const commentLvl2Template = document.querySelector(
-  "[data-comment-lvl2-template]"
-);
+const commentsCount = document.querySelector("[data-comments]");
 
-// Lyssnar efter ett keypress på tsInput
+// pga localstrage så sparar jag alla de hårdkodade kommentarerna i en array
+const hardcodedComments = [
+  "comment1",
+  "comment2",
+  "comment3",
+  "comment4",
+  "comment5",
+  "comment6",
+  "comment7",
+  "comment8",
+  "comment9",
+  "comment10",
+  "comment11",
+];
+
+// hämtar nuvarande siffervärde på ts comment count
+let count = parseInt(commentsCount.dataset.comments);
+
+// kallar få funktionen för att ladda alla sparade kommentarer
+loadComments();
+
+// lyssnar efter ett keypress på tsInput
 tsInput.addEventListener("keypress", function (event) {
-  // Om enter klickas på
+  // om enter klickas på
   if (event.key === "Enter") {
-    // För säkerhetsskull så stoppar vi default action
+    // för säkerhetsskull så stoppar vi default action
     event.preventDefault();
 
-    // Hämtar värdet i input
+    // hämtar värdet i input
     const tsInputValue = tsInput.value;
-    // Rensar input
+    // rensar input
     tsInput.value = "";
 
-    // Skapar en klon av comment template
+    // skapar en klon av comment template
     const comment = commentLvl1Template.content.cloneNode(true).children[0];
 
-    // Hämtar textcontent arean
+    // hämtar textcontent arean
     const commentTextContent = comment.querySelector(
       "[data-replace-text-content]"
     );
-    // Skriver ut tsInputValue i commentTextContent
+    // skriver ut tsInputValue i commentTextContent
     commentTextContent.textContent = tsInputValue;
 
-    // Spottar ut kommentaren i listan
+    //sSpottar ut kommentaren längst ner i listan
     commentsListLvl1.append(comment);
+
+    // kommentarssiffran ska öka med ett
+    count++;
+    // uppdaterar siffran i DOM och dataset
+    commentsCount.textContent = count;
+    commentsCount.dataset.comments = count;
+
+    // lägger till kommenataren i localStorage
+    addComment(tsInputValue);
+
+    // kallar på lastchild funktionen
+    lastChildOfListLvl1();
+
+    comment.scrollIntoView({ behavior: "smooth", block: "end" });
+
+    // om man vill ta bort kommentar
+    const deleteBtn = comment.querySelector("[data-fn-delete-comment]");
+    deleteBtn.addEventListener("click", () =>
+      removeComment(commentText, comment)
+    );
+  }
+});
+
+// funktion för att lägga till kommentar i localstorage
+function addComment(comment) {
+  // hämta nuvarande kommentarer från localStorage
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  // och lägger till ny kommentar
+  comments.push(comment);
+  // spara uppdaterade kommentarer i localStorage
+  localStorage.setItem("comments", JSON.stringify(comments));
+  // och renderar alla sparade kommentarer igen
+  // renderComments(comments);
+}
+
+// funktion för att ladda kommentarer
+function loadComments() {
+  // hämtar kommentarer från localStorage
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  // uppdaterar kommentarsräknaren
+  count = comments.length + hardcodedComments.length;
+  commentsCount.textContent = count;
+  commentsCount.dataset.comments = count;
+
+  // rendera både hårdkodade och sparade kommentarer
+  renderComments(comments);
+}
+
+// funktion för att rendera kommentarerna
+function renderComments(comments) {
+  // tömmer den nuvarande listan men lämnar de hårdkodade kommentarerna
+  while (commentsListLvl1.children.length > hardcodedComments.length) {
+    commentsListLvl1.removeChild(commentsListLvl1.lastChild);
+  }
+  // Lägg till varje sparad kommentar i listan
+  comments.forEach((commentText) => {
+    const comment = commentLvl1Template.content.cloneNode(true).children[0];
+    const commentTextContent = comment.querySelector(
+      "[data-replace-text-content]"
+    );
+    commentTextContent.textContent = commentText;
+    commentsListLvl1.append(comment);
+
+    // om man vill ta bort kommentar
+    const deleteBtn = comment.querySelector("[data-fn-delete-comment]");
+    deleteBtn.addEventListener("click", () =>
+      removeComment(commentText, comment)
+    );
+  });
+}
+
+// funktion för att ta bort kommentar
+function removeComment(commentText, commentElement) {
+  // Bekräfta borttagning
+  if (confirm("Vill du verkligen ta bort denna kommentar?")) {
+    // Ta bort visuellt
+    commentElement.remove();
+
+    // Ta bort från localStorage
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments = comments.filter((comment) => comment !== commentText);
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    // Uppdatera räknaren
+    count--;
+    commentsCount.textContent = count;
+    commentsCount.dataset.comments = count;
 
     lastChildOfListLvl1();
   }
-});
+}
 
 // skapar funktion för att hitta last child och applicera class
 function lastChildOfListLvl1() {
