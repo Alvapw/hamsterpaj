@@ -1333,6 +1333,7 @@ body {
     border-top-left-radius: var(--border-radius-sm);
     border-top-right-radius: var(--border-radius-sm);
     justify-content: space-evenly;
+    gap: var(--space-0);
   }
 }
 @media (max-width: 1024px) {
@@ -1356,6 +1357,11 @@ body {
 }
 @media (min-width: 1024px) {
   .c-header__icon-item--mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .c-header__icon-text {
     display: none;
   }
 }
