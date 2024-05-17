@@ -1076,15 +1076,36 @@ body {
 .c-swiper__list {
   position: relative;
   width: 100%;
-  min-height: 294px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+@media (min-width: 408px) {
+  .c-swiper__list {
+    min-height: 450px;
+  }
+}
+@media (min-width: 744px) {
+  .c-swiper__list {
+    min-height: 294px;
+  }
+}
+@media (min-width: 1024px) {
+  .c-swiper__list {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .c-swiper__list {
+    justify-content: flex-end;
+  }
+}
 .c-swiper__item {
   display: inline-block;
   max-width: 588px;
-  height: 294px;
+  height: auto;
+  margin-left: var(--space-16);
   background: var(--color-bg-card);
   border-radius: var(--border-radius-sm);
   overflow: hidden;
@@ -1096,6 +1117,11 @@ body {
 .c-swiper__item.moving {
   transition: none;
   cursor: grabbing;
+}
+@media (min-width: 700px) {
+  .c-swiper__item {
+    margin-left: var(--space-0);
+  }
 }
 .c-swiper__post-content {
   pointer-events: none;
@@ -1534,7 +1560,7 @@ body {
 }
 
 .c-lib-page__swiper {
-  margin: var(--space-10) var(--space-20) var(--space-10);
+  margin: var(--space-10) var(--space-0);
 }
 @media (min-width: 1024px) {
   .c-lib-page__swiper {

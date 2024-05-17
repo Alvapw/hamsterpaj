@@ -1,7 +1,7 @@
 .c-lib-page {
   &__swiper {
     // skjuter in denna sektion lite till på sidorna
-    margin: var(--space-10) var(--space-20) var(--space-10);
+    margin: var(--space-10) var(--space-0);
 
     // TO-DO: rätt breakpoint
     @media (min-width: 1024px) {
