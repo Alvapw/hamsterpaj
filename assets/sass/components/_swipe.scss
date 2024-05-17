@@ -24,12 +24,28 @@
 
     // ska vara hundra procent bred och minst 600px hög, måste sätta width + height pga position absolute
     width: 100%;
-    min-height: 294px;
+    min-height: 400px;
 
     // flex för att centrera innehållet
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media (min-width: 408px) {
+      min-height: 450px;
+    }
+
+    @media (min-width: 744px) {
+      min-height: 294px;
+    }
+
+    @media (min-width: 1024px) {
+      justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+      justify-content: flex-end;
+    }
   }
 
   // card
@@ -38,7 +54,8 @@
 
     // height + width
     max-width: 588px;
-    height: 294px;
+    height: auto;
+    margin-left: var(--space-16);
 
     // background-color
     background: var(--color-bg-card);
@@ -63,6 +80,10 @@
       cursor: -webkit-grabbing;
       cursor: -moz-grabbing;
       cursor: grabbing;
+    }
+
+    @media (min-width: 700px) {
+      margin-left: var(--space-0);
     }
   }
 
